@@ -1,0 +1,71 @@
+extends layout
+
+block content
+  section.main-slide-form
+    h1.main-slide-form__title Конкурс на самое безбашеное путешествие с Пинк
+
+  form(action="").form
+    section.form__fio
+      h2.form__title Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+      .form__input-wrap
+        label.form__label(for="input-last-name") Фамилия:
+        input.form__input(id="input-last-name" type="text" placeholder="Укажите фамилию *")
+      .form__input-wrap
+        label.form__label(for="input-first-name") Имя:
+        input.form__input(id="input-first-name" type="text" placeholder="Введите ваше имя *")
+      .form__input-wrap
+        label.form__label(for="input-second-name") Отчество:
+        input.form__input(id="input-second-name" type="text" placeholder="Ну и отчество тоже")
+
+    section.form__achievements
+      h2.form__achievements-title Ваши безбашенные достижения в путешествии
+      .form__checkbox-wrap
+        input.form__checkbox-checkbox(type="checkbox" id="input-shark")
+        label.form__checkbox-label(for="input-shark") Сделал селфи с акулой
+      .form__checkbox-wrap
+        input.form__checkbox-checkbox(type="checkbox" id="input-beach")
+        label.form__checkbox-label(for="input-beach") Обгорел на пляже
+      .form__checkbox-wrap
+        input.form__checkbox-checkbox(type="checkbox" id="input-norris")
+        label.form__checkbox-label(for="input-norris") Видел Чака Норриса
+      .form__checkbox-wrap
+        input.form__checkbox-checkbox(type="checkbox" id="input-presents")
+        label.form__checkbox-label(for="input-presents") Накупил сувениров
+      .form__checkbox-wrap
+        input.form__checkbox-checkbox(type="checkbox" id="input-tower")
+        label.form__checkbox-label(for="input-tower") Удержал башню
+      .form__checkbox-wrap
+        input.form__checkbox-checkbox(type="checkbox" id="input-destroy")
+        label.form__checkbox-label(for="input-destroy") Разгромил отель
+
+    section.form__contacts
+      .form__input-wrap
+        label.form__label(for="input-phone") Номер телефона
+        input.form__input(id="input-phone" type="text" placeholder="Номер, пожалуйста")
+      .form__input-wrap
+        label.form__label(for="input-mail") адресок почты
+        input.form__input(id="input-mail" type="text" placeholder="Введите почту *")
+
+    section.form__app
+      .form__radio-wrap
+        input.form__radio-checkbox(id="radio-ios" type="radio" name="radio-applications")
+        label.form__radio-label(for="radio-ios") Pink для iOS
+      .form__radio-wrap
+        input.form__radio-checkbox(id="radio-android" type="radio" name="radio-applications")
+        label.form__radio-label(for="radio-android") Pink на Android
+      .form__radio-wrap
+        input.form__radio-checkbox(id="radio-wp" type="radio" name="radio-applications")
+        label.form__radio-label(for="radio-wp") Windows Phone
+
+    section.form__feedback
+      .form__textarea-wrap
+        textarea.form__textarea Можно прям в красках, не стесняясь в выражениях
+
+    section.form__submit
+      .form__submit-btn-wrap
+        button.button-primary(type="submit") Отправить форму
+      .form__submit-tooltip
+        span.form__submit-star *
+        |  — обязательные поля
+
+  include footer
