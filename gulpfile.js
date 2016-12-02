@@ -25,7 +25,8 @@ gulp.task('style', function() {
 });
 
 gulp.task('pug', function buildHTML() {
-  return gulp.src('pug/pages/*.pug')
+  return gulp.src('pug/pages/*.{pug,jade}')
+    .pipe(plumber())
     .pipe(pug({
       pretty: true,
       basedir: 'pug'

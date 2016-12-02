@@ -1,1 +1,14 @@
 @import "base/normalize";
+@import "base/variables";
+@import "base/font-face";
+@import "base/base";
+
+@import "blocks/header";
+@import "blocks/main-slide";
+@import "blocks/benefits";
+@import "blocks/feedback";
+@import "blocks/tariff";
+@import "blocks/contact";
+@import "blocks/map";
+
+@import "blocks/buttons/button-primary";

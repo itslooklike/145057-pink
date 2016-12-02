@@ -1,0 +1,36 @@
+.benefits{
+  padding: 45px 20px 300px;
+  background: #f2f2f2 url('/img/iphone-screen-mobile@1x.png') no-repeat center bottom -50px;
+}
+.benefits__title-wrap{
+  margin-bottom: 120px;
+  text-align: center;
+}
+.benefits__title{
+  margin: 0 0 40px;
+  color: #283645;
+  font-size: 24px;
+  font-weight: normal;
+
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+.benefits__item{
+  margin-bottom: 40px;
+  text-align: center;
+  line-height: 24px;
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+.benefits__item-title{
+  margin: 0 0 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.benefits__item-text{
+  margin: 0;
+  color: #283645;
+  font-size: 14px;
+}
