@@ -16,7 +16,7 @@
   text-align: center;
 
   &--new{
-    background-image: url('/img/bg-hit-tablet.svg');
+    background-image: url('../img/bg-hit-tablet.svg');
     background-repeat: no-repeat;
     background-position: 0 0;
 
@@ -59,12 +59,12 @@
     right: 20px;
     width: 25px;
     height: 25px;
-    background: url('/img/icon-yes.svg') 0 0/contain no-repeat;
+    background: url('../img/icon-yes.svg') 0 0/contain no-repeat;
     transform: translateY(-50%);
   }
   &--no:after{
     width: 25px;
     height: 25px;
-    background: url('/img/icon-no.svg') 0 0/contain no-repeat;
+    background: url('../img/icon-no.svg') 0 0/contain no-repeat;
   }
 }

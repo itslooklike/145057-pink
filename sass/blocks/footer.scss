@@ -36,13 +36,13 @@
     background-position: 50% 50%;
   }
   &--tw:before{
-    background-image: url('/img/icon-twitter.svg');
+    background-image: url('../img/icon-twitter.svg');
   }
   &--fb:before{
-    background-image: url('/img/icon-facebook.svg');
+    background-image: url('../img/icon-facebook.svg');
   }
   &--yt:before{
-    background-image: url('/img/icon-youtube.svg');
+    background-image: url('../img/icon-youtube.svg');
   }
 }
 .footer__copy-wrap{
@@ -64,6 +64,6 @@
     right: 0;
     width: 27px;
     height: 34px;
-    background: url('/img/logo-htmlacademy.svg') 0 0 no-repeat;
+    background: url('../img/logo-htmlacademy.svg') 0 0 no-repeat;
   }
 }

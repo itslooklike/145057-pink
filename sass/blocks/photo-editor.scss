@@ -30,15 +30,15 @@
   }
 
   &--crop:before{
-    background-image: url('/img/icon-editor-crop.svg');
+    background-image: url('../img/icon-editor-crop.svg');
   }
 
   &--fill:before{
-    background-image: url('/img/icon-editor-fill.svg');
+    background-image: url('../img/icon-editor-fill.svg');
   }
 
   &--contrast:before{
-    background-image: url('/img/icon-editor-contrast.svg');
+    background-image: url('../img/icon-editor-contrast.svg');
   }
 }
 .photo-editor__range-bar{
