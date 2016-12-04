@@ -1,36 +1,35 @@
-.main-slide{
+.main-slide {
   background-color: #1d2631;
 }
 
-.main-slide__content{
+.main-slide__content {
   height: 462px;
-  background: url('../img/iphone-hand-mobile@1x.png') 0 100%/auto 285px no-repeat,
-              url('../img/bg-back-mobile@1x.jpg') 50% 0/cover no-repeat;
+  background: url('../img/iphone-hand-mobile@1x.png') 0 100%/auto 285px no-repeat, url('../img/bg-back-mobile@1x.jpg') 50% 0/cover no-repeat;
 }
 
-.main-slide__app{
+.main-slide__app {
   padding-top: 28px;
   padding-bottom: 28px;
 }
 
-.main-slide__app-btn-wrap{
+.main-slide__app-btn-wrap {
   text-align: center;
   margin-bottom: 30px;
 }
 
-.main-slide__icon-list{
+.main-slide__icon-list {
   font-size: 0;
   text-align: center;
   margin-bottom: 28px;
 }
 
-.main-slide__icon-item{
+.main-slide__icon-item {
   display: inline-block;
   margin-left: 18px;
   margin-right: 18px;
 }
 
-.main-slide__text{
+.main-slide__text {
   padding-left: 20px;
   padding-right: 20px;
   color: #fff;

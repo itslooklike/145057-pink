@@ -1,11 +1,10 @@
-.tariff{
+.tariff {
   background-color: #f2f2f2;
   padding-top: 50px;
   padding-bottom: 50px;
 }
-.tariff__carusel{}
 
-.tariff__head{
+.tariff__head {
   position: relative;
   padding-top: 23px;
   padding-bottom: 21px;
@@ -15,12 +14,12 @@
   color: #fff;
   text-align: center;
 
-  &--new{
+  &--new {
     background-image: url('../img/bg-hit-tablet.svg');
     background-repeat: no-repeat;
     background-position: 0 0;
 
-    &:before{
+    &:before {
       content: 'ХИТ';
       position: absolute;
       top: 12px;
@@ -30,20 +29,23 @@
     }
   }
 }
-.tariff__head-title{
+
+.tariff__head-title {
   margin: 0 0 20px;
   font-size: 18px;
   font-weight: bold;
   line-height: 30px;
   text-transform: uppercase;
 }
-.tariff__head-text{
+
+.tariff__head-text {
   margin: 0;
   font-size: 24px;
   line-height: 30px;
   font-weight: 100;
 }
-.tariff__item{
+
+.tariff__item {
   position: relative;
   padding: 24px 23px 26px;
   border-bottom: 1px solid #e5e5e5;
@@ -52,7 +54,7 @@
   font-size: 14px;
   text-transform: uppercase;
 
-  &:after{
+  &:after {
     content: '';
     position: absolute;
     top: 50%;
@@ -62,7 +64,8 @@
     background: url('../img/icon-yes.svg') 0 0/contain no-repeat;
     transform: translateY(-50%);
   }
-  &--no:after{
+
+  &--no:after {
     width: 25px;
     height: 25px;
     background: url('../img/icon-no.svg') 0 0/contain no-repeat;

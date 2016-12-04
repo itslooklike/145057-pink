@@ -1,7 +1,8 @@
-.photo{
+.photo {
   padding: 40px 20px 20px;
 }
-.photo__title{
+
+.photo__title {
   margin: 0 0 20px;
   color: $COLOR-PRIMARY;
   font-size: 14px;
@@ -9,17 +10,20 @@
   line-height: 30px;
   text-align: center;
 }
-.photo-card{
+
+.photo-card {
   margin-bottom: 20px;
   background-color: #f2f2f2;
 }
-.photo-card__img-wrap{
+
+.photo-card__img-wrap {
   position: relative;
-  &--panorama{
+
+  &--panorama {
     margin-left: -20px;
     margin-right: -20px;
 
-    &:before{
+    &::before {
       content: 'ПАНОРАМА ДНЯ';
       position: absolute;
       top: 0;
@@ -32,23 +36,28 @@
     }
   }
 }
-.photo-card__content{
+
+.photo-card__content {
   padding: 30px 20px;
 }
-.photo-card__title{
+
+.photo-card__title {
   margin-bottom: 10px;
   font-size: 14px;
   font-weight: bold;
 }
-.photo-card__time{
+
+.photo-card__time {
   font-weight: 300;
 }
-.photo-card__desc{
+
+.photo-card__desc {
   margin: 0 0 20px;
   font-size: 14px;
   line-height: 24px;
 }
-.photo-card__like{
+
+.photo-card__like {
   position: relative;
   padding-left: 30px;
   margin: 0;
@@ -56,7 +65,7 @@
   font-size: 12px;
   text-transform: uppercase;
 
-  &:before{
+  &::before {
     content: '';
     position: absolute;
     top: 0;
@@ -66,7 +75,8 @@
     background: url('../img/icon-heart.svg') 0 0 no-repeat;
   }
 }
-.photo__footer-text{
+
+.photo__footer-text {
   margin: 0;
   color: $COLOR-PRIMARY;
   font-size: 14px;

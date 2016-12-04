@@ -4,11 +4,22 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var plumber = require('gulp-plumber');
 var postcss = require('gulp-postcss');
+var reporter = require('postcss-reporter');
+var stylelint = require('stylelint');
+var scss = require("postcss-scss");
 var pug = require('gulp-pug');
 var autoprefixer = require('autoprefixer');
 var server = require('browser-sync').create();
 
-gulp.task('style', function() {
+gulp.task('scss-lint', function() {
+  gulp.src(['sass/**/*.scss','!sass/base/normalize.scss'])
+    .pipe(postcss([
+      stylelint(),
+      reporter({ clearMessages: true })
+    ],{ syntax: scss }));
+});
+
+gulp.task('style', ['scss-lint'], function() {
   gulp.src('sass/style.scss')
     .pipe(plumber())
     .pipe(sass())

@@ -1,4 +1,4 @@
-.button-ternary{
+.button-ternary {
   display: inline-block;
   padding: 17px 37px 15px;
   border: 3px solid currentColor;
@@ -10,13 +10,13 @@
   line-height: 1;
   text-decoration: none;
 
-  &[disabled]{
+  &[disabled] {
     border-color: currentColor;
     color: #283645;
-    opacity: .1;
+    opacity: 0.1;
   }
 
-  &--full-width{
+  &--full-width {
     width: 100%;
   }
 }
