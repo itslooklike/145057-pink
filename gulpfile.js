@@ -24,6 +24,10 @@ gulp.task('style', function() {
     .pipe(server.stream());
 });
 
+gulp.task('pug-watch', function() {
+  gulp.watch('pug/**/*.{pug,jade}', ['pug']);
+});
+
 gulp.task('pug', function buildHTML() {
   return gulp.src('pug/pages/*.{pug,jade}')
     .pipe(plumber())
