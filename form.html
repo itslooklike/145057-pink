@@ -2,117 +2,116 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>HTML Academy: Пинк</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="header">
       <div class="header__head">
-        <div class="header__logo-wrap"><img src="http://placehold.it/57x33" class="header__logo"></div>
+        <div class="header__logo-wrap"><img class="header__logo" src="img/logo-pink-white-mobile.svg"></div>
         <div class="header__burger-wrap">
-          <div class="header__burger">X</div>
+          <div class="header__burger"><span class="header__burger-item"></span><span class="header__burger-item"></span><span class="header__burger-item"></span></div>
         </div>
       </div>
       <nav class="header__menu">
         <ul class="header__menu-list">
-          <li class="header__menu-item">Главная</li>
-          <li class="header__menu-item">Фотографии</li>
-          <li class="header__menu-item">Конкурс</li>
-          <li class="header__menu-item">HTML Academy</li>
+          <li class="header__menu-item"><a class="header__menu-link" href="/">Главная</a></li>
+          <li class="header__menu-item"><a class="header__menu-link" href="/photo.html">Фотографии</a></li>
+          <li class="header__menu-item"><a class="header__menu-link" href="/form.html">Конкурс</a></li>
+          <li class="header__menu-item"><a class="header__menu-link" href="#">HTML Academy</a></li>
         </ul>
       </nav>
     </header>
     <section class="main-slide-form">
       <h1 class="main-slide-form__title">Конкурс на самое безбашеное путешествие с Пинк</h1>
     </section>
-    <form action="" class="form">
+    <form class="form" action="">
       <section class="form__fio">
         <h2 class="form__title">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</h2>
-        <div class="form__input-wrap">
-          <label for="input-last-name" class="form__label">Фамилия:</label>
-          <input id="input-last-name" type="text" placeholder="Укажите фамилию *" class="form__input">
+        <div class="form__input-row">
+          <label class="form__label" for="input-last-name">Фамилия:</label>
+          <input class="form__input" id="input-last-name" type="text" placeholder="Укажите фамилию *">
         </div>
-        <div class="form__input-wrap">
-          <label for="input-first-name" class="form__label">Имя:</label>
-          <input id="input-first-name" type="text" placeholder="Введите ваше имя *" class="form__input">
+        <div class="form__input-row">
+          <label class="form__label" for="input-first-name">Имя:</label>
+          <input class="form__input" id="input-first-name" type="text" placeholder="Введите ваше имя *">
         </div>
-        <div class="form__input-wrap">
-          <label for="input-second-name" class="form__label">Отчество:</label>
-          <input id="input-second-name" type="text" placeholder="Ну и отчество тоже" class="form__input">
+        <div class="form__input-row">
+          <label class="form__label" for="input-second-name">Отчество:</label>
+          <input class="form__input" id="input-second-name" type="text" placeholder="Ну и отчество тоже">
         </div>
       </section>
       <section class="form__achievements">
         <h2 class="form__achievements-title">Ваши безбашенные достижения в путешествии</h2>
-        <div class="form__checkbox-wrap">
-          <input type="checkbox" id="input-shark" class="form__checkbox-checkbox">
-          <label for="input-shark" class="form__checkbox-label">Сделал селфи с акулой</label>
+        <div class="form__checkbox-row">
+          <input class="form__checkbox-checkbox" type="checkbox" id="input-shark">
+          <label class="form__checkbox-label" for="input-shark">Сделал селфи с акулой</label>
         </div>
-        <div class="form__checkbox-wrap">
-          <input type="checkbox" id="input-beach" class="form__checkbox-checkbox">
-          <label for="input-beach" class="form__checkbox-label">Обгорел на пляже</label>
+        <div class="form__checkbox-row">
+          <input class="form__checkbox-checkbox" type="checkbox" id="input-beach">
+          <label class="form__checkbox-label" for="input-beach">Обгорел на пляже</label>
         </div>
-        <div class="form__checkbox-wrap">
-          <input type="checkbox" id="input-norris" class="form__checkbox-checkbox">
-          <label for="input-norris" class="form__checkbox-label">Видел Чака Норриса</label>
+        <div class="form__checkbox-row">
+          <input class="form__checkbox-checkbox" type="checkbox" id="input-norris">
+          <label class="form__checkbox-label" for="input-norris">Видел Чака Норриса</label>
         </div>
-        <div class="form__checkbox-wrap">
-          <input type="checkbox" id="input-presents" class="form__checkbox-checkbox">
-          <label for="input-presents" class="form__checkbox-label">Накупил сувениров</label>
+        <div class="form__checkbox-row">
+          <input class="form__checkbox-checkbox" type="checkbox" id="input-presents">
+          <label class="form__checkbox-label" for="input-presents">Накупил сувениров</label>
         </div>
-        <div class="form__checkbox-wrap">
-          <input type="checkbox" id="input-tower" class="form__checkbox-checkbox">
-          <label for="input-tower" class="form__checkbox-label">Удержал башню</label>
+        <div class="form__checkbox-row">
+          <input class="form__checkbox-checkbox" type="checkbox" id="input-tower">
+          <label class="form__checkbox-label" for="input-tower">Удержал башню</label>
         </div>
-        <div class="form__checkbox-wrap">
-          <input type="checkbox" id="input-destroy" class="form__checkbox-checkbox">
-          <label for="input-destroy" class="form__checkbox-label">Разгромил отель</label>
+        <div class="form__checkbox-row">
+          <input class="form__checkbox-checkbox" type="checkbox" id="input-destroy">
+          <label class="form__checkbox-label" for="input-destroy">Разгромил отель</label>
         </div>
       </section>
       <section class="form__contacts">
-        <div class="form__input-wrap">
-          <label for="input-phone" class="form__label">Номер телефона</label>
-          <input id="input-phone" type="text" placeholder="Номер, пожалуйста" class="form__input">
+        <div class="form__input-row">
+          <label class="form__label" for="input-phone">Номер телефона</label>
+          <input class="form__input" id="input-phone" type="text" placeholder="Номер, пожалуйста">
         </div>
-        <div class="form__input-wrap">
-          <label for="input-mail" class="form__label">адресок почты</label>
-          <input id="input-mail" type="text" placeholder="Введите почту *" class="form__input">
+        <div class="form__input-row">
+          <label class="form__label" for="input-mail">адресок почты</label>
+          <input class="form__input" id="input-mail" type="text" placeholder="Введите почту *">
         </div>
       </section>
       <section class="form__app">
-        <div class="form__radio-wrap">
-          <input id="radio-ios" type="radio" name="radio-applications" class="form__radio-checkbox">
-          <label for="radio-ios" class="form__radio-label">Pink для iOS</label>
+        <h2 class="form__app-title">С каким приложением путешествовали?</h2>
+        <div class="form__radio-row">
+          <input class="form__radio-checkbox" id="radio-ios" type="radio" name="radio-applications">
+          <label class="form__radio-label" for="radio-ios">Pink для iOS</label>
         </div>
-        <div class="form__radio-wrap">
-          <input id="radio-android" type="radio" name="radio-applications" class="form__radio-checkbox">
-          <label for="radio-android" class="form__radio-label">Pink на Android</label>
+        <div class="form__radio-row">
+          <input class="form__radio-checkbox" id="radio-android" type="radio" name="radio-applications">
+          <label class="form__radio-label" for="radio-android">Pink на Android</label>
         </div>
-        <div class="form__radio-wrap">
-          <input id="radio-wp" type="radio" name="radio-applications" class="form__radio-checkbox">
-          <label for="radio-wp" class="form__radio-label">Windows Phone</label>
+        <div class="form__radio-row">
+          <input class="form__radio-checkbox" id="radio-wp" type="radio" name="radio-applications">
+          <label class="form__radio-label" for="radio-wp">Windows Phone</label>
         </div>
       </section>
       <section class="form__feedback">
+        <h2 class="form__feedback-title">Опишите свои эмоции</h2>
         <div class="form__textarea-wrap">
           <textarea class="form__textarea">Можно прям в красках, не стесняясь в выражениях</textarea>
         </div>
       </section>
       <section class="form__submit">
         <div class="form__submit-btn-wrap">
-          <button type="submit" class="button-primary">Отправить форму</button>
+          <button class="button-secondary button-secondary--full-width" type="submit">Отправить форму</button>
         </div>
         <div class="form__submit-tooltip"><span class="form__submit-star">*</span> — обязательные поля</div>
       </section>
     </form>
-    <footer class="form-footer">
-      <div class="form-footer__logo-wrap"><img src="http://placehold.it/150x50" class="form-footer__logo"></div>
-      <ul class="form-footer__icon-list">
-        <li class="form-footer__icon-item form-footer__icon-item--tw"><a href="#" class="form-footer__icon-link"></a></li>
-        <li class="form-footer__icon-item form-footer__icon-item--fb"><a href="#" class="form-footer__icon-link"></a></li>
-        <li class="form-footer__icon-item form-footer__icon-item--yt"><a href="#" class="form-footer__icon-link"></a></li>
-      </ul>
-      <div class="form-footer__copy-wrap">
-        <p class="form-footer__copy">Разработано</p>
-      </div>
+    <footer class="footer">
+      <div class="footer__logo-wrap"><img class="footer__logo" src="img/logo-pink-blue-mobile.svg"></div>
+      <div class="footer__icon-list"><a class="footer__icon-link footer__icon-link--tw" href="#"></a><a class="footer__icon-link footer__icon-link--fb" href="#"></a><a class="footer__icon-link footer__icon-link--yt" href="#"></a></div>
+      <p class="footer__copy-wrap"><span class="footer__copy">Разработано</span></p>
     </footer>
   </body>
 </html>

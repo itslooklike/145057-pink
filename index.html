@@ -2,35 +2,38 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>HTML Academy: Пинк</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="header">
       <div class="header__head">
-        <div class="header__logo-wrap"><img src="http://placehold.it/57x33" class="header__logo"></div>
+        <div class="header__logo-wrap"><img class="header__logo" src="img/logo-pink-white-mobile.svg"></div>
         <div class="header__burger-wrap">
-          <div class="header__burger">X</div>
+          <div class="header__burger"><span class="header__burger-item"></span><span class="header__burger-item"></span><span class="header__burger-item"></span></div>
         </div>
       </div>
       <nav class="header__menu">
         <ul class="header__menu-list">
-          <li class="header__menu-item">Главная</li>
-          <li class="header__menu-item">Фотографии</li>
-          <li class="header__menu-item">Конкурс</li>
-          <li class="header__menu-item">HTML Academy</li>
+          <li class="header__menu-item"><a class="header__menu-link" href="/">Главная</a></li>
+          <li class="header__menu-item"><a class="header__menu-link" href="/photo.html">Фотографии</a></li>
+          <li class="header__menu-item"><a class="header__menu-link" href="/form.html">Конкурс</a></li>
+          <li class="header__menu-item"><a class="header__menu-link" href="#">HTML Academy</a></li>
         </ul>
       </nav>
     </header>
     <section class="main-slide">
       <div class="main-slide__content"></div>
-      <div class="main-slide-app">
-        <div class="main-slide-app__download-btn"></div>
-        <ul class="main-slide-app__icon-list">
-          <li class="main-slide-app__icon-item"><img src="http://placehold.it/50x60" class="main-slide-app__icon-img"></li>
-          <li class="main-slide-app__icon-item"><img src="http://placehold.it/50x60" class="main-slide-app__icon-img"></li>
-          <li class="main-slide-app__icon-item"><img src="http://placehold.it/50x60" class="main-slide-app__icon-img"></li>
+      <div class="main-slide__app">
+        <div class="main-slide__app-btn-wrap"><a class="button-primary" href="#"><span class="button-primary__text">Скачать приложение</span></a></div>
+        <ul class="main-slide__icon-list">
+          <li class="main-slide__icon-item"><img class="main-slide__icon-img" src="img/logo-apple.svg"></li>
+          <li class="main-slide__icon-item"><img class="main-slide__icon-img" src="img/logo-android.svg"></li>
+          <li class="main-slide__icon-item"><img class="main-slide__icon-img" src="img/logo-microsoft.svg"></li>
         </ul>
-        <p class="main-slide-app__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+        <p class="main-slide__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
       </div>
     </section>
     <section class="benefits">
@@ -58,15 +61,19 @@
       <p class="feedback__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
     </section>
     <section class="tariff">
-      <div class="tariff__head">
-        <h5 class="tariff__head-title">Стандарт</h5>
-        <p class="tariff__head-text">3,99 USD</p>
+      <div class="tariff__carusel">
+        <div class="tariff__slide">
+          <div class="tariff__head tariff__head--new">
+            <h5 class="tariff__head-title">Стандарт</h5>
+            <p class="tariff__head-text">3,99 USD</p>
+          </div>
+          <ul class="tariff__list">
+            <li class="tariff__item">Розовый фильтр</li>
+            <li class="tariff__item">Смайлики</li>
+            <li class="tariff__item tariff__item--no">Комментарии</li>
+          </ul>
+        </div>
       </div>
-      <ul class="tariff__list">
-        <li class="tariff__item">Розовый фильтр</li>
-        <li class="tariff__item">Смайлики</li>
-        <li class="tariff__item">Комментарии</li>
-      </ul>
     </section>
     <section class="contact">
       <h4 class="contact__title">Остались вопросы? Свяжитесь с нами!</h4>

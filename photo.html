@@ -2,33 +2,36 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>HTML Academy: Пинк</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="header">
       <div class="header__head">
-        <div class="header__logo-wrap"><img src="http://placehold.it/57x33" class="header__logo"></div>
+        <div class="header__logo-wrap"><img class="header__logo" src="img/logo-pink-white-mobile.svg"></div>
         <div class="header__burger-wrap">
-          <div class="header__burger">X</div>
+          <div class="header__burger"><span class="header__burger-item"></span><span class="header__burger-item"></span><span class="header__burger-item"></span></div>
         </div>
       </div>
       <nav class="header__menu">
         <ul class="header__menu-list">
-          <li class="header__menu-item">Главная</li>
-          <li class="header__menu-item">Фотографии</li>
-          <li class="header__menu-item">Конкурс</li>
-          <li class="header__menu-item">HTML Academy</li>
+          <li class="header__menu-item"><a class="header__menu-link" href="/">Главная</a></li>
+          <li class="header__menu-item"><a class="header__menu-link" href="/photo.html">Фотографии</a></li>
+          <li class="header__menu-item"><a class="header__menu-link" href="/form.html">Конкурс</a></li>
+          <li class="header__menu-item"><a class="header__menu-link" href="#">HTML Academy</a></li>
         </ul>
       </nav>
     </header>
     <section class="main-slide-photo">
-      <h1 class="main-slide-photo__text">Фотографии пользователей</h1>
+      <h1 class="main-slide-photo__title">Фотографии пользователей</h1>
     </section>
     <section class="photo">
       <h2 class="photo__title">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</h2>
       <div class="photo__card-catalog">
         <div class="photo-card">
-          <div class="photo-card__img-wrap photo-card__img-wrap--panorama"><img src="http://placehold.it/320x140" class="photo-card__img"></div>
+          <div class="photo-card__img-wrap photo-card__img-wrap--panorama"><img class="photo-card__img" src="img/panorama-mobile@1x.jpg"></div>
           <div class="photo-card__content">
             <div class="photo-card__title">Анна<span class="photo-card__time"> (5 минут назад)</span></div>
             <p class="photo-card__desc">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
@@ -36,7 +39,7 @@
           </div>
         </div>
         <div class="photo-card">
-          <div class="photo-card__img-wrap"><img src="http://placehold.it/280x140" class="photo-card__img"></div>
+          <div class="photo-card__img-wrap"><img class="photo-card__img" src="img/photo-1-mobile@1x.jpg"></div>
           <div class="photo-card__content">
             <div class="photo-card__title">Левон<span class="photo-card__time"> (5 часов назад)</span></div>
             <p class="photo-card__desc">Вчера он на луну летал, сегодня в руки к нам попал.</p>
@@ -44,7 +47,7 @@
           </div>
         </div>
         <div class="photo-card">
-          <div class="photo-card__img-wrap"><img src="http://placehold.it/280x140" class="photo-card__img"></div>
+          <div class="photo-card__img-wrap"><img class="photo-card__img" src="img/photo-2-mobile@1x.jpg"></div>
           <div class="photo-card__content">
             <div class="photo-card__title">Антон<span class="photo-card__time"> (12 часов назад)</span></div>
             <p class="photo-card__desc">Соседи будут рады!</p>
@@ -52,7 +55,7 @@
           </div>
         </div>
         <div class="photo-card">
-          <div class="photo-card__img-wrap"><img src="http://placehold.it/280x140" class="photo-card__img"></div>
+          <div class="photo-card__img-wrap"><img class="photo-card__img" src="img/photo-3-mobile@1x.jpg"></div>
           <div class="photo-card__content">
             <div class="photo-card__title">Борис<span class="photo-card__time"> (20 часов назад)</span></div>
             <p class="photo-card__desc">Здесь могла быть ваша цитата о высоком и вечном.</p>
@@ -60,7 +63,7 @@
           </div>
         </div>
         <div class="photo-card">
-          <div class="photo-card__img-wrap"><img src="http://placehold.it/280x140" class="photo-card__img"></div>
+          <div class="photo-card__img-wrap"><img class="photo-card__img" src="img/photo-4-mobile@1x.jpg"></div>
           <div class="photo-card__content">
             <div class="photo-card__title">Сергей<span class="photo-card__time"> (25 часов назад)</span></div>
             <p class="photo-card__desc">Самая кубанская в мире!</p>
@@ -68,7 +71,7 @@
           </div>
         </div>
         <div class="photo-card">
-          <div class="photo-card__img-wrap"><img src="http://placehold.it/280x140" class="photo-card__img"></div>
+          <div class="photo-card__img-wrap"><img class="photo-card__img" src="img/photo-5-mobile@1x.jpg"></div>
           <div class="photo-card__content">
             <div class="photo-card__title">Максим<span class="photo-card__time"> (40 часов назад)</span></div>
             <p class="photo-card__desc">Где снег-то?</p>
@@ -76,7 +79,7 @@
           </div>
         </div>
         <div class="photo-card">
-          <div class="photo-card__img-wrap"><img src="http://placehold.it/280x140" class="photo-card__img"></div>
+          <div class="photo-card__img-wrap"><img class="photo-card__img" src="img/photo-6-mobile@1x.jpg"></div>
           <div class="photo-card__content">
             <div class="photo-card__title">Надежда<span class="photo-card__time"> (45 часов назад)</span></div>
             <p class="photo-card__desc">Всем GM и взаимные лайки!</p>
@@ -89,32 +92,28 @@
       </div>
     </section>
     <section class="photo-editor">
-      <div class="photo-editor__img-wrap"><img src="http://placehold.it/280x370" class="photo-editor__img"></div>
+      <div class="photo-editor__img-wrap"><img class="photo-editor__img" src="img/photo-7-mobile@1x.jpg"></div>
       <ul class="photo-editor__tools-list">
-        <li class="photo-editor__tools-item"></li>
-        <li class="photo-editor__tools-item"></li>
-        <li class="photo-editor__tools-item"></li>
+        <li class="photo-editor__tools-item photo-editor__tools-item--crop"></li>
+        <li class="photo-editor__tools-item photo-editor__tools-item--fill"></li>
+        <li class="photo-editor__tools-item photo-editor__tools-item--contrast"></li>
       </ul>
-      <div class="photo-editor__range-bar"></div>
+      <div class="photo-editor__range-bar">
+        <div class="photo-editor__range-dot photo-editor__range-dot--position"></div>
+      </div>
       <div class="photo-editor__buttons-wrap">
         <div class="photo-editor__btn-wrap">
-          <button type="button" class="button-primary">Запостить</button>
+          <button class="button-ternary button-ternary--full-width" type="button">Запостить</button>
         </div>
         <div class="photo-editor__btn-wrap">
-          <button type="button" disabled class="button-primary">Отмена</button>
+          <button class="button-ternary button-ternary--full-width" type="button" disabled>Отмена</button>
         </div>
       </div>
     </section>
-    <footer class="form-footer">
-      <div class="form-footer__logo-wrap"><img src="http://placehold.it/150x50" class="form-footer__logo"></div>
-      <ul class="form-footer__icon-list">
-        <li class="form-footer__icon-item form-footer__icon-item--tw"><a href="#" class="form-footer__icon-link"></a></li>
-        <li class="form-footer__icon-item form-footer__icon-item--fb"><a href="#" class="form-footer__icon-link"></a></li>
-        <li class="form-footer__icon-item form-footer__icon-item--yt"><a href="#" class="form-footer__icon-link"></a></li>
-      </ul>
-      <div class="form-footer__copy-wrap">
-        <p class="form-footer__copy">Разработано</p>
-      </div>
+    <footer class="footer">
+      <div class="footer__logo-wrap"><img class="footer__logo" src="img/logo-pink-blue-mobile.svg"></div>
+      <div class="footer__icon-list"><a class="footer__icon-link footer__icon-link--tw" href="#"></a><a class="footer__icon-link footer__icon-link--fb" href="#"></a><a class="footer__icon-link footer__icon-link--yt" href="#"></a></div>
+      <p class="footer__copy-wrap"><span class="footer__copy">Разработано</span></p>
     </footer>
   </body>
 </html>

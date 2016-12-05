@@ -1,0 +1,22 @@
+.button-ternary {
+  display: inline-block;
+  padding: 17px 37px 15px;
+  border: 3px solid currentColor;
+  border-radius: 30px;
+  background: none;
+  color: $COLOR-SECONDARY;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1;
+  text-decoration: none;
+
+  &[disabled] {
+    border-color: currentColor;
+    color: #283645;
+    opacity: 0.1;
+  }
+
+  &--full-width {
+    width: 100%;
+  }
+}

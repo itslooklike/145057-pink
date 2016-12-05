@@ -1,0 +1,14 @@
+.button-secondary {
+  padding: 23px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2aab6d;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  &--full-width {
+    width: 100%;
+  }
+}
