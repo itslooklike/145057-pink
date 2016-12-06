@@ -19,7 +19,7 @@
     background-repeat: no-repeat;
     background-position: 0 0;
 
-    &:before {
+    &::before {
       content: 'ХИТ';
       position: absolute;
       top: 12px;
@@ -54,7 +54,7 @@
   font-size: 14px;
   text-transform: uppercase;
 
-  &:after {
+  &::after {
     content: '';
     position: absolute;
     top: 50%;
@@ -65,7 +65,7 @@
     transform: translateY(-50%);
   }
 
-  &--no:after {
+  &--no::after {
     width: 25px;
     height: 25px;
     background: url('../img/icon-no.svg') 0 0/contain no-repeat;
