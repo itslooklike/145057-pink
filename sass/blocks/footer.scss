@@ -1,10 +1,22 @@
 .footer {
+  @include content-container;
+
   padding-top: 40px;
   padding-bottom: 40px;
+
+  @include tablet {
+    @include clearfix;
+
+    text-align: center;
+  }
 }
 
 .footer__logo-wrap {
   margin-bottom: 40px;
+
+  @include tablet {
+    float: left;
+  }
 }
 
 .footer__logo {
@@ -17,6 +29,10 @@
   display: flex;
   justify-content: center;
   margin-bottom: 40px;
+
+  @include tablet {
+    display: inline-block;
+  }
 }
 
 .footer__icon-link {
@@ -28,6 +44,10 @@
   border-radius: 50%;
   margin-right: 9px;
   margin-left: 9px;
+
+  @include tablet {
+    display: inline-block;
+  }
 
   &::before {
     content: '';
@@ -60,6 +80,10 @@
   font-weight: normal;
   line-height: 18px;
   text-align: center;
+
+  @include tablet {
+    float: right;
+  }
 }
 
 .footer__copy {

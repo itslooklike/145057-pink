@@ -4,6 +4,12 @@
   padding-bottom: 50px;
 }
 
+.tariff__slide {
+  @include tablet {
+    display: none;
+  }
+}
+
 .tariff__head {
   position: relative;
   padding-top: 23px;
@@ -68,6 +74,96 @@
   &--no::after {
     width: 25px;
     height: 25px;
+    background: url('../img/icon-no.svg') 0 0/contain no-repeat;
+  }
+}
+
+
+.tariff__table {
+  display: none;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+
+  @include tablet {
+    display: table;
+  }
+}
+
+.tariff__thead {
+  position: relative;
+  padding-top: 23px;
+  padding-bottom: 21px;
+  border: 1px solid #e5e5e5;
+  background-color: $COLOR-PRIMARY;
+  background-clip: padding-box;
+  color: #fff;
+  text-align: center;
+
+  &--empty {
+    border: none;
+    background: none;
+  }
+
+  &--new {
+    background-image: url('../img/bg-hit-tablet.svg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    &::before {
+      content: 'ХИТ';
+      position: absolute;
+      top: 12px;
+      left: 3px;
+      display: block;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.tariff__thead-title {
+  display: inline-block;
+  width: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.tariff__thead-cost {
+  display: inline-block;
+  width: 100%;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 100;
+}
+
+.tariff__cell {
+  position: relative;
+  padding: 24px 23px 26px;
+  border: 1px solid #e5e5e5;
+  background-color: #fff;
+  background-clip: padding-box;
+  color: $COLOR-PRIMARY;
+  font-size: 14px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 20px;
+    width: 25px;
+    height: 25px;
+    transform: translate(-50%, -50%);
+  }
+
+  &--yes::after {
+    background: url('../img/icon-yes.svg') 0 0/contain no-repeat;
+  }
+
+  &--no::after {
+
     background: url('../img/icon-no.svg') 0 0/contain no-repeat;
   }
 }
