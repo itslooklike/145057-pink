@@ -9,55 +9,66 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__head">
-        <div class="header__logo-wrap"><img class="header__logo" src="img/logo-pink-white-mobile.svg"></div>
-        <div class="header__burger-wrap">
-          <div class="header__burger"><span class="header__burger-item"></span><span class="header__burger-item"></span><span class="header__burger-item"></span></div>
+      <div class="header__inner">
+        <div class="header__head">
+          <div class="header__logo-wrap"><img class="header__logo" src="img/logo-pink-white-mobile.svg"></div>
+          <div class="header__burger-wrap">
+            <div class="header__burger"><span class="header__burger-item"></span><span class="header__burger-item"></span><span class="header__burger-item"></span></div>
+          </div>
         </div>
+        <nav class="header__menu">
+          <ul class="header__menu-list">
+            <li class="header__menu-item"><a class="header__menu-link" href="/">Главная</a></li>
+            <li class="header__menu-item"><a class="header__menu-link" href="/photo.html">Фотографии</a></li>
+            <li class="header__menu-item"><a class="header__menu-link" href="/form.html">Конкурс</a></li>
+            <li class="header__menu-item"><a class="header__menu-link" href="#">HTML Academy</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav class="header__menu">
-        <ul class="header__menu-list">
-          <li class="header__menu-item"><a class="header__menu-link" href="/">Главная</a></li>
-          <li class="header__menu-item"><a class="header__menu-link" href="/photo.html">Фотографии</a></li>
-          <li class="header__menu-item"><a class="header__menu-link" href="/form.html">Конкурс</a></li>
-          <li class="header__menu-item"><a class="header__menu-link" href="#">HTML Academy</a></li>
-        </ul>
-      </nav>
     </header>
     <section class="main-slide">
-      <div class="main-slide__content"></div>
-      <div class="main-slide__app">
-        <div class="main-slide__app-btn-wrap"><a class="button-primary" href="#"><span class="button-primary__text">Скачать приложение</span></a></div>
-        <ul class="main-slide__icon-list">
-          <li class="main-slide__icon-item"><img class="main-slide__icon-img" src="img/logo-apple.svg"></li>
-          <li class="main-slide__icon-item"><img class="main-slide__icon-img" src="img/logo-android.svg"></li>
-          <li class="main-slide__icon-item"><img class="main-slide__icon-img" src="img/logo-microsoft.svg"></li>
-        </ul>
-        <p class="main-slide__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+      <div class="main-slide__inner">
+        <div class="main-slide__app">
+          <h1 class="main-slide__title">Взгляните на жизнь иначе!</h1>
+          <div class="main-slide__app-btn-wrap"><a class="button-primary" href="#"><span class="button-primary__text">Скачать приложение</span></a></div>
+          <ul class="main-slide__icon-list">
+            <li class="main-slide__icon-item"><img class="main-slide__icon-img" src="img/logo-apple.svg"></li>
+            <li class="main-slide__icon-item"><img class="main-slide__icon-img" src="img/logo-android.svg"></li>
+            <li class="main-slide__icon-item"><img class="main-slide__icon-img" src="img/logo-microsoft.svg"></li>
+          </ul>
+          <p class="main-slide__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+        </div>
       </div>
     </section>
     <section class="benefits">
-      <div class="benefits__title-wrap">
-        <h2 class="benefits__title">Устали от серости мегаполиса?</h2>
-        <h3 class="benefits__title">Нам есть, что вам предложить!</h3>
+      <div class="benefits__inner">
+        <div class="benefits__title-wrap">
+          <h2 class="benefits__title">Устали от серости мегаполиса?</h2>
+          <h3 class="benefits__title benefits__title--subtitle">Нам есть, что вам предложить!</h3>
+        </div>
+        <div class="benefits__list-wrap">
+          <ul class="benefits__list">
+            <li class="benefits__item">
+              <h4 class="benefits__item-title">Поднимает настроение</h4>
+              <p class="benefits__item-text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+            </li>
+            <li class="benefits__item">
+              <h4 class="benefits__item-title">Меняет мир вокруг</h4>
+              <p class="benefits__item-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+            </li>
+            <li class="benefits__item">
+              <h4 class="benefits__item-title">Заводит новых друзей</h4>
+              <p class="benefits__item-text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+            </li>
+          </ul>
+        </div>
       </div>
-      <ul class="benefits__list">
-        <li class="benefits__item">
-          <h4 class="benefits__item-title">Поднимает настроение</h4>
-          <p class="benefits__item-text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-        </li>
-        <li class="benefits__item">
-          <h4 class="benefits__item-title">Меняет мир вокруг</h4>
-          <p class="benefits__item-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-        </li>
-        <li class="benefits__item">
-          <h4 class="benefits__item-title">Заводит новых друзей</h4>
-          <p class="benefits__item-text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
-        </li>
-      </ul>
     </section>
     <section class="feedback">
-      <h4 class="feedback__title">Николай Петров</h4>
+      <div class="feedback__title-wrap">
+        <h4 class="feedback__title">Николай Петров</h4>
+        <p class="feedback__subtitle">25 лет, водитель трамвая</p>
+      </div>
       <p class="feedback__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
     </section>
     <section class="tariff">
@@ -73,6 +84,32 @@
             <li class="tariff__item tariff__item--no">Комментарии</li>
           </ul>
         </div>
+        <table class="tariff__table">
+          <tr class="tariff__row">
+            <th class="tariff__thead tariff__thead--empty">&nbsp;</th>
+            <th class="tariff__thead"><span class="tariff__thead-title">База</span><span class="tariff__thead-cost">3,99 USD</span></th>
+            <th class="tariff__thead tariff__thead--new"><span class="tariff__thead-title">Стандарт</span><span class="tariff__thead-cost">3,99 USD</span></th>
+            <th class="tariff__thead"><span class="tariff__thead-title">Анлим</span><span class="tariff__thead-cost">3,99 USD</span></th>
+          </tr>
+          <tr class="tariff__row">
+            <td class="tariff__cell">Розовый фильтр</td>
+            <td class="tariff__cell tariff__cell--yes"></td>
+            <td class="tariff__cell tariff__cell--no"></td>
+            <td class="tariff__cell tariff__cell--no"></td>
+          </tr>
+          <tr class="tariff__row">
+            <td class="tariff__cell">Смайлики</td>
+            <td class="tariff__cell tariff__cell--yes"></td>
+            <td class="tariff__cell tariff__cell--yes"></td>
+            <td class="tariff__cell tariff__cell--no"></td>
+          </tr>
+          <tr class="tariff__row">
+            <td class="tariff__cell">Комментарии</td>
+            <td class="tariff__cell tariff__cell--yes"></td>
+            <td class="tariff__cell tariff__cell--yes"></td>
+            <td class="tariff__cell tariff__cell--yes"></td>
+          </tr>
+        </table>
       </div>
     </section>
     <section class="contact">

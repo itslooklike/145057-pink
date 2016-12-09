@@ -1,25 +1,56 @@
 .photo-editor {
-  padding: 20px 20px 40px;
   background-color: $COLOR-BACKGROUND-PRIMARY;
+
+  @include tablet {
+    font-size: 0;
+  }
+}
+
+.photo-editor__inner {
+  @include content-container;
+
+  padding: 20px 20px 40px;
 }
 
 .photo-editor__img-wrap {
   margin-bottom: 40px;
+
+  @include tablet {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+  }
+}
+
+.photo-editor__tools-wrap {
+  @include tablet {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+  }
 }
 
 .photo-editor__tools-list {
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
+
+  @include tablet {
+    flex-wrap: wrap;
+  }
 }
 
 .photo-editor__tools-item {
   position: relative;
   width: 50px;
   height: 50px;
-  margin-left: 25px;
   margin-right: 25px;
+  margin-left: 25px;
   cursor: pointer;
+
+  @include tablet {
+    width: 100%;
+  }
 
   &::before {
     content: '';

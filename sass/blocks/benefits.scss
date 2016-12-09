@@ -1,21 +1,85 @@
 .benefits {
-  padding: 45px 20px 300px;
-  background: #f2f2f2 url('../img/iphone-screen-mobile@1x.png') no-repeat center bottom -50px;
+  background-color: #f2f2f2;
+}
+
+.benefits__inner {
+  @include content-container;
+
+  padding-top: 45px;
 }
 
 .benefits__title-wrap {
   margin-bottom: 120px;
   text-align: center;
+
+  @include tablet {
+    margin-bottom: 50px;
+  }
 }
 
 .benefits__title {
   margin: 0 0 40px;
   color: $COLOR-PRIMARY;
   font-size: 24px;
-  font-weight: normal;
+  font-weight: 300;
+
+  @include tablet {
+    margin-bottom: 0;
+    font-size: 40px;
+  }
+
+  @include desktop {
+    font-size: 50px;
+  }
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  &--subtitle {
+    @include tablet {
+      max-width: 400px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    @include desktop {
+      max-width: 500px;
+    }
+  }
+}
+
+.benefits__list-wrap {
+  padding-bottom: 300px;
+  background: url('../img/iphone-screen-mobile@1x.png') no-repeat center bottom -50px;
+  background-size: 157px auto;
+
+  @include tablet {
+    max-width: 650px;
+    padding-bottom: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    background-position: left 20px bottom -60px;
+    background-size: 241px auto;
+  }
+
+  @include desktop {
+    max-width: none;
+    padding-top: 300px;
+    background: none; // временно убрал картинку
+  }
+}
+
+.benefits__list {
+  @include tablet {
+    max-width: 300px;
+    margin-left: auto;
+  }
+
+  @include desktop {
+    max-width: none;
+    margin-left: 0;
+    font-size: 0;
   }
 }
 
@@ -23,6 +87,19 @@
   margin-bottom: 40px;
   text-align: center;
   line-height: 24px;
+
+  @include tablet {
+    margin-bottom: 30px;
+    text-align: left;
+  }
+
+  @include desktop {
+    display: inline-block;
+    width: calc(100% / 3);
+    margin-bottom: 0;
+    text-align: center;
+    vertical-align: top;
+  }
 
   &:last-child {
     margin-bottom: 0;
@@ -33,10 +110,27 @@
   margin: 0 0 20px;
   font-size: 18px;
   font-weight: bold;
+
+  @include tablet {
+    margin-bottom: 10px;
+  }
+
+  @include desktop {
+    max-width: 236px;
+    margin: 0 auto 30px;
+    font-size: 30px;
+  }
 }
 
 .benefits__item-text {
   margin: 0;
   color: $COLOR-PRIMARY;
   font-size: 14px;
+
+  @include desktop {
+    max-width: 236px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 18px;
+  }
 }

@@ -1,22 +1,38 @@
 .footer {
+  @include content-container;
+
   padding-top: 40px;
   padding-bottom: 40px;
+
+  @include tablet {
+    @include clearfix;
+
+    text-align: center;
+  }
 }
 
 .footer__logo-wrap {
   margin-bottom: 40px;
+
+  @include tablet {
+    float: left;
+  }
 }
 
 .footer__logo {
   max-width: 150px;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
 }
 
 .footer__icon-list {
   display: flex;
   justify-content: center;
   margin-bottom: 40px;
+
+  @include tablet {
+    display: inline-block;
+  }
 }
 
 .footer__icon-link {
@@ -26,16 +42,20 @@
   height: 51px;
   border: 3px solid $COLOR-PRIMARY;
   border-radius: 50%;
-  margin-left: 9px;
   margin-right: 9px;
+  margin-left: 9px;
+
+  @include tablet {
+    display: inline-block;
+  }
 
   &::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
     width: 100%;
+    height: 100%;
     background-repeat: no-repeat;
     background-position: 50% 50%;
   }
@@ -60,6 +80,10 @@
   font-weight: normal;
   line-height: 18px;
   text-align: center;
+
+  @include tablet {
+    float: right;
+  }
 }
 
 .footer__copy {

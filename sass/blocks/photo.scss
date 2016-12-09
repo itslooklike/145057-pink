@@ -1,38 +1,96 @@
+$photo-slide-padding-mobile: 20px;
+$photo-slide-padding-tablet: 40px;
+
 .photo {
-  padding: 40px 20px 20px;
+  padding: 40px $photo-slide-padding-mobile 20px;
+
+  @include tablet {
+    padding-top: 100px;
+    padding-left: $photo-slide-padding-tablet;
+    padding-right: $photo-slide-padding-tablet;
+  }
 }
 
 .photo__title {
-  margin: 0 0 20px;
+  margin: 0 auto 20px;
   color: $COLOR-PRIMARY;
   font-size: 14px;
   font-weight: normal;
   line-height: 30px;
   text-align: center;
+
+  @include tablet {
+    max-width: 450px;
+    margin-bottom: 80px;
+    font-size: 18px;
+  }
+}
+
+.photo__card-catalog {
+  @include tablet {
+    font-size: 0;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
 }
 
 .photo-card {
   margin-bottom: 20px;
   background-color: #f2f2f2;
+
+  @include tablet {
+    display: inline-block;
+    width: calc(50% - 20px);
+    margin-left: 10px;
+    margin-right: 10px;
+    vertical-align: top;
+  }
+
+  @include desktop {
+    width: calc(33% - 20px);
+  }
+
+  &--panorama {
+    @include tablet {
+      display: block;
+      width: auto;
+    }
+
+    @include desktop {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
 }
 
 .photo-card__img-wrap {
   position: relative;
 
   &--panorama {
-    margin-left: -20px;
-    margin-right: -20px;
+    margin-left: $photo-slide-padding-mobile * -1;
+    margin-right: $photo-slide-padding-mobile * -1;
+
+    @include tablet {
+      margin-left: $photo-slide-padding-tablet * -1;
+      margin-right: $photo-slide-padding-tablet * -1;
+    }
 
     &::before {
       content: 'ПАНОРАМА ДНЯ';
       position: absolute;
       top: 0;
-      right: 20px;
+      right: $photo-slide-padding-mobile;
       padding: 12px 20px 13px;
       background-color: $COLOR-SECONDARY;
       color: #fff;
+      font-size: 12px;
       font-weight: bold;
       text-transform: uppercase;
+
+      @include tablet {
+        top: 60px;
+        right: $photo-slide-padding-tablet;
+      }
     }
   }
 }
@@ -76,6 +134,13 @@
   }
 }
 
+.photo__footer {
+  @include tablet {
+    padding-top: 50px;
+    padding-bottom: 70px;
+  }
+}
+
 .photo__footer-text {
   margin: 0;
   color: $COLOR-PRIMARY;
@@ -83,4 +148,8 @@
   font-weight: normal;
   line-height: 30px;
   text-align: center;
+
+  @include tablet {
+    font-size: 18px;
+  }
 }

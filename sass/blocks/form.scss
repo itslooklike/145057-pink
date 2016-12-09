@@ -1,8 +1,15 @@
-.form__fio {
-  padding-top: 50px;
-  padding-left: 20px;
-  padding-right: 20px;
-  background-color: #fff;
+.form {
+  @include desktop {
+    font-size: 0;
+  }
+}
+
+.form__title-wrap {
+  padding: 50px 20px 0;
+
+  @include tablet {
+    padding-top: 100px;
+  }
 }
 
 .form__title {
@@ -12,10 +19,33 @@
   font-weight: normal;
   line-height: 30px;
   text-align: center;
+
+  @include tablet {
+    max-width: 500px;
+    margin: 0 auto 80px;
+    font-size: 18px;
+  }
+}
+
+.form__fio {
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: #fff;
+
+  @include desktop {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+  }
 }
 
 .form__input-row {
   margin-bottom: 20px;
+
+  @include tablet {
+    display: table;
+    width: 100%;
+  }
 }
 
 .form__label {
@@ -24,6 +54,10 @@
   margin-bottom: 20px;
   color: $COLOR-SECONDARY;
   text-transform: uppercase;
+
+  @include tablet {
+    display: table-cell;
+  }
 }
 
 .form__input {
@@ -32,11 +66,33 @@
   border: 2px solid #e5e5e5;
   font-size: 18px;
   line-height: 30px;
+
+  @include tablet {
+    display: table-cell;
+  }
+}
+
+.form__fieldset {
+  border-color: #e5e5e5;
+}
+
+.form__legend {
+  padding-left: 20px;
+  padding-right: 20px;
+  color: $COLOR-SECONDARY;
+  font-size: 14px;
+  text-transform: uppercase;
 }
 
 .form__achievements {
   padding: 42px 20px 20px;
   background-color: #f2f2f2;
+
+  @include desktop {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+  }
 }
 
 .form__achievements-title {
@@ -167,18 +223,27 @@
 }
 
 .form__textarea {
-  min-height: 200px;
   width: 100%;
+  min-height: 200px;
   padding: 20px;
   resize: vertical;
 }
 
 .form__submit {
   padding: 20px;
+
+  @include tablet {
+    font-size: 0;
+  }
 }
 
 .form__submit-btn-wrap {
   margin-bottom: 40px;
+
+  @include tablet {
+    display: inline-block;
+    width: 50%;
+  }
 }
 
 .form__submit-tooltip {
@@ -187,6 +252,11 @@
   line-height: 30px;
   text-align: center;
   text-transform: uppercase;
+
+  @include tablet {
+    display: inline-block;
+    width: 50%;
+  }
 }
 
 .form__submit-star {

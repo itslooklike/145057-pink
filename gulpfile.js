@@ -2,6 +2,7 @@
 
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
 var plumber = require('gulp-plumber');
 var postcss = require('gulp-postcss');
 var reporter = require('postcss-reporter');
@@ -22,6 +23,7 @@ gulp.task('scss-lint', function() {
 gulp.task('style', ['scss-lint'], function() {
   gulp.src('sass/style.scss')
     .pipe(plumber())
+    .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(postcss([
       autoprefixer({
@@ -31,6 +33,7 @@ gulp.task('style', ['scss-lint'], function() {
         cascade: false
       })
     ]))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('css'))
     .pipe(server.stream());
 });

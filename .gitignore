@@ -6,6 +6,7 @@
 *.psd
 *.sublime*
 css/*.css
+css/*.map
 node_modules/
 Thumbs.db
 prepros-6.config
