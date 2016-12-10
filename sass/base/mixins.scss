@@ -23,15 +23,21 @@
 }
 
 @mixin content-container {
-  max-width: $desktop-width;
-  padding-right: 20px;
-  padding-left: 20px;
+  max-width: $desktop-width - $mobile-paddings * 2;
+  padding-right: $mobile-paddings;
+  padding-left: $mobile-paddings;
   margin-right: auto;
   margin-left: auto;
 
   @include tablet {
-    padding-right: 40px;
-    padding-left: 40px;
+    max-width: $desktop-width - $tablet-paddings * 2;
+    padding-right: $tablet-paddings;
+    padding-left: $tablet-paddings;
+  }
+
+  @include desktop {
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 

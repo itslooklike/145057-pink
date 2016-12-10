@@ -1,107 +1,219 @@
-.photo-editor {
-  background-color: $COLOR-BACKGROUND-PRIMARY;
-
-  @include tablet {
-    font-size: 0;
-  }
-}
-
 .photo-editor__inner {
   @include content-container;
 
-  padding: 20px 20px 40px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0 0;
+  background-color: $COLOR-BACKGROUND-PRIMARY;
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @include desktop {
+    padding-left: 80px;
+    padding-right: 60px;
+  }
 }
 
 .photo-editor__img-wrap {
+  width: 100%;
+  padding-left: $mobile-paddings;
+  padding-right: $mobile-paddings;
   margin-bottom: 40px;
 
   @include tablet {
-    display: inline-block;
-    width: 50%;
-    vertical-align: top;
+    flex: 0 0 300px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 0;
+  }
+}
+
+.photo-editor__img {
+  object-fit: cover;
+}
+
+.photo-editor__controls {
+  width: 100%;
+
+  @include tablet {
+    padding-left: 45px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include desktop {
+    padding-left: 90px;
   }
 }
 
 .photo-editor__tools-wrap {
+  padding-bottom: 15px;
+
   @include tablet {
-    display: inline-block;
-    width: 50%;
-    vertical-align: top;
+    padding-bottom: 0;
   }
 }
 
 .photo-editor__tools-list {
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 
   @include tablet {
     flex-wrap: wrap;
+    margin-bottom: 0;
   }
 }
 
 .photo-editor__tools-item {
   position: relative;
+  margin-left: 15px;
+  margin-right: 15px;
+
+  @include tablet {
+    display: flex;
+    align-content: center;
+    width: 100%;
+    padding-top: 7px;
+    padding-bottom: 20px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid $COLOR-GRAY-UNDERLINES;
+  }
+
+  @include desktop {
+    padding-top: 0;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.photo-editor__tools-btn {
   width: 50px;
   height: 50px;
-  margin-right: 25px;
-  margin-left: 25px;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
   cursor: pointer;
 
   @include tablet {
-    width: 100%;
+    width: 25px;
+    height: 25px;
   }
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
+  @include desktop {
+    width: 50px;
+    height: 50px;
   }
 
-  &--crop::before {
+  &--crop {
     background-image: url('../img/icon-editor-crop.svg');
+    background-size: 44px;
+
+    @include tablet {
+      background-size: 22px;
+    }
+
+    @include desktop {
+      background-size: 44px;
+    }
   }
 
-  &--fill::before {
+  &--fill {
     background-image: url('../img/icon-editor-fill.svg');
+    background-size: 48px 43px;
+    background-position: 50% 100%; // переделать свг с норм въюбоксами, и убрать это дерьмо
+
+    @include tablet {
+      background-size: 24px 22px;
+      background-position: 50% 50%;
+    }
+
+    @include desktop {
+      background-size: 48px 43px;
+    }
   }
 
-  &--contrast::before {
+  &--contrast {
     background-image: url('../img/icon-editor-contrast.svg');
+    background-size: 32px;
+
+    @include tablet {
+      background-size: 16px;
+    }
+
+    @include desktop {
+      background-size: 32px;
+    }
   }
 }
 
-.photo-editor__range-bar {
-  position: relative;
-  width: 240px;
-  height: 2px;
-  margin: 0 auto 30px;
-  background-color: #000;
+.photo-editor__tools-range-bar {
+  display: none;
+
+  @include tablet {
+    display: block;
+    flex-grow: 1;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @include desktop {
+    padding-left: 45px;
+    padding-right: 30px;
+  }
 }
 
-.photo-editor__range-dot {
-  position: absolute;
-  top: -6px;
-  left: 0;
-  width: 14px;
-  height: 14px;
-  border: 2px solid $COLOR-SECONDARY;
-  border-radius: 50%;
-  background-color: #fff;
-  cursor: pointer;
+.photo-editor__range-bar-wrap {
+  width: 240px;
+  margin: 0 auto 20px;
 
-  &--position {
-    left: 80%;
+  @include tablet {
+    display: none;
+  }
+}
+
+.photo-editor__buttons-inner {
+  @include content-container;
+
+  padding: 40px $mobile-paddings;
+  border-top: 1px solid $COLOR-GRAY-UNDERLINES;
+  background-color: $COLOR-BACKGROUND-PRIMARY;
+
+  @include tablet {
+    width: 100%;
+    padding: 0;
+    border-top: 0;
+    margin-top: auto;
+  }
+}
+
+.photo-editor__buttons-wrap {
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
   }
 }
 
 .photo-editor__btn-wrap {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+
+  @include tablet {
+    margin-bottom: 20px;
+  }
+
+  @include desktop {
+    flex-basis: 180px;
+    margin-bottom: 0;
+  }
 
   &:last-child {
     margin-bottom: 0;
