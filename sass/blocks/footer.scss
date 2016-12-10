@@ -1,21 +1,30 @@
-.footer {
+.footer__inner {
   @include content-container;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding-top: 40px;
   padding-bottom: 40px;
 
   @include tablet {
-    @include clearfix;
+    flex-direction: row;
+    align-items: center;
+  }
 
-    text-align: center;
+  @include desktop {
+    padding-top: 100px;
+    padding-bottom: 70px;
   }
 }
 
 .footer__logo-wrap {
+  position: relative;
   margin-bottom: 40px;
 
   @include tablet {
-    float: left;
+    top: -10px;
+    margin-bottom: 0;
   }
 }
 
@@ -28,10 +37,10 @@
 .footer__icon-list {
   display: flex;
   justify-content: center;
-  margin-bottom: 40px;
+  margin-bottom: 45px;
 
   @include tablet {
-    display: inline-block;
+    margin-bottom: 0;
   }
 }
 
@@ -40,14 +49,10 @@
   display: block;
   width: 51px;
   height: 51px;
-  border: 3px solid $COLOR-PRIMARY;
+  border: 3px solid #edeeef;
   border-radius: 50%;
-  margin-right: 9px;
-  margin-left: 9px;
-
-  @include tablet {
-    display: inline-block;
-  }
+  margin-right: 5px;
+  margin-left: 5px;
 
   &::before {
     content: '';
@@ -81,8 +86,8 @@
   line-height: 18px;
   text-align: center;
 
-  @include tablet {
-    float: right;
+  @include desktop {
+    font-size: 18px;
   }
 }
 
@@ -98,5 +103,9 @@
     width: 27px;
     height: 34px;
     background: url('../img/logo-htmlacademy.svg') 0 0 no-repeat;
+
+    @include desktop {
+      top: 0;
+    }
   }
 }
