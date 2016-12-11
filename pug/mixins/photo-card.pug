@@ -1,0 +1,12 @@
+mixin photo-card(props)
+  .photo-card
+    .photo-card__img-wrap
+      img.photo-card__img(src=props.src)
+    .photo-card__content
+      .photo-card__title= props.title
+        span.photo-card__time= props.time
+      p.photo-card__desc= props.desc
+      .photo-card__like-wrap
+        button.photo-card__like-btn(type="button")
+        span.photo-card__like-text= props.likes
+        //span.photo-card__like-text Нравится: 356

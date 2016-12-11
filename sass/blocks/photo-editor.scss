@@ -19,6 +19,34 @@
   }
 }
 
+
+.photo-editor__title-wrap {
+  padding: 20px 20px 40px;
+
+  @include tablet {
+    padding-top: 45px;
+    padding-bottom: 70px;
+  }
+
+  @include desktop {
+    padding-top: 40px;
+    padding-bottom: 65px;
+  }
+}
+
+.photo-editor__title {
+  margin: 0;
+  color: $COLOR-PRIMARY;
+  font-size: $FONT-SIZE-S;
+  font-weight: normal;
+  line-height: 30px;
+  text-align: center;
+
+  @include tablet {
+    font-size: $FONT-SIZE-M;
+  }
+}
+
 .photo-editor__img-wrap {
   width: 100%;
   padding-left: $mobile-paddings;

@@ -15,7 +15,7 @@
 .form__title {
   margin: 0 0 35px;
   color: $COLOR-PRIMARY;
-  font-size: 14px;
+  font-size: $FONT-SIZE-S;
   font-weight: normal;
   line-height: 30px;
   text-align: center;
@@ -23,7 +23,7 @@
   @include tablet {
     max-width: 500px;
     margin: 0 auto 80px;
-    font-size: 18px;
+    font-size: $FONT-SIZE-M;
   }
 }
 
@@ -64,7 +64,7 @@
   width: 100%;
   padding: 15px 18px 14px;
   border: 2px solid #e5e5e5;
-  font-size: 18px;
+  font-size: $FONT-SIZE-M;
   line-height: 30px;
 
   @include tablet {
@@ -80,7 +80,7 @@
   padding-left: 20px;
   padding-right: 20px;
   color: $COLOR-SECONDARY;
-  font-size: 14px;
+  font-size: $FONT-SIZE-S;
   text-transform: uppercase;
 }
 
@@ -98,7 +98,7 @@
 .form__achievements-title {
   margin: 0 0 20px;
   color: $COLOR-SECONDARY;
-  font-size: 14px;
+  font-size: $FONT-SIZE-S;
   font-weight: normal;
   text-align: center;
   text-transform: uppercase;
@@ -123,7 +123,7 @@
   padding-bottom: 10px;
   padding-left: 60px;
   color: $COLOR-PRIMARY;
-  font-size: 18px;
+  font-size: $FONT-SIZE-M;
 
   &::before {
     content: '';
@@ -155,7 +155,7 @@
 
 .form__app-title {
   margin: 0 0 20px;
-  font-size: 14px;
+  font-size: $FONT-SIZE-S;
   line-height: 18px;
   color: $COLOR-SECONDARY;
   font-weight: normal;
@@ -182,7 +182,7 @@
   padding-bottom: 10px;
   padding-left: 60px;
   color: $COLOR-PRIMARY;
-  font-size: 18px;
+  font-size: $FONT-SIZE-M;
 
   &::before {
     content: '';
@@ -215,7 +215,7 @@
 .form__feedback-title {
   margin: 0 0 20px;
   color: $COLOR-SECONDARY;
-  font-size: 14px;
+  font-size: $FONT-SIZE-S;
   font-weight: normal;
   line-height: 30px;
   text-align: center;
@@ -248,7 +248,7 @@
 
 .form__submit-tooltip {
   color: $COLOR-PRIMARY;
-  font-size: 14px;
+  font-size: $FONT-SIZE-S;
   line-height: 30px;
   text-align: center;
   text-transform: uppercase;

@@ -6,10 +6,10 @@
 }
 
 .header__inner {
-  max-width: 980px;
-  padding: 22px 20px;
-  margin-right: auto;
-  margin-left: auto;
+  @include content-container;
+
+  padding-top: 22px;
+  padding-bottom: 22px;
 
   @include tablet {
     padding-top: 42px;

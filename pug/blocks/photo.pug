@@ -1,15 +1,21 @@
 section.photo
   .photo__inner
-    h2.photo__title Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?
+
+    .photo__title-wrap
+      h2.photo__title Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?
+
     .photo__card-catalog
+
       .photo-card.photo-card--panorama
-        .photo-card__img-wrap.photo-card__img-wrap--panorama
+        .photo-card__img-wrap
           img.photo-card__img(src="img/panorama-mobile@1x.jpg")
         .photo-card__content
           .photo-card__title Анна
             span.photo-card__time  (5 минут назад)
           p.photo-card__desc Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!
-          p.photo-card__like Нравится: 215
+          .photo-card__like-wrap
+            button.photo-card__like-btn(type="button")
+            span.photo-card__like-text Нравится: 215
 
       .photo-card
         .photo-card__img-wrap
@@ -18,7 +24,9 @@ section.photo
           .photo-card__title Левон
             span.photo-card__time  (5 часов назад)
           p.photo-card__desc Вчера он на луну летал, сегодня в руки к нам попал.
-          p.photo-card__like Нравится: 356
+          .photo-card__like-wrap
+            button.photo-card__like-btn(type="button")
+            span.photo-card__like-text Нравится: 356
 
       .photo-card
         .photo-card__img-wrap
@@ -26,8 +34,9 @@ section.photo
         .photo-card__content
           .photo-card__title Антон
             span.photo-card__time  (12 часов назад)
-          p.photo-card__desc Соседи будут рады!
-          p.photo-card__like Нравится: 666
+          .photo-card__like-wrap
+            button.photo-card__like-btn(type="button")
+            span.photo-card__like-text Нравится: 666
 
       .photo-card
         .photo-card__img-wrap
@@ -36,7 +45,9 @@ section.photo
           .photo-card__title Борис
             span.photo-card__time  (20 часов назад)
           p.photo-card__desc Здесь могла быть ваша цитата о высоком и вечном.
-          p.photo-card__like Нравится: 215
+          .photo-card__like-wrap
+            button.photo-card__like-btn(type="button")
+            span.photo-card__like-text Нравится: 215
 
       .photo-card
         .photo-card__img-wrap
@@ -45,7 +56,9 @@ section.photo
           .photo-card__title Сергей
             span.photo-card__time  (25 часов назад)
           p.photo-card__desc Самая кубанская в мире!
-          p.photo-card__like Нравится: 4
+          .photo-card__like-wrap
+            button.photo-card__like-btn(type="button")
+            span.photo-card__like-text Нравится: 4
 
       .photo-card
         .photo-card__img-wrap
@@ -54,7 +67,9 @@ section.photo
           .photo-card__title Максим
             span.photo-card__time  (40 часов назад)
           p.photo-card__desc Где снег-то?
-          p.photo-card__like Нравится: 150
+          .photo-card__like-wrap
+            button.photo-card__like-btn(type="button")
+            span.photo-card__like-text Нравится: 150
 
       .photo-card
         .photo-card__img-wrap
@@ -63,7 +78,6 @@ section.photo
           .photo-card__title Надежда
             span.photo-card__time  (45 часов назад)
           p.photo-card__desc Всем GM и взаимные лайки!
-          p.photo-card__like Нравится: 2560
-
-    .photo__footer
-      h3.photo__footer-text Затмите их всех! Выкладывайте все, что накопилось в телефоне!
+          .photo-card__like-wrap
+            button.photo-card__like-btn(type="button")
+            span.photo-card__like-text Нравится: 2560

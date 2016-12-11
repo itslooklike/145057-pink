@@ -41,6 +41,12 @@
   }
 }
 
+@mixin center-content($width) {
+  max-width: $width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @mixin visuallyhidden {
   position: absolute;
   width: 1px;

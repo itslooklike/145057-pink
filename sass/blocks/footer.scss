@@ -81,13 +81,13 @@
 .footer__copy-wrap {
   margin: 0;
   color: $COLOR-PRIMARY;
-  font-size: 14px;
+  font-size: $FONT-SIZE-S;
   font-weight: normal;
   line-height: 18px;
   text-align: center;
 
   @include desktop {
-    font-size: 18px;
+    font-size: $FONT-SIZE-M;
   }
 }
 

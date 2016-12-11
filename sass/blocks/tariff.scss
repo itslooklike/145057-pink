@@ -38,7 +38,7 @@
 
 .tariff__head-title {
   margin: 0 0 20px;
-  font-size: 18px;
+  font-size: $FONT-SIZE-M;
   font-weight: bold;
   line-height: 30px;
   text-transform: uppercase;
@@ -57,7 +57,7 @@
   border-bottom: 1px solid #e5e5e5;
   background-color: #fff;
   color: $COLOR-PRIMARY;
-  font-size: 14px;
+  font-size: $FONT-SIZE-S;
   text-transform: uppercase;
 
   &::after {
@@ -124,7 +124,7 @@
 .tariff__thead-title {
   display: inline-block;
   width: 100%;
-  font-size: 18px;
+  font-size: $FONT-SIZE-M;
   font-weight: bold;
   line-height: 30px;
   text-transform: uppercase;
@@ -145,7 +145,7 @@
   background-color: #fff;
   background-clip: padding-box;
   color: $COLOR-PRIMARY;
-  font-size: 14px;
+  font-size: $FONT-SIZE-S;
 
   &::after {
     content: '';

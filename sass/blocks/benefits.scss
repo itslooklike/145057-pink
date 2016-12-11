@@ -108,7 +108,7 @@
 
 .benefits__item-title {
   margin: 0 0 20px;
-  font-size: 18px;
+  font-size: $FONT-SIZE-M;
   font-weight: bold;
 
   @include tablet {
@@ -125,12 +125,12 @@
 .benefits__item-text {
   margin: 0;
   color: $COLOR-PRIMARY;
-  font-size: 14px;
+  font-size: $FONT-SIZE-S;
 
   @include desktop {
     max-width: 236px;
     margin-right: auto;
     margin-left: auto;
-    font-size: 18px;
+    font-size: $FONT-SIZE-M;
   }
 }
