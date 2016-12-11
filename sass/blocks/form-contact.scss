@@ -1,0 +1,82 @@
+.form-contact__fieldset {
+  @include form-fieldset;
+}
+
+.form-contact__legend {
+  @include form-legend;
+
+  @include tablet-invert {
+    @include visuallyhidden;
+  }
+}
+
+.form-contact__content {
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    padding-top: 40px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  @include desktop {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 35px;
+  }
+}
+
+.form-contact__row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+
+  @include tablet {
+    margin-bottom: 20px;
+  }
+
+  @include desktop {
+    flex-basis: 375px;
+    margin-bottom: 10px;
+  }
+}
+
+.form-contact__label {
+  @include form-label;
+
+  @include tablet {
+    order: 1;
+    margin-top: 10px;
+  }
+}
+
+.form-contact__input-wrap {
+  position: relative;
+
+  @include tablet {
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60px;
+      height: 100%;
+      background-color: $COLOR-GRAY-BORDERS;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+    }
+
+    &--tel::after {
+      background-image: url('../img/icon-no.svg');
+    }
+
+    &--email::after {
+      background-image: url('../img/icon-no.svg');
+    }
+  }
+}
+
+.form-contact__input {
+  @include form-input;
+}

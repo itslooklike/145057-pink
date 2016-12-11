@@ -1,0 +1,27 @@
+.form-fio__row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+
+  @include tablet {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 52px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.form-fio__label {
+  @include form-label;
+
+  @include tablet {
+    padding-left: 0;
+  }
+}
+
+.form-fio__input {
+  @include form-input;
+}

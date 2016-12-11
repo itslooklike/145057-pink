@@ -1,12 +1,17 @@
 .main-slide-form {
   padding-top: 100px;
-  padding-bottom: 50px;
+  padding-bottom: 55px;
   background: url('../img/bg-back-mobile@1x.jpg') 50% 0/auto 462px no-repeat;
 
   @include tablet {
-    padding-top: 150px;
-    padding-bottom: 80px;
+    padding-top: 180px;
+    padding-bottom: 85px;
     background-size: cover;
+  }
+
+  @include tablet {
+    padding-top: 170px;
+    padding-bottom: 105px;
   }
 }
 
@@ -14,12 +19,16 @@
   max-width: 240px;
   margin: 0 auto;
   color: #fff;
-  font-size: 24px;
+  font-size: $FONT-SIZE-HERO-S;
   font-weight: 300;
   text-align: center;
 
   @include tablet {
     max-width: 540px;
-    font-size: 50px;
+    font-size: $FONT-SIZE-HERO-M;
+  }
+
+  @include desktop {
+    max-width: 850px;
   }
 }

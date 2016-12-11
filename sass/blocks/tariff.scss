@@ -14,8 +14,8 @@
   position: relative;
   padding-top: 23px;
   padding-bottom: 21px;
-  border-left: 1px solid #e5e5e5;
-  border-right: 1px solid #e5e5e5;
+  border-left: 1px solid $COLOR-GRAY-BORDERS;
+  border-right: 1px solid $COLOR-GRAY-BORDERS;
   background-color: $COLOR-PRIMARY;
   color: #fff;
   text-align: center;
@@ -54,7 +54,7 @@
 .tariff__item {
   position: relative;
   padding: 24px 23px 26px;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid $COLOR-GRAY-BORDERS;
   background-color: #fff;
   color: $COLOR-PRIMARY;
   font-size: $FONT-SIZE-S;
@@ -94,7 +94,7 @@
   position: relative;
   padding-top: 23px;
   padding-bottom: 21px;
-  border: 1px solid #e5e5e5;
+  border: 1px solid $COLOR-GRAY-BORDERS;
   background-color: $COLOR-PRIMARY;
   background-clip: padding-box;
   color: #fff;
@@ -141,7 +141,7 @@
 .tariff__cell {
   position: relative;
   padding: 24px 23px 26px;
-  border: 1px solid #e5e5e5;
+  border: 1px solid $COLOR-GRAY-BORDERS;
   background-color: #fff;
   background-clip: padding-box;
   color: $COLOR-PRIMARY;

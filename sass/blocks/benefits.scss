@@ -5,7 +5,7 @@
 .benefits__inner {
   @include content-container;
 
-  padding-top: 45px;
+  padding-top: 40px;
 }
 
 .benefits__title-wrap {
@@ -18,7 +18,7 @@
 }
 
 .benefits__title {
-  margin: 0 0 40px;
+  margin: 0 0 30px;
   color: $COLOR-PRIMARY;
   font-size: 24px;
   font-weight: 300;
