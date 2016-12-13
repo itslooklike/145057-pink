@@ -1,0 +1,24 @@
+.slider-dots {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider-dots__btn {
+  width: 6px;
+  height: 6px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  margin: 0;
+  background-color: rgba(40, 54, 69, 0.3);
+  cursor: pointer;
+
+  &--active {
+    width: 12px;
+    height: 12px;
+    border: 3px solid #283645;
+    background-color: transparent;
+  }
+}

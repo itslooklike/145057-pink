@@ -1,0 +1,76 @@
+.effect {
+  @include tablet-invert {
+    display: none;
+  }
+
+  @include desktop {
+    background-color: $COLOR-BACKGROUND-PRIMARY;
+  }
+}
+
+.effect__inner {
+  @include content-container;
+
+  display: flex;
+  padding-top: 95px;
+  padding-bottom: 30px;
+  background: url('http://placehold.it/240x280') 10% 100%/240px 280px no-repeat;
+
+  @include desktop {
+    padding-top: 105px;
+    padding-bottom: 115px;
+    background-image: url('http://placehold.it/300x350');
+    background-position: 0 0;
+    background-size: 300px 350px;
+  }
+}
+
+.effect__content {
+  flex: 0 0 310px;
+  margin-left: auto;
+
+  @include desktop {
+    flex-basis: auto;
+    margin-left: 365px;
+  }
+
+  br {
+    @include desktop {
+      display: none;
+    }
+  }
+}
+
+.effect__title {
+  margin: 0 0 10px;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: bold;
+
+  @include desktop {
+    margin-bottom: 20px;
+  }
+}
+
+.effect__text {
+  margin: 0 0 10px;
+  font-size: $FONT-SIZE-S;
+  line-height: 24px;
+
+  @include desktop {
+    margin-bottom: 30px;
+    font-size: $FONT-SIZE-M;
+    line-height: 30px;
+  }
+}
+
+.effect__link {
+  @include link;
+
+  font-size: $FONT-SIZE-S;
+
+  @include desktop {
+    font-size: $FONT-SIZE-M;
+    line-height: 30px;
+  }
+}

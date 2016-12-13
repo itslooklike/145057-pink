@@ -105,3 +105,7 @@
   text-transform: uppercase;
   text-align: center;
 }
+
+@mixin link {
+  color: $COLOR-SECONDARY;
+}
