@@ -48,15 +48,15 @@
         </div>
         <div class="benefits__list-wrap">
           <ul class="benefits__list">
-            <li class="benefits__item">
+            <li class="benefits__item benefits__item--1">
               <h4 class="benefits__item-title">Поднимает настроение</h4>
               <p class="benefits__item-text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
             </li>
-            <li class="benefits__item">
+            <li class="benefits__item benefits__item--2">
               <h4 class="benefits__item-title">Меняет мир вокруг</h4>
               <p class="benefits__item-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
             </li>
-            <li class="benefits__item">
+            <li class="benefits__item benefits__item--3">
               <h4 class="benefits__item-title">Заводит новых друзей</h4>
               <p class="benefits__item-text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
             </li>
@@ -64,70 +64,97 @@
         </div>
       </div>
     </section>
-    <section class="feedback">
-      <div class="feedback__title-wrap">
-        <h4 class="feedback__title">Николай Петров</h4>
-        <p class="feedback__subtitle">25 лет, водитель трамвая</p>
+    <section class="effect">
+      <div class="effect__inner">
+        <div class="effect__content">
+          <h3 class="effect__title">Эффект<br> на 24 часа!</h3>
+          <p class="effect__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p><a class="effect__link" href="#">Узнать больше об исследовании</a>
+        </div>
       </div>
-      <p class="feedback__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+    </section>
+    <section class="feedback">
+      <div class="feedback__inner">
+        <div class="feedback__title-wrap">
+          <h4 class="feedback__title">Николай Петров</h4>
+          <p class="feedback__subtitle">25 лет, водитель трамвая</p>
+        </div>
+        <p class="feedback__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+        <div class="feedback__dots-wrap">
+          <div class="slider-dots">
+            <button class="slider-dots__btn slider-dots__btn--active"></button>
+            <button class="slider-dots__btn"></button>
+            <button class="slider-dots__btn"></button>
+          </div>
+        </div>
+      </div>
     </section>
     <section class="tariff">
-      <div class="tariff__carusel">
-        <div class="tariff__slide">
-          <div class="tariff__head tariff__head--new">
-            <h5 class="tariff__head-title">Стандарт</h5>
-            <p class="tariff__head-text">3,99 USD</p>
+      <div class="tariff__inner">
+        <div class="tariff__carusel">
+          <!--.tariff__slide-->
+          <!--  .tariff__head.tariff__head--new-->
+          <!--    h5.tariff__head-title Стандарт-->
+          <!--    p.tariff__head-text 3,99 USD-->
+          <!--  ul.tariff__list-->
+          <!--    li.tariff__item Розовый фильтр-->
+          <!--    li.tariff__item Смайлики-->
+          <!--    li.tariff__item.tariff__item--no Комментарии-->
+          <div class="tariff__table-wrap">
+            <table class="tariff__table">
+              <tr class="tariff__row">
+                <th class="tariff__thead tariff__thead--empty">&nbsp;</th>
+                <th class="tariff__thead"><span class="tariff__thead-title">База</span><span class="tariff__thead-cost">3,99 USD</span></th>
+                <th class="tariff__thead tariff__thead--new"><span class="tariff__thead-title">Стандарт</span><span class="tariff__thead-cost">3,99 USD</span></th>
+                <th class="tariff__thead"><span class="tariff__thead-title">Анлим</span><span class="tariff__thead-cost">3,99 USD</span></th>
+              </tr>
+              <tr class="tariff__row">
+                <td class="tariff__cell">Розовый фильтр</td>
+                <td class="tariff__cell tariff__cell--yes"></td>
+                <td class="tariff__cell tariff__cell--no"></td>
+                <td class="tariff__cell tariff__cell--no"></td>
+              </tr>
+              <tr class="tariff__row">
+                <td class="tariff__cell">Смайлики</td>
+                <td class="tariff__cell tariff__cell--yes"></td>
+                <td class="tariff__cell tariff__cell--yes"></td>
+                <td class="tariff__cell tariff__cell--no"></td>
+              </tr>
+              <tr class="tariff__row">
+                <td class="tariff__cell">Комментарии</td>
+                <td class="tariff__cell tariff__cell--yes"></td>
+                <td class="tariff__cell tariff__cell--yes"></td>
+                <td class="tariff__cell tariff__cell--yes"></td>
+              </tr>
+            </table>
           </div>
-          <ul class="tariff__list">
-            <li class="tariff__item">Розовый фильтр</li>
-            <li class="tariff__item">Смайлики</li>
-            <li class="tariff__item tariff__item--no">Комментарии</li>
-          </ul>
+          <div class="tariff__dots-wrap">
+            <div class="slider-dots">
+              <button class="slider-dots__btn slider-dots__btn--active"></button>
+              <button class="slider-dots__btn"></button>
+              <button class="slider-dots__btn"></button>
+            </div>
+          </div>
         </div>
-        <table class="tariff__table">
-          <tr class="tariff__row">
-            <th class="tariff__thead tariff__thead--empty">&nbsp;</th>
-            <th class="tariff__thead"><span class="tariff__thead-title">База</span><span class="tariff__thead-cost">3,99 USD</span></th>
-            <th class="tariff__thead tariff__thead--new"><span class="tariff__thead-title">Стандарт</span><span class="tariff__thead-cost">3,99 USD</span></th>
-            <th class="tariff__thead"><span class="tariff__thead-title">Анлим</span><span class="tariff__thead-cost">3,99 USD</span></th>
-          </tr>
-          <tr class="tariff__row">
-            <td class="tariff__cell">Розовый фильтр</td>
-            <td class="tariff__cell tariff__cell--yes"></td>
-            <td class="tariff__cell tariff__cell--no"></td>
-            <td class="tariff__cell tariff__cell--no"></td>
-          </tr>
-          <tr class="tariff__row">
-            <td class="tariff__cell">Смайлики</td>
-            <td class="tariff__cell tariff__cell--yes"></td>
-            <td class="tariff__cell tariff__cell--yes"></td>
-            <td class="tariff__cell tariff__cell--no"></td>
-          </tr>
-          <tr class="tariff__row">
-            <td class="tariff__cell">Комментарии</td>
-            <td class="tariff__cell tariff__cell--yes"></td>
-            <td class="tariff__cell tariff__cell--yes"></td>
-            <td class="tariff__cell tariff__cell--yes"></td>
-          </tr>
-        </table>
       </div>
     </section>
     <section class="contact">
-      <h4 class="contact__title">Остались вопросы? Свяжитесь с нами!</h4>
-      <ul class="contact__list">
-        <li class="contact__item">
-          <h5 class="contact__item-title">Звоните:</h5>
-          <p class="contact__item-text">+7 (812) 555-66-66</p>
-        </li>
-        <li class="contact__item">
-          <h5 class="contact__item-title">Пишите:</h5>
-          <p class="contact__item-text">mail@htmlacademy.ru</p>
-        </li>
-        <li class="contact__item">
-          <h5 class="contact__item-title">Приезжайте в гости:</h5>
-          <p class="contact__item-text">ул. Большая Конюшенная, 19/8</p>
-        </li>
-      </ul>
+      <div class="contact__inner">
+        <h4 class="contact__title">Остались вопросы? Свяжитесь с нами!</h4>
+        <ul class="contact__list">
+          <li class="contact__item">
+            <h5 class="contact__item-title">Звоните:</h5>
+            <p class="contact__item-text">+7 (812) 555-66-66</p>
+          </li>
+          <li class="contact__item">
+            <h5 class="contact__item-title">Пишите:</h5>
+            <p class="contact__item-text">mail@htmlacademy.ru</p>
+          </li>
+          <li class="contact__item">
+            <h5 class="contact__item-title">Приезжайте в гости:</h5>
+            <p class="contact__item-text">ул. Большая Конюшенная, 19/8</p>
+          </li>
+        </ul>
+      </div>
     </section>
     <section class="map"></section>
   </body>

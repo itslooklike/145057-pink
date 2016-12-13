@@ -31,14 +31,18 @@
     </section>
     <section class="photo">
       <div class="photo__inner">
-        <h2 class="photo__title">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</h2>
+        <div class="photo__title-wrap">
+          <h2 class="photo__title">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</h2>
+        </div>
         <div class="photo__card-catalog">
           <div class="photo-card photo-card--panorama">
-            <div class="photo-card__img-wrap photo-card__img-wrap--panorama"><img class="photo-card__img" src="img/panorama-mobile@1x.jpg"></div>
+            <div class="photo-card__img-wrap"><img class="photo-card__img" src="img/panorama-mobile@1x.jpg"></div>
             <div class="photo-card__content">
               <div class="photo-card__title">Анна<span class="photo-card__time"> (5 минут назад)</span></div>
               <p class="photo-card__desc">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-              <p class="photo-card__like">Нравится: 215</p>
+              <div class="photo-card__like-wrap">
+                <button class="photo-card__like-btn" type="button"></button><span class="photo-card__like-text">Нравится: 215</span>
+              </div>
             </div>
           </div>
           <div class="photo-card">
@@ -46,15 +50,18 @@
             <div class="photo-card__content">
               <div class="photo-card__title">Левон<span class="photo-card__time"> (5 часов назад)</span></div>
               <p class="photo-card__desc">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-              <p class="photo-card__like">Нравится: 356</p>
+              <div class="photo-card__like-wrap">
+                <button class="photo-card__like-btn" type="button"></button><span class="photo-card__like-text">Нравится: 356</span>
+              </div>
             </div>
           </div>
           <div class="photo-card">
             <div class="photo-card__img-wrap"><img class="photo-card__img" src="img/photo-2-mobile@1x.jpg"></div>
             <div class="photo-card__content">
               <div class="photo-card__title">Антон<span class="photo-card__time"> (12 часов назад)</span></div>
-              <p class="photo-card__desc">Соседи будут рады!</p>
-              <p class="photo-card__like">Нравится: 666</p>
+              <div class="photo-card__like-wrap">
+                <button class="photo-card__like-btn" type="button"></button><span class="photo-card__like-text">Нравится: 666</span>
+              </div>
             </div>
           </div>
           <div class="photo-card">
@@ -62,7 +69,9 @@
             <div class="photo-card__content">
               <div class="photo-card__title">Борис<span class="photo-card__time"> (20 часов назад)</span></div>
               <p class="photo-card__desc">Здесь могла быть ваша цитата о высоком и вечном.</p>
-              <p class="photo-card__like">Нравится: 215</p>
+              <div class="photo-card__like-wrap">
+                <button class="photo-card__like-btn" type="button"></button><span class="photo-card__like-text">Нравится: 215</span>
+              </div>
             </div>
           </div>
           <div class="photo-card">
@@ -70,7 +79,9 @@
             <div class="photo-card__content">
               <div class="photo-card__title">Сергей<span class="photo-card__time"> (25 часов назад)</span></div>
               <p class="photo-card__desc">Самая кубанская в мире!</p>
-              <p class="photo-card__like">Нравится: 4</p>
+              <div class="photo-card__like-wrap">
+                <button class="photo-card__like-btn" type="button"></button><span class="photo-card__like-text">Нравится: 4</span>
+              </div>
             </div>
           </div>
           <div class="photo-card">
@@ -78,7 +89,9 @@
             <div class="photo-card__content">
               <div class="photo-card__title">Максим<span class="photo-card__time"> (40 часов назад)</span></div>
               <p class="photo-card__desc">Где снег-то?</p>
-              <p class="photo-card__like">Нравится: 150</p>
+              <div class="photo-card__like-wrap">
+                <button class="photo-card__like-btn" type="button"></button><span class="photo-card__like-text">Нравится: 150</span>
+              </div>
             </div>
           </div>
           <div class="photo-card">
@@ -86,33 +99,63 @@
             <div class="photo-card__content">
               <div class="photo-card__title">Надежда<span class="photo-card__time"> (45 часов назад)</span></div>
               <p class="photo-card__desc">Всем GM и взаимные лайки!</p>
-              <p class="photo-card__like">Нравится: 2560</p>
+              <div class="photo-card__like-wrap">
+                <button class="photo-card__like-btn" type="button"></button><span class="photo-card__like-text">Нравится: 2560</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="photo__footer">
-          <h3 class="photo__footer-text">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</h3>
         </div>
       </div>
     </section>
     <section class="photo-editor">
+      <div class="photo-editor__title-wrap">
+        <p class="photo-editor__title">Затмите их всех!</p>
+        <p class="photo-editor__title">Выкладывайте все, что накопилось в телефоне!</p>
+      </div>
       <div class="photo-editor__inner">
         <div class="photo-editor__img-wrap"><img class="photo-editor__img" src="img/photo-7-mobile@1x.jpg"></div>
-        <div class="photo-editor__tools-wrap">
-          <ul class="photo-editor__tools-list">
-            <li class="photo-editor__tools-item photo-editor__tools-item--crop"></li>
-            <li class="photo-editor__tools-item photo-editor__tools-item--fill"></li>
-            <li class="photo-editor__tools-item photo-editor__tools-item--contrast"></li>
-          </ul>
-          <div class="photo-editor__range-bar">
-            <div class="photo-editor__range-dot photo-editor__range-dot--position"></div>
-          </div>
-          <div class="photo-editor__buttons-wrap">
-            <div class="photo-editor__btn-wrap">
-              <button class="button-ternary button-ternary--full-width" type="button">Запостить</button>
+        <div class="photo-editor__controls">
+          <div class="photo-editor__tools-wrap">
+            <ul class="photo-editor__tools-list">
+              <li class="photo-editor__tools-item">
+                <button class="photo-editor__tools-btn photo-editor__tools-btn--crop" type="button"></button>
+                <div class="photo-editor__tools-range-bar">
+                  <div class="range-bar">
+                    <div class="range-bar__dot range-bar__dot--position"></div>
+                  </div>
+                </div>
+              </li>
+              <li class="photo-editor__tools-item">
+                <button class="photo-editor__tools-btn photo-editor__tools-btn--fill" type="button"></button>
+                <div class="photo-editor__tools-range-bar">
+                  <div class="range-bar">
+                    <div class="range-bar__dot range-bar__dot--position"></div>
+                  </div>
+                </div>
+              </li>
+              <li class="photo-editor__tools-item">
+                <button class="photo-editor__tools-btn photo-editor__tools-btn--contrast" type="button"></button>
+                <div class="photo-editor__tools-range-bar">
+                  <div class="range-bar">
+                    <div class="range-bar__dot range-bar__dot--position"></div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="photo-editor__range-bar-wrap">
+              <div class="range-bar">
+                <div class="range-bar__dot range-bar__dot--position"></div>
+              </div>
             </div>
-            <div class="photo-editor__btn-wrap">
-              <button class="button-ternary button-ternary--full-width" type="button" disabled>Отмена</button>
+          </div>
+          <div class="photo-editor__buttons-inner">
+            <div class="photo-editor__buttons-wrap">
+              <div class="photo-editor__btn-wrap">
+                <button class="button-ternary button-ternary--full-width" type="button">Запостить</button>
+              </div>
+              <div class="photo-editor__btn-wrap">
+                <button class="button-ternary button-ternary--full-width" type="button" disabled>Отмена</button>
+              </div>
             </div>
           </div>
         </div>
