@@ -24,11 +24,11 @@ gulp.task('style', ['scss-lint'], function() {
   gulp.src('sass/style.scss')
     .pipe(plumber())
     .pipe(sourcemaps.init())
-    .pipe(sass())
+    .pipe(sass({outputStyle: 'expanded'}))
     .pipe(postcss([
       autoprefixer({
         browsers: [
-          'last 2 versions'
+          'last 1 versions'
         ],
         cascade: false
       })

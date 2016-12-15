@@ -104,14 +104,9 @@
 }
 
 .tariff__table {
-  //display: none;
   width: 100%;
   table-layout: fixed;
   border-collapse: collapse;
-
-  @include tablet {
-    display: table;
-  }
 }
 
 .tariff__thead {
@@ -123,6 +118,16 @@
   background-clip: padding-box;
   color: #fff;
   text-align: center;
+
+  @include tablet {
+    padding-top: 12px;
+    padding-bottom: 6px;
+  }
+
+  @include desktop {
+    padding-top: 15px;
+    padding-bottom: 25px;
+  }
 
   &--empty {
     border: none;
@@ -152,6 +157,14 @@
   font-weight: bold;
   line-height: 30px;
   text-transform: uppercase;
+
+  @include tablet {
+    font-size: $FONT-SIZE-SM;
+  }
+
+  @include desktop {
+    font-size: $FONT-SIZE-M;
+  }
 }
 
 .tariff__thead-cost {
@@ -160,6 +173,14 @@
   font-size: 24px;
   line-height: 30px;
   font-weight: 100;
+
+  @include tablet {
+    font-size: $FONT-SIZE-M;
+  }
+
+  @include tablet {
+    font-size: 24px;
+  }
 }
 
 .tariff__cell {
@@ -170,6 +191,15 @@
   background-clip: padding-box;
   color: $COLOR-PRIMARY;
   font-size: $FONT-SIZE-S;
+
+  @include tablet {
+    padding: 15px;
+  }
+
+  @include desktop {
+    padding: 18px 23px 18px;
+    font-size: $FONT-SIZE-M;
+  }
 
   &::after {
     content: '';
@@ -192,7 +222,7 @@
 }
 
 .tariff__dots-wrap {
-  @include center-content(60px)
+  @include center-content(60px);
 
   @include tablet {
     display: none;

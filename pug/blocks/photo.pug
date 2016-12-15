@@ -4,11 +4,11 @@ section.photo
     .photo__title-wrap
       h2.photo__title Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?
 
-    .photo__card-catalog
-
-      .photo-card.photo-card--panorama
-        .photo-card__img-wrap
-          img.photo-card__img(src="img/panorama-mobile@1x.jpg")
+  .photo__panorama-wrap
+    .photo-card.photo-card--panorama
+      .photo-card__img-wrap
+        img.photo-card__img(src="img/panorama-mobile@1x.jpg")
+      .photo__inner
         .photo-card__content
           .photo-card__title Анна
             span.photo-card__time  (5 минут назад)
@@ -17,6 +17,8 @@ section.photo
             button.photo-card__like-btn(type="button")
             span.photo-card__like-text Нравится: 215
 
+  .photo__inner
+    .photo__card-catalog
       .photo-card
         .photo-card__img-wrap
           img.photo-card__img(src="img/photo-1-mobile@1x.jpg")
