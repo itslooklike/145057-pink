@@ -1,0 +1,22 @@
+.range-bar {
+  position: relative;
+  top: 50%;
+  height: 2px;
+  background-color: #000;
+}
+
+.range-bar__dot {
+  position: absolute;
+  top: -6px;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  border: 2px solid $COLOR-SECONDARY;
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+
+  &--position {
+    left: 80%;
+  }
+}

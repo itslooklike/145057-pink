@@ -1,104 +1,70 @@
 .tariff {
   background-color: #f2f2f2;
-  padding-top: 50px;
+}
+
+.tariff__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 90px;
   padding-bottom: 50px;
-}
 
-.tariff__slide {
   @include tablet {
-    display: none;
+    @include content-container;
   }
 }
 
-.tariff__head {
-  position: relative;
-  padding-top: 23px;
-  padding-bottom: 21px;
-  border-left: 1px solid #e5e5e5;
-  border-right: 1px solid #e5e5e5;
-  background-color: $COLOR-PRIMARY;
-  color: #fff;
-  text-align: center;
+.tariff__carusel {
+  flex-basis: 100%;
 
-  &--new {
-    background-image: url('../img/bg-hit-tablet.svg');
-    background-repeat: no-repeat;
-    background-position: 0 0;
-
-    &::before {
-      content: 'ХИТ';
-      position: absolute;
-      top: 12px;
-      left: 3px;
-      display: block;
-      transform: rotate(-45deg);
-    }
+  @include tablet-invert {
+    overflow-x: scroll;
   }
 }
 
-.tariff__head-title {
-  margin: 0 0 20px;
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 30px;
-  text-transform: uppercase;
-}
+.tariff__table-wrap {
+  margin-bottom: 40px;
 
-.tariff__head-text {
-  margin: 0;
-  font-size: 24px;
-  line-height: 30px;
-  font-weight: 100;
-}
+  @include tablet-invert {
+    $slide-width: 280px;
+    $wrap-width: $slide-width * 4;
 
-.tariff__item {
-  position: relative;
-  padding: 24px 23px 26px;
-  border-bottom: 1px solid #e5e5e5;
-  background-color: #fff;
-  color: $COLOR-PRIMARY;
-  font-size: 14px;
-  text-transform: uppercase;
-
-  &::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    width: 25px;
-    height: 25px;
-    background: url('../img/icon-yes.svg') 0 0/contain no-repeat;
-    transform: translateY(-50%);
-  }
-
-  &--no::after {
-    width: 25px;
-    height: 25px;
-    background: url('../img/icon-no.svg') 0 0/contain no-repeat;
+    width: $wrap-width;
+    //margin-left: (-$slide-width * 2 + $mobile-paddings);
   }
 }
-
 
 .tariff__table {
-  display: none;
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  table-layout: fixed;
-  border-collapse: collapse;
+}
 
-  @include tablet {
-    display: table;
-  }
+.tariff__row {
+  display: flex;
+  flex-direction: row;
 }
 
 .tariff__thead {
+  flex: 1 1 238px;
   position: relative;
   padding-top: 23px;
   padding-bottom: 21px;
-  border: 1px solid #e5e5e5;
+  border: 1px solid $COLOR-GRAY-BORDERS;
   background-color: $COLOR-PRIMARY;
   background-clip: padding-box;
   color: #fff;
   text-align: center;
+
+  @include tablet {
+    padding-top: 12px;
+    padding-bottom: 6px;
+  }
+
+  @include desktop {
+    padding-top: 15px;
+    padding-bottom: 25px;
+  }
 
   &--empty {
     border: none;
@@ -124,10 +90,18 @@
 .tariff__thead-title {
   display: inline-block;
   width: 100%;
-  font-size: 18px;
+  font-size: $FONT-SIZE-M;
   font-weight: bold;
   line-height: 30px;
   text-transform: uppercase;
+
+  @include tablet {
+    font-size: $FONT-SIZE-SM;
+  }
+
+  @include desktop {
+    font-size: $FONT-SIZE-M;
+  }
 }
 
 .tariff__thead-cost {
@@ -136,16 +110,34 @@
   font-size: 24px;
   line-height: 30px;
   font-weight: 100;
+
+  @include tablet {
+    font-size: $FONT-SIZE-M;
+  }
+
+  @include tablet {
+    font-size: 24px;
+  }
 }
 
 .tariff__cell {
+  flex: 1 1 238px;
   position: relative;
   padding: 24px 23px 26px;
-  border: 1px solid #e5e5e5;
+  border: 1px solid $COLOR-GRAY-BORDERS;
   background-color: #fff;
   background-clip: padding-box;
   color: $COLOR-PRIMARY;
-  font-size: 14px;
+  font-size: $FONT-SIZE-S;
+
+  @include tablet {
+    padding: 15px;
+  }
+
+  @include desktop {
+    padding: 18px 23px 18px;
+    font-size: $FONT-SIZE-M;
+  }
 
   &::after {
     content: '';
@@ -163,7 +155,14 @@
   }
 
   &--no::after {
-
     background: url('../img/icon-no.svg') 0 0/contain no-repeat;
+  }
+}
+
+.tariff__dots-wrap {
+  @include center-content();
+
+  @include tablet {
+    display: none;
   }
 }

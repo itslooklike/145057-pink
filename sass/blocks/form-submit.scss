@@ -1,0 +1,35 @@
+.form-submit {
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.form-submit__btn-wrap {
+  margin-bottom: 30px;
+
+  @include tablet {
+    flex-basis: 300px;
+    margin-bottom: 0;
+  }
+}
+
+.form-submit__tooltip {
+  margin: 0;
+  color: $COLOR-PRIMARY;
+  font-size: $FONT-SIZE-S;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.form-submit__star {
+  color: $COLOR-SECONDARY;
+}
+
+.form-submit__hidden {
+  @include desktop-invert {
+    @include visuallyhidden;
+  }
+}

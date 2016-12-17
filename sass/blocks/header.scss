@@ -1,28 +1,56 @@
+$header-padding-mobile: 22px;
+$header-padding-tablet: 44px;
+
 .header {
   position: absolute;
   z-index: 1;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.3);
-}
-
-.header__inner {
-  max-width: 980px;
-  padding: 22px 20px;
-  margin-right: auto;
-  margin-left: auto;
+  padding-top: $header-padding-mobile;
+  padding-bottom: $header-padding-mobile;
+  transition: background-color 0.2s;
 
   @include tablet {
-    padding-top: 42px;
-    padding-bottom: 42px;
+    padding-top: $header-padding-tablet;
+    padding-bottom: $header-padding-tablet;
+  }
+
+  @include desktop {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  &.active {
+    @include desktop-invert {
+      //position: relative;
+      background-color: #283645;
+      padding-bottom: 0;
+    }
   }
 }
 
 .header__head {
-  @include clearfix;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  @include desktop {
+    @include content-container;
+  }
 }
 
 .header__logo-wrap {
-  float: left;
+  margin-left: $mobile-paddings;
+
+  @include tablet {
+    margin-left: $tablet-paddings;
+  }
+
+  @include desktop {
+    margin-left: 0;
+    margin-right: 50px;
+  }
 }
 
 .header__logo {
@@ -32,9 +60,18 @@
 }
 
 .header__burger-wrap {
-  float: right;
   width: 50px;
   height: 24px;
+  margin-right: $mobile-paddings;
+
+  @include tablet {
+    margin-right: $tablet-paddings;
+  }
+
+  @include desktop {
+    display: none;
+    margin-right: 0;
+  }
 }
 
 .header__burger {
@@ -55,5 +92,63 @@
 }
 
 .header__menu {
+  flex: 0 1 100%;
   display: none;
+  flex-direction: column;
+  text-align: center;
+
+  @include desktop {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1 1 auto;
+  }
+
+  @include desktop {
+    flex-direction: row;
+    flex-basis: auto;
+  }
+
+  .header.active & {
+    @include desktop-invert {
+      display: flex;
+      margin-top: $header-padding-mobile;
+    }
+
+    @include desktop-invert {
+      @include tablet {
+        margin-top: $header-padding-tablet;
+      }
+    }
+  }
+}
+
+.header__menu-link {
+  padding-top: 27px;
+  padding-bottom: 27px;
+  border-top: 1px solid #000;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 32px;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  @include desktop {
+    flex: 0 1 175px;
+    padding-top: 45px;
+    padding-bottom: 49px;
+    border: 0;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1;
+    text-transform: initial;
+  }
+
+  &:last-child {
+    border-bottom: 1px solid #000;
+
+    @include desktop {
+      border: 0;
+    }
+  }
 }

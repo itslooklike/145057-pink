@@ -1,0 +1,34 @@
+.form-area__fieldset {
+  @include form-fieldset;
+}
+
+.form-area__legend {
+  @include form-legend;
+}
+
+.form-area__content {
+  padding-top: 20px;
+
+  @include tablet {
+    padding: 35px 55px 45px;
+  }
+}
+
+.form-area__textarea {
+  resize: vertical;
+  width: 100%;
+  min-height: 200px;
+  padding: 10px 20px;
+  border: 2px solid $COLOR-GRAY-BORDERS;
+  font-size: $FONT-SIZE-M;
+  line-height: 30px;
+
+  @include tablet {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  @include desktop {
+    min-height: 130px;
+  }
+}

@@ -5,31 +5,49 @@
 .benefits__inner {
   @include content-container;
 
-  padding-top: 45px;
+  padding-top: 40px;
+  padding-bottom: 320px;
+  background: url('../img/iphone-screen-mobile@1x.png') no-repeat center bottom -50px;
+  background-size: 157px auto;
+
+  @include tablet {
+    padding-top: 50px;
+    padding-bottom: 0;
+    background-position: left 10% bottom -60px;
+    background-size: 267px auto;
+  }
+
+  @include desktop {
+    background: none;
+  }
 }
 
 .benefits__title-wrap {
-  margin-bottom: 120px;
+  margin-bottom: 117px;
   text-align: center;
 
   @include tablet {
-    margin-bottom: 50px;
+    margin-bottom: 125px;
+  }
+
+  @include desktop {
+    margin-bottom: 80px;
   }
 }
 
 .benefits__title {
-  margin: 0 0 40px;
+  margin: 0 0 30px;
   color: $COLOR-PRIMARY;
   font-size: 24px;
   font-weight: 300;
 
   @include tablet {
     margin-bottom: 0;
-    font-size: 40px;
+    font-size: $FONT-SIZE-HERO-SM;
   }
 
   @include desktop {
-    font-size: 50px;
+    font-size: $FONT-SIZE-HERO-M;
   }
 
   &:last-child {
@@ -50,65 +68,94 @@
 }
 
 .benefits__list-wrap {
-  padding-bottom: 300px;
-  background: url('../img/iphone-screen-mobile@1x.png') no-repeat center bottom -50px;
-  background-size: 157px auto;
-
   @include tablet {
     max-width: 650px;
     padding-bottom: 50px;
     margin-right: auto;
     margin-left: auto;
-    background-position: left 20px bottom -60px;
-    background-size: 241px auto;
   }
 
   @include desktop {
     max-width: none;
-    padding-top: 300px;
-    background: none; // временно убрал картинку
   }
 }
 
 .benefits__list {
+  display: flex;
+  flex-flow: column nowrap;
+
   @include tablet {
-    max-width: 300px;
+    max-width: 310px;
     margin-left: auto;
   }
 
   @include desktop {
+    flex-direction: row;
+    justify-content: space-around;
     max-width: none;
     margin-left: 0;
-    font-size: 0;
   }
 }
 
 .benefits__item {
-  margin-bottom: 40px;
+  position: relative;
+  margin-bottom: 33px;
   text-align: center;
   line-height: 24px;
 
   @include tablet {
-    margin-bottom: 30px;
+    margin-bottom: 35px;
     text-align: left;
   }
 
   @include desktop {
-    display: inline-block;
-    width: calc(100% / 3);
+    flex: 0 0 240px;
+    padding-top: 355px;
     margin-bottom: 0;
     text-align: center;
-    vertical-align: top;
   }
 
   &:last-child {
     margin-bottom: 0;
   }
+
+  &::before {
+    @include desktop {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 300px;
+      border-bottom: 1px solid #000;
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      background-size: 190px auto;
+    }
+  }
+
+  &--1::before {
+    @include desktop {
+      background-image: url('../img/iphone-screen-mobile@1x.png');
+    }
+  }
+
+  &--2::before {
+    @include desktop {
+      background-image: url('../img/iphone-screen-mobile@1x.png');
+    }
+  }
+
+  &--3::before {
+    @include desktop {
+      background-image: url('../img/iphone-screen-mobile@1x.png');
+    }
+  }
 }
 
 .benefits__item-title {
-  margin: 0 0 20px;
-  font-size: 18px;
+  margin: 0 0 10px;
+  font-size: $FONT-SIZE-M;
   font-weight: bold;
 
   @include tablet {
@@ -116,21 +163,21 @@
   }
 
   @include desktop {
-    max-width: 236px;
-    margin: 0 auto 30px;
+    margin: 0 auto 25px;
     font-size: 30px;
+    line-height: 30px;
   }
 }
 
 .benefits__item-text {
   margin: 0;
   color: $COLOR-PRIMARY;
-  font-size: 14px;
+  font-size: $FONT-SIZE-S;
 
   @include desktop {
-    max-width: 236px;
     margin-right: auto;
     margin-left: auto;
-    font-size: 18px;
+    font-size: $FONT-SIZE-M;
+    line-height: 30px;
   }
 }

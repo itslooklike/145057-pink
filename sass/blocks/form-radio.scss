@@ -1,0 +1,69 @@
+.form-radio__fieldset {
+  @include form-fieldset;
+}
+
+.form-radio__legend {
+  @include form-legend;
+}
+
+.form-radio__content {
+  padding-top: 40px;
+
+  @include tablet-invert {
+    padding-left: $mobile-paddings;
+    padding-right: $mobile-paddings;
+  }
+
+  @include tablet {
+    padding: 45px 60px 15px;
+  }
+
+  @include desktop {
+    padding-left: 75px;
+  }
+}
+
+.form-radio__row {
+  margin-bottom: 30px;
+
+  @include tablet {
+    margin-bottom: 35px;
+  }
+}
+
+.form-radio__radio {
+  display: none;
+}
+
+.form-radio__label {
+  position: relative;
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 60px;
+  color: $COLOR-PRIMARY;
+  font-size: $FONT-SIZE-M;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 39px;
+    height: 39px;
+    border: 2px solid $COLOR-GRAY-BORDERS;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+
+  .form-radio__radio:checked + &::after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: $COLOR-SECONDARY;
+  }
+}

@@ -10,7 +10,7 @@ var stylelint = require('stylelint');
 var scss = require("postcss-scss");
 var pug = require('gulp-pug');
 var autoprefixer = require('autoprefixer');
-var server = require('browser-sync').create();
+var browserSync = require('browser-sync').create();
 
 gulp.task('scss-lint', function() {
   gulp.src(['sass/**/*.scss','!sass/base/normalize.scss'])
@@ -24,22 +24,13 @@ gulp.task('style', ['scss-lint'], function() {
   gulp.src('sass/style.scss')
     .pipe(plumber())
     .pipe(sourcemaps.init())
-    .pipe(sass())
+    .pipe(sass({outputStyle: 'expanded'}))
     .pipe(postcss([
-      autoprefixer({
-        browsers: [
-          'last 2 versions'
-        ],
-        cascade: false
-      })
+      autoprefixer({browsers: ['last 1 versions'], cascade: false})
     ]))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('css'))
-    .pipe(server.stream());
-});
-
-gulp.task('pug-watch', function() {
-  gulp.watch('pug/**/*.{pug,jade}', ['pug']);
+    .pipe(browserSync.stream({match: '**/*.css'}));
 });
 
 gulp.task('pug', function buildHTML() {
@@ -53,7 +44,7 @@ gulp.task('pug', function buildHTML() {
 });
 
 gulp.task('serve', ['style', 'pug'], function() {
-  server.init({
+  browserSync.init({
     server: '.',
     notify: false,
     open: false,
@@ -63,5 +54,7 @@ gulp.task('serve', ['style', 'pug'], function() {
 
   gulp.watch('sass/**/*.{scss,sass}', ['style']);
   gulp.watch('pug/**/*.{pug,jade}', ['pug']);
-  gulp.watch('*.html').on('change', server.reload);
+  gulp.watch('*.html').on('change', function() {
+    browserSync.reload();
+  });
 });

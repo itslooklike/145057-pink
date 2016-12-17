@@ -4,9 +4,10 @@
   border-radius: 5px;
   background-color: #2aab6d;
   color: #fff;
-  font-size: 18px;
+  font-size: $FONT-SIZE-M;
   font-weight: bold;
   text-transform: uppercase;
+  cursor: pointer;
 
   &--full-width {
     width: 100%;

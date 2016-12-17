@@ -4,8 +4,20 @@
   }
 }
 
+@mixin tablet-invert {
+  @media (max-width: #{$tablet-width - 1}) {
+    @content;
+  }
+}
+
 @mixin desktop {
   @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin desktop-invert {
+  @media (max-width: #{$desktop-width - 1}) {
     @content;
   }
 }
@@ -23,11 +35,31 @@
 }
 
 @mixin content-container {
-  max-width: $desktop-content-width;
-  padding-right: 20px;
-  padding-left: 20px;
+  max-width: $desktop-width - $mobile-paddings * 2;
+  padding-right: $mobile-paddings;
+  padding-left: $mobile-paddings;
   margin-right: auto;
   margin-left: auto;
+
+  @include tablet {
+    max-width: $desktop-width - $tablet-paddings * 2;
+    padding-right: $tablet-paddings;
+    padding-left: $tablet-paddings;
+  }
+
+  @include desktop {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+@mixin center-content($width: null) {
+  @if $width {
+    max-width: $width;
+  }
+
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @mixin visuallyhidden {
@@ -40,4 +72,43 @@
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+@mixin form-label {
+  display: block;
+  padding: 10px 20px;
+  color: $COLOR-SECONDARY;
+  font-size: $FONT-SIZE-S;
+  text-transform: uppercase;
+}
+
+@mixin form-input {
+  width: 100%;
+  padding: 15px 18px 14px;
+  border: 2px solid $COLOR-GRAY-BORDERS;
+  font-size: $FONT-SIZE-M;
+  line-height: 30px;
+}
+
+@mixin form-fieldset {
+  padding: 0;
+  border: 0;
+  margin: 0;
+
+  @include tablet {
+    border: 2px solid $COLOR-GRAY-BORDERS;
+  }
+}
+
+@mixin form-legend {
+  padding-left: 20px;
+  padding-right: 20px;
+  color: $COLOR-SECONDARY;
+  font-size: $FONT-SIZE-S;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@mixin link {
+  color: $COLOR-SECONDARY;
 }
