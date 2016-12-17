@@ -78,9 +78,7 @@
 }
 
 .feedback__dots-wrap {
-  @include center-content(60px);
-
-  width: 100%;
+  @include center-content();
 
   @include desktop {
     display: none;

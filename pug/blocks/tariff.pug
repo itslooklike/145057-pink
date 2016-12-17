@@ -1,42 +1,34 @@
 section.tariff
   .tariff__inner
     .tariff__carusel
-      //.tariff__slide
-      //  .tariff__head.tariff__head--new
-      //    h5.tariff__head-title Стандарт
-      //    p.tariff__head-text 3,99 USD
-      //  ul.tariff__list
-      //    li.tariff__item Розовый фильтр
-      //    li.tariff__item Смайлики
-      //    li.tariff__item.tariff__item--no Комментарии
-
       .tariff__table-wrap
-        table.tariff__table
-          tr.tariff__row
-            th.tariff__thead.tariff__thead--empty &nbsp;
-            th.tariff__thead
+        .tariff__table
+          .tariff__row
+            .tariff__thead.tariff__thead--empty &nbsp;
+            .tariff__thead
               span.tariff__thead-title База
               span.tariff__thead-cost 3,99 USD
-            th.tariff__thead.tariff__thead--new
+            .tariff__thead.tariff__thead--new
               span.tariff__thead-title Стандарт
               span.tariff__thead-cost 3,99 USD
-            th.tariff__thead
+            .tariff__thead
               span.tariff__thead-title Анлим
               span.tariff__thead-cost 3,99 USD
-          tr.tariff__row
-            td.tariff__cell Розовый фильтр
-            td.tariff__cell.tariff__cell--yes
-            td.tariff__cell.tariff__cell--no
-            td.tariff__cell.tariff__cell--no
-          tr.tariff__row
-            td.tariff__cell Смайлики
-            td.tariff__cell.tariff__cell--yes
-            td.tariff__cell.tariff__cell--yes
-            td.tariff__cell.tariff__cell--no
-          tr.tariff__row
-            td.tariff__cell Комментарии
-            td.tariff__cell.tariff__cell--yes
-            td.tariff__cell.tariff__cell--yes
-            td.tariff__cell.tariff__cell--yes
-      .tariff__dots-wrap
-        include /blocks/slider-dots
+          .tariff__row
+            .tariff__cell Розовый фильтр
+            .tariff__cell.tariff__cell--yes
+            .tariff__cell.tariff__cell--no
+            .tariff__cell.tariff__cell--no
+          .tariff__row
+            .tariff__cell Смайлики
+            .tariff__cell.tariff__cell--yes
+            .tariff__cell.tariff__cell--yes
+            .tariff__cell.tariff__cell--no
+          .tariff__row
+            .tariff__cell Комментарии
+            .tariff__cell.tariff__cell--yes
+            .tariff__cell.tariff__cell--yes
+            .tariff__cell.tariff__cell--yes
+
+    .tariff__dots-wrap
+      include /blocks/slider-dots

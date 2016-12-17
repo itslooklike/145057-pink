@@ -22,6 +22,7 @@ $header-padding-tablet: 44px;
 
   &.active {
     @include desktop-invert {
+      //position: relative;
       background-color: #283645;
       padding-bottom: 0;
     }
@@ -136,10 +137,18 @@ $header-padding-tablet: 44px;
     flex: 0 1 175px;
     padding-top: 45px;
     padding-bottom: 49px;
-    border-top: 0;
+    border: 0;
     font-size: 18px;
     font-weight: normal;
     line-height: 1;
     text-transform: initial;
+  }
+
+  &:last-child {
+    border-bottom: 1px solid #000;
+
+    @include desktop {
+      border: 0;
+    }
   }
 }
