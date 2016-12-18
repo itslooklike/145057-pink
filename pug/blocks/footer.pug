@@ -1,7 +1,10 @@
 footer.footer
   .footer__inner
     .footer__logo-wrap
-      img.footer__logo(src="img/logo-pink-blue-mobile.svg")
+      a(href="/")
+        picture
+          source(media="(min-width: 1020px)" srcset="img/logo-pink-blue-desktop.svg")
+          img.footer__logo(src="img/logo-pink-blue-mobile.svg")
     .footer__icon-list
       a.footer__icon-link.footer__icon-link--tw(href="#")
       a.footer__icon-link.footer__icon-link--fb(href="#")

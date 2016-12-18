@@ -1,7 +1,11 @@
 header.header
   .header__head
     .header__logo-wrap
-      img.header__logo(src="img/logo-pink-white-mobile.svg")
+      a(href="/")
+        picture
+          source(media="(min-width: 1020px)" srcset="img/logo-pink-white-desktop.svg")
+          source(media="(min-width: 700px)" srcset="img/logo-pink-white-tablet.svg")
+          img.header__logo(src="img/logo-pink-white-mobile.svg")
     .header__burger-wrap
       .header__burger
         span.header__burger-item
