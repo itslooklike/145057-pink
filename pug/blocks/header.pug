@@ -12,7 +12,11 @@ header.header
         span.header__burger-item
         span.header__burger-item
     nav.header__menu
-      a.header__menu-link(href="/") Главная
-      a.header__menu-link(href="/photo.html") Фотографии
-      a.header__menu-link(href="/form.html") Конкурс
-      a.header__menu-link(href="#") HTML Academy
+      a.header__menu-link(href="/")
+        span.header__menu-text Главная
+      a.header__menu-link.header__menu-link--active(href="/photo.html")
+        span.header__menu-text Фотографии
+      a.header__menu-link(href="/form.html")
+        span.header__menu-text Конкурс
+      a.header__menu-link(href="#")
+        span.header__menu-text HTML Academy

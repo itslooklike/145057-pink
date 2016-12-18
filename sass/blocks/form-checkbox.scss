@@ -65,4 +65,12 @@
       background: url('../img/icon-yes.svg') 50% 50%/22px 16px no-repeat;
     }
   }
+
+  &:hover::before {
+    border-color: $COLOR-PRIMARY;
+  }
+
+  &:active::before {
+    border-color: $COLOR-SECONDARY;
+  }
 }

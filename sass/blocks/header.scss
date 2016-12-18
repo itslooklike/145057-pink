@@ -150,4 +150,28 @@ $header-padding-tablet: 35px;
       border: 0;
     }
   }
+
+  &:focus,
+  &:hover {
+    color: $COLOR-SECONDARY;
+  }
+
+  &:active {
+    color: rgba(#fff, 0.3);
+  }
+
+  &--active {
+    span {
+      border-bottom: 2px solid #fff;
+    }
+
+    &:focus span,
+    &:hover span {
+      border-color: $COLOR-SECONDARY;
+    }
+
+    &:active span {
+      border-color: rgba(#fff, 0.3);
+    }
+  }
 }

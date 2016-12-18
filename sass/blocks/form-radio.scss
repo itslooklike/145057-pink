@@ -56,6 +56,14 @@
     background-color: #fff;
   }
 
+  &:hover::before {
+    border-color: $COLOR-PRIMARY;
+  }
+
+  &:active::before {
+    border-color: $COLOR-SECONDARY;
+  }
+
   .form-radio__radio:checked + &::after {
     content: '';
     position: absolute;

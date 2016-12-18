@@ -53,30 +53,27 @@
 
 .form-contact__input-wrap {
   position: relative;
-
-  @include tablet {
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 60px;
-      height: 100%;
-      background-color: $COLOR-GRAY-BORDERS;
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-    }
-
-    &--tel::after {
-      background-image: url('../img/icon-no.svg');
-    }
-
-    &--email::after {
-      background-image: url('../img/icon-no.svg');
-    }
-  }
+  display: flex;
 }
 
 .form-contact__input {
   @include form-input;
+}
+
+.form-contact__input-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  background-color: $COLOR-GRAY-BORDERS;
+
+  @include tablet-invert {
+    display: none;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+    fill: $COLOR-SECONDARY;
+  }
 }

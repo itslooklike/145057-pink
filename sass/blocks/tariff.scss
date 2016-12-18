@@ -1,5 +1,24 @@
 .tariff {
+  position: relative;
   background-color: #f2f2f2;
+}
+
+.tariff__corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 25px;
+  fill: #fff;
+
+  @include tablet {
+    height: 55px;
+  }
+
+  @include desktop {
+    height: 70px;
+  }
 }
 
 .tariff__inner {
@@ -11,6 +30,10 @@
 
   @include tablet {
     @include content-container;
+  }
+
+  @include tablet {
+    padding-top: 140px;
   }
 }
 

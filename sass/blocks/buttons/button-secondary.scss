@@ -1,13 +1,30 @@
 .button-secondary {
+  display: inline-block;
   padding: 23px 20px;
   border: none;
   border-radius: 5px;
-  background-color: #2aab6d;
+  background-color: $COLOR-GREEN;
   color: #fff;
   font-size: $FONT-SIZE-M;
   font-weight: bold;
+  line-height: 1;
   text-transform: uppercase;
+  text-decoration: none;
   cursor: pointer;
+
+  &:focus,
+  &:hover {
+    background-color: rgb(28, 155, 94);
+  }
+
+  &:active {
+    color: rgba($COLOR-SECONDARY, 0.3);
+  }
+
+  &[disabled] {
+    background-color: rgb(229, 229, 229);
+    color: #fff;
+  }
 
   &--full-width {
     width: 100%;

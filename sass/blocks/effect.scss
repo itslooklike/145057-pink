@@ -12,26 +12,59 @@
   @include content-container;
 
   display: flex;
-  padding-top: 95px;
+  align-items: center;
+  padding-top: 60px;
   padding-bottom: 30px;
-  background: url('http://placehold.it/240x280') 10% 100%/240px 280px no-repeat;
 
   @include desktop {
-    padding-top: 105px;
-    padding-bottom: 115px;
-    background-image: url('http://placehold.it/300x350');
-    background-position: 0 0;
-    background-size: 300px 350px;
+    padding-top: 15px;
+    padding-bottom: 65px;
+  }
+}
+
+.effect__icon-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 238px;
+  height: 276px;
+  background: url('../img/icon-timer.svg') 0 0/contain no-repeat;
+
+  @include desktop {
+    flex: 0 0 298px;
+    height: 345px;
+  }
+}
+
+.effect__icon {
+  position: relative;
+  top: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 202px;
+  height: 202px;
+  border: 20px solid currentColor;
+  border-radius: 50%;
+  background-color: $COLOR-BACKGROUND-PRIMARY;
+  color: $COLOR-SECONDARY;
+  font-size: 96px;
+  line-height: 1;
+
+  @include desktop {
+    top: 25px;
+    width: 253px;
+    height: 253px;
+    font-size: 120px;
   }
 }
 
 .effect__content {
-  flex: 0 0 310px;
-  margin-left: auto;
+  flex: 1 1 310px;
+  margin-left: 70px;
 
   @include desktop {
-    flex: 1 1 auto;
-    margin-left: 365px;
+    padding-top: 40px;
   }
 
   br {

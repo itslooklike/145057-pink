@@ -3,9 +3,18 @@ fieldset.form-contact__fieldset
   .form-contact__content
     .form-contact__row
       label.form-contact__label(for="input-phone") Номер телефона
-      .form-contact__input-wrap.form-contact__input-wrap--tel
+      .form-contact__input-wrap
         input.form-contact__input(id="input-phone" type="text" placeholder="Номер, пожалуйста")
+        span.form-contact__input-icon
+          <svg>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#iconTelephone"></use>
+          </svg>
     .form-contact__row
       label.form-contact__label(for="input-mail") адресок почты
-      .form-contact__input-wrap.form-contact__input-wrap--email
+      .form-contact__input-wrap
         input.form-contact__input(id="input-mail" type="text" placeholder="Введите почту *")
+        span.form-contact__input-icon
+          <svg>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#iconMail"></use>
+          </svg>
+

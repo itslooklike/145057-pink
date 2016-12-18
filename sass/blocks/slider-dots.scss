@@ -12,13 +12,22 @@
   border: none;
   border-radius: 50%;
   margin: 0 5px;
-  background-color: rgba(40, 54, 69, 0.3);
+  background-color: rgba($COLOR-PRIMARY, 0.3);
   cursor: pointer;
+
+  &:focus,
+  &:hover {
+    background-color: rgba($COLOR-PRIMARY, 0.6);
+  }
+
+  &:active {
+    background-color: rgba($COLOR-PRIMARY, 0.1);
+  }
 
   &--active {
     width: 12px;
     height: 12px;
-    border: 3px solid #283645;
+    border: 3px solid $COLOR-PRIMARY;
     background-color: transparent;
   }
 }

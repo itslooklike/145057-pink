@@ -3,10 +3,21 @@ $main-slide-phone-height: 285px;
 
 .main-slide {
   position: relative;
-  background: url('../img/bg-back-mobile@1x.jpg') 50% 0/auto $main-slide-bg-height no-repeat, #1d2631;
+  @include retina('../img/bg-back-mobile', 2, jpg);
+
+  background-color: #1d2631;
+  background-position: 50% 0;
+  background-size: auto $main-slide-bg-height;
+  background-repeat: no-repeat;
 
   @include tablet {
+    @include retina('../img/bg-back-tablet', 2, jpg);
+
     background-size: cover;
+  }
+
+  @include desktop {
+    @include retina('../img/bg-back-desktop', 2, jpg);
   }
 }
 
@@ -14,15 +25,26 @@ $main-slide-phone-height: 285px;
   @include content-container;
 
   padding-top: $main-slide-bg-height;
-  background: url('../img/iphone-hand-mobile@1x.png') 10% ($main-slide-bg-height - $main-slide-phone-height)/auto $main-slide-phone-height no-repeat;
+
+  @include retina('../img/iphone-hand-mobile', 2, png);
+
+  background-position: 10% ($main-slide-bg-height - $main-slide-phone-height);
+  background-size: auto $main-slide-phone-height;
+  background-repeat: no-repeat;
 
   @include tablet {
     padding-top: 0;
-    background: url('../img/iphone-hand-mobile@1x.png') 80% 100%/auto 545px no-repeat;
+
+    @include retina('../img/iphone-hand-tablet', 2, png);
+
+    background-position: 80% 100%;
+    background-size: auto 545px;
   }
 
   @include desktop {
-    background-size: 570px auto;
+    @include retina('../img/iphone-hand-desktop', 2, png);
+
+    background-size: auto 640px;
   }
 }
 
