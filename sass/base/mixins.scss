@@ -112,3 +112,18 @@
 @mixin link {
   color: $COLOR-SECONDARY;
 }
+
+@mixin retina($url, $scale: 3, $ext: png) {
+  $dpi: 96;
+  $descender: 0.5;
+
+  background-image: url($url + '@1x.' + $ext);
+
+  @if $scale > 1 {
+    @for $i from 2 through $scale {
+      @media (min-resolution: ($i - $descender) * ($dpi)+dpi), (min-resolution: ($i - $descender)+dppx) {
+        background-image: url($url + '@' + $i + 'x.' + $ext);
+      }
+    }
+  }
+}
