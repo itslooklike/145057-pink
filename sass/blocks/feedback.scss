@@ -91,12 +91,20 @@
   top: 50%;
   width: 31px;
   height: 31px;
-  border-bottom: 2px solid #283645;
-  border-left: 2px solid #283645;
-  opacity: 0.3;
+  border-bottom: 2px solid rgba($COLOR-PRIMARY, 0.3);
+  border-left: 2px solid rgba($COLOR-PRIMARY, 0.3);
+  cursor: pointer;
 
   @include desktop-invert {
     display: none;
+  }
+
+  &:hover {
+    border-color: rgba($COLOR-PRIMARY, 0.6);
+  }
+
+  &:active {
+    border-color: rgba($COLOR-PRIMARY, 0.1);
   }
 
   &--left {

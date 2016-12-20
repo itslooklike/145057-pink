@@ -2,15 +2,23 @@ header.header
   .header__head
     .header__logo-wrap
       a(href="/")
-        picture
-          source(media="(min-width: 1020px)" srcset="img/logo-pink-white-desktop.svg")
-          source(media="(min-width: 700px)" srcset="img/logo-pink-white-tablet.svg")
-          img.header__logo(src="img/logo-pink-white-mobile.svg")
+        <svg class="header__logo header__logo--mobile" viewbox="0 0 75 22">
+          <use xlink:href="symbols.svg#logo-pink-white-mobile"/>
+        </svg>
+        <svg class="header__logo header__logo--tablet" viewbox="0 0 147 40">
+          <use xlink:href="symbols.svg#logo-pink-white-tablet"/>
+        </svg>
+        <svg class="header__logo header__logo--desktop" viewbox="0 0 147 40">
+          <use xlink:href="symbols.svg#logo-pink-white-desktop"/>
+        </svg>
     .header__burger-wrap
       .header__burger
-        span.header__burger-item
-        span.header__burger-item
-        span.header__burger-item
+        <svg class="header__burger-burger" viewbox="0 0 50 24">
+          <use xlink:href="symbols.svg#icon-menu-burger"/>
+        </svg>
+        <svg class="header__burger-cross" viewbox="0 0 50 24">
+          <use xlink:href="symbols.svg#icon-menu-cross"/>
+        </svg>
     nav.header__menu
       a.header__menu-link(href="/")
         span.header__menu-text Главная

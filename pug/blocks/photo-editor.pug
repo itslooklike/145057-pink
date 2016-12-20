@@ -12,15 +12,24 @@ section.photo-editor
       .photo-editor__tools-wrap
         ul.photo-editor__tools-list
           li.photo-editor__tools-item
-            button.photo-editor__tools-btn.photo-editor__tools-btn--crop(type="button")
+            button.photo-editor__tools-btn.photo-editor__tools-btn--active(type="button")
+              <svg class="photo-editor__tools-btn-icon photo-editor__tools-btn-icon--crop" viewbox="0 0 50 50">
+                <use xlink:href="symbols.svg#icon-editor-crop"/>
+              </svg>
             .photo-editor__tools-range-bar
               include /blocks/range-bar
           li.photo-editor__tools-item
-            button.photo-editor__tools-btn.photo-editor__tools-btn--fill(type="button")
+            button.photo-editor__tools-btn(type="button")
+              <svg class="photo-editor__tools-btn-icon photo-editor__tools-btn-icon--fill" viewbox="0 0 50 50">
+                <use xlink:href="symbols.svg#icon-editor-fill"/>
+              </svg>
             .photo-editor__tools-range-bar
               include /blocks/range-bar
           li.photo-editor__tools-item
-            button.photo-editor__tools-btn.photo-editor__tools-btn--contrast(type="button")
+            button.photo-editor__tools-btn(type="button")
+              <svg class="photo-editor__tools-btn-icon photo-editor__tools-btn-icon--contrast" viewbox="0 0 50 50">
+                <use xlink:href="symbols.svg#icon-editor-contrast"/>
+              </svg>
             .photo-editor__tools-range-bar
               include /blocks/range-bar
         .photo-editor__range-bar-wrap

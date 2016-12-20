@@ -131,6 +131,7 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
   cursor: pointer;
+  fill: rgba($COLOR-PRIMARY, 0.3);
 
   @include tablet {
     width: 25px;
@@ -142,44 +143,47 @@
     height: 50px;
   }
 
-  &--crop {
-    background-image: url('../img/icon-editor-crop.svg');
-    background-size: 44px;
+  &:hover {
+    fill: rgba($COLOR-PRIMARY, 0.5);
+  }
 
-    @include tablet {
-      background-size: 22px;
+  &--active {
+    fill: $COLOR-SECONDARY;
+
+    &:hover {
+      fill: $COLOR-SECONDARY;
     }
+  }
+}
 
-    @include desktop {
-      background-size: 44px;
+.photo-editor__tools-btn-icon {
+  &--crop {
+    width: 44px;
+    height: 44px;
+
+    @include tablet-only {
+      width: 22px;
+      height: 22px;
     }
   }
 
   &--fill {
-    background-image: url('../img/icon-editor-fill.svg');
-    background-size: 48px 43px;
-    background-position: 50% 100%; // переделать свг с норм въюбоксами, и убрать это дерьмо
+    width: 48px;
+    height: 43px;
 
-    @include tablet {
-      background-size: 24px 22px;
-      background-position: 50% 50%;
-    }
-
-    @include desktop {
-      background-size: 48px 43px;
+    @include tablet-only {
+      width: 24px;
+      height: 22px;
     }
   }
 
   &--contrast {
-    background-image: url('../img/icon-editor-contrast.svg');
-    background-size: 32px;
+    width: 32px;
+    height: 32px;
 
-    @include tablet {
-      background-size: 16px;
-    }
-
-    @include desktop {
-      background-size: 32px;
+    @include tablet-only {
+      width: 16px;
+      height: 16px;
     }
   }
 }
