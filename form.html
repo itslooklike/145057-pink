@@ -10,11 +10,25 @@
   <body>
     <header class="header">
       <div class="header__head">
-        <div class="header__logo-wrap"><img class="header__logo" src="img/logo-pink-white-mobile.svg"></div>
+        <div class="header__logo-wrap"><a href="/"><svg class="header__logo header__logo--mobile" viewbox="0 0 75 22">
+<use xlink:href="symbols.svg#logo-pink-white-mobile"/>
+</svg>
+<svg class="header__logo header__logo--tablet" viewbox="0 0 147 40">
+<use xlink:href="symbols.svg#logo-pink-white-tablet"/>
+</svg>
+<svg class="header__logo header__logo--desktop" viewbox="0 0 147 40">
+<use xlink:href="symbols.svg#logo-pink-white-desktop"/>
+</svg></a></div>
         <div class="header__burger-wrap">
-          <div class="header__burger"><span class="header__burger-item"></span><span class="header__burger-item"></span><span class="header__burger-item"></span></div>
+          <div class="header__burger"><svg class="header__burger-burger" viewbox="0 0 50 24">
+<use xlink:href="symbols.svg#icon-menu-burger"/>
+</svg>
+<svg class="header__burger-cross" viewbox="0 0 50 24">
+<use xlink:href="symbols.svg#icon-menu-cross"/>
+</svg>
+          </div>
         </div>
-        <nav class="header__menu"><a class="header__menu-link" href="/">Главная</a><a class="header__menu-link" href="/photo.html">Фотографии</a><a class="header__menu-link" href="/form.html">Конкурс</a><a class="header__menu-link" href="#">HTML Academy</a></nav>
+        <nav class="header__menu"><a class="header__menu-link" href="/"><span class="header__menu-text">Главная</span></a><a class="header__menu-link header__menu-link--active" href="/photo.html"><span class="header__menu-text">Фотографии</span></a><a class="header__menu-link" href="/form.html"><span class="header__menu-text">Конкурс</span></a><a class="header__menu-link" href="#"><span class="header__menu-text">HTML Academy</span></a></nav>
       </div>
     </header>
     <section class="main-slide-form">
@@ -78,14 +92,18 @@
             <div class="form-contact__content">
               <div class="form-contact__row">
                 <label class="form-contact__label" for="input-phone">Номер телефона</label>
-                <div class="form-contact__input-wrap form-contact__input-wrap--tel">
-                  <input class="form-contact__input" id="input-phone" type="text" placeholder="Номер, пожалуйста">
+                <div class="form-contact__input-wrap">
+                  <input class="form-contact__input" id="input-phone" type="text" placeholder="Номер, пожалуйста"><span class="form-contact__input-icon"><svg class="" viewbox="0 0 20 20">
+<use xlink:href="symbols.svg#icon-phone"/>
+</svg></span>
                 </div>
               </div>
               <div class="form-contact__row">
                 <label class="form-contact__label" for="input-mail">адресок почты</label>
-                <div class="form-contact__input-wrap form-contact__input-wrap--email">
-                  <input class="form-contact__input" id="input-mail" type="text" placeholder="Введите почту *">
+                <div class="form-contact__input-wrap">
+                  <input class="form-contact__input" id="input-mail" type="text" placeholder="Введите почту *"><span class="form-contact__input-icon"><svg class="" viewbox="0 0 20 20">
+<use xlink:href="symbols.svg#icon-mail"/>
+</svg></span>
                 </div>
               </div>
             </div>
@@ -132,9 +150,17 @@
     </form>
     <footer class="footer">
       <div class="footer__inner">
-        <div class="footer__logo-wrap"><img class="footer__logo" src="img/logo-pink-blue-mobile.svg"></div>
-        <div class="footer__icon-list"><a class="footer__icon-link footer__icon-link--tw" href="#"></a><a class="footer__icon-link footer__icon-link--fb" href="#"></a><a class="footer__icon-link footer__icon-link--yt" href="#"></a></div>
-        <p class="footer__copy-wrap"><span class="footer__copy">Разработано</span></p>
+        <div class="footer__logo-wrap">
+          <div class="footer__logo"><a href="/"><svg class="footer__logo-tablet" viewbox="0 0 147 40">
+<use xlink:href="symbols.svg#logo-pink-blue-mobile"/>
+</svg>
+<svg class="footer__logo-desktop" viewbox="0 0 147 40">
+<use xlink:href="symbols.svg#logo-pink-blue-desktop"/>
+</svg></a></div>
+        </div>
+        <div class="footer__icon-list"><a class="footer__icon-link footer__icon-link--tw" href="#"></a><a class="footer__icon-link footer__icon-link--fb" href="#"></a><a class="footer__icon-link footer__icon-link--yt" href="#"></a></div><a class="footer__copy-wrap" href="/"><span class="footer__copy">Разработано<span class="footer__copy-logo"><svg class="" viewbox="0 0 27 34">
+<use xlink:href="symbols.svg#logo-htmlacademy"/>
+</svg></span></span></a>
       </div>
     </footer>
     <script src="js/app.js"></script>
