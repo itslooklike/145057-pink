@@ -10,3 +10,4 @@ css/*.map
 node_modules/
 Thumbs.db
 prepros-6.config
+build
