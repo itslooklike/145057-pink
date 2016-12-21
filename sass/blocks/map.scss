@@ -2,25 +2,18 @@
   position: relative;
   height: 200px;
 
-  @include retina('../img/bg-map-mobile', 2, jpg);
-
-  background-position: 0 0;
-  background-size: cover;
-  background-repeat: no-repeat;
-
   @include tablet {
     height: 380px;
-
-    @include retina('../img/bg-map-tablet', 2, jpg);
   }
 
   @include desktop {
-    @include retina('../img/bg-map-desktop', 2, jpg);
+    height: 500px;
   }
 }
 
 .map__corner {
   position: absolute;
+  z-index: 1;
   top: 0;
   right: 0;
   left: 0;
@@ -35,4 +28,8 @@
   @include desktop {
     height: 105px;
   }
+}
+
+.map__map {
+  height: 100%;
 }
