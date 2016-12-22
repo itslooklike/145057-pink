@@ -10,11 +10,25 @@
   <body>
     <header class="header">
       <div class="header__head">
-        <div class="header__logo-wrap"><img class="header__logo" src="img/logo-pink-white-mobile.svg"></div>
+        <div class="header__logo-wrap"><a href="/"><svg class="header__logo header__logo--mobile" viewbox="0 0 75 22">
+<use xlink:href="img/symbols.svg#logo-pink-white-mobile"/>
+</svg>
+<svg class="header__logo header__logo--tablet" viewbox="0 0 147 40">
+<use xlink:href="img/symbols.svg#logo-pink-white-tablet"/>
+</svg>
+<svg class="header__logo header__logo--desktop" viewbox="0 0 147 40">
+<use xlink:href="img/symbols.svg#logo-pink-white-desktop"/>
+</svg></a></div>
         <div class="header__burger-wrap">
-          <div class="header__burger"><span class="header__burger-item"></span><span class="header__burger-item"></span><span class="header__burger-item"></span></div>
+          <div class="header__burger"><svg class="header__burger-burger" viewbox="0 0 50 24">
+<use xlink:href="img/symbols.svg#icon-menu-burger"/>
+</svg>
+<svg class="header__burger-cross" viewbox="0 0 50 24">
+<use xlink:href="img/symbols.svg#icon-menu-cross"/>
+</svg>
+          </div>
         </div>
-        <nav class="header__menu"><a class="header__menu-link" href="/">Главная</a><a class="header__menu-link" href="/photo.html">Фотографии</a><a class="header__menu-link" href="/form.html">Конкурс</a><a class="header__menu-link" href="#">HTML Academy</a></nav>
+        <nav class="header__menu"><a class="header__menu-link" href="/"><span class="header__menu-text">Главная</span></a><a class="header__menu-link header__menu-link--active" href="/photo.html"><span class="header__menu-text">Фотографии</span></a><a class="header__menu-link" href="/form.html"><span class="header__menu-text">Конкурс</span></a><a class="header__menu-link" href="#"><span class="header__menu-text">HTML Academy</span></a></nav>
       </div>
     </header>
     <section class="main-slide">
@@ -57,6 +71,9 @@
     </section>
     <section class="effect">
       <div class="effect__inner">
+        <div class="effect__icon-wrap">
+          <div class="effect__icon"><span class="effect__icon-text">24</span></div>
+        </div>
         <div class="effect__content">
           <h3 class="effect__title">Эффект<br> на 24 часа!</h3>
           <p class="effect__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p><a class="effect__link" href="#">Узнать больше об исследовании</a>
@@ -65,6 +82,8 @@
     </section>
     <section class="feedback">
       <div class="feedback__inner">
+        <button class="feedback__btn feedback__btn--left" type="button"></button>
+        <button class="feedback__btn feedback__btn--right" type="button"></button>
         <div class="feedback__title-wrap">
           <h4 class="feedback__title">Николай Петров</h4>
           <p class="feedback__subtitle">25 лет, водитель трамвая</p>
@@ -79,7 +98,9 @@
         </div>
       </div>
     </section>
-    <section class="tariff">
+    <section class="tariff"><svg class="tariff__corner">
+<use xlink:href="img/symbols.svg#bg-triangle-white"/>
+</svg>
       <div class="tariff__inner">
         <div class="tariff__carusel">
           <div class="tariff__table-wrap">
@@ -91,22 +112,49 @@
                 <div class="tariff__thead"><span class="tariff__thead-title">Анлим</span><span class="tariff__thead-cost">3,99 USD</span></div>
               </div>
               <div class="tariff__row">
-                <div class="tariff__cell">Розовый фильтр</div>
-                <div class="tariff__cell tariff__cell--yes"></div>
-                <div class="tariff__cell tariff__cell--no"></div>
-                <div class="tariff__cell tariff__cell--no"></div>
+                <div class="tariff__cell"><span class="tariff__text">Розовый фильтр</span></div>
+                <div class="tariff__cell"><span class="tariff__text-mobile">Розовый фильтр</span><svg class="tariff__cell-svg tariff__cell-svg--yes" viewbox="0 0 27 27">
+<use xlink:href="img/symbols.svg#icon-yes"/>
+</svg>
+                </div>
+                <div class="tariff__cell"><span class="tariff__text-mobile">Розовый фильтр</span><svg class="tariff__cell-svg tariff__cell-svg--yes" viewbox="0 0 27 27">
+<use xlink:href="img/symbols.svg#icon-yes"/>
+</svg>
+                </div>
+                <div class="tariff__cell"><span class="tariff__text-mobile">Розовый фильтр</span><svg class="tariff__cell-svg tariff__cell-svg--yes" viewbox="0 0 27 27">
+<use xlink:href="img/symbols.svg#icon-yes"/>
+</svg>
+                </div>
               </div>
               <div class="tariff__row">
-                <div class="tariff__cell">Смайлики</div>
-                <div class="tariff__cell tariff__cell--yes"></div>
-                <div class="tariff__cell tariff__cell--yes"></div>
-                <div class="tariff__cell tariff__cell--no"></div>
+                <div class="tariff__cell"><span class="tariff__text">Смайлики</span></div>
+                <div class="tariff__cell"><span class="tariff__text-mobile">Смайлики</span><svg class="tariff__cell-svg tariff__cell-svg--no" viewbox="0 0 27 27">
+<use xlink:href="img/symbols.svg#icon-no"/>
+</svg>
+                </div>
+                <div class="tariff__cell"><span class="tariff__text-mobile">Смайлики</span><svg class="tariff__cell-svg tariff__cell-svg--yes" viewbox="0 0 27 27">
+<use xlink:href="img/symbols.svg#icon-yes"/>
+</svg>
+                </div>
+                <div class="tariff__cell"><span class="tariff__text-mobile">Смайлики</span><svg class="tariff__cell-svg tariff__cell-svg--yes" viewbox="0 0 27 27">
+<use xlink:href="img/symbols.svg#icon-yes"/>
+</svg>
+                </div>
               </div>
               <div class="tariff__row">
-                <div class="tariff__cell">Комментарии</div>
-                <div class="tariff__cell tariff__cell--yes"></div>
-                <div class="tariff__cell tariff__cell--yes"></div>
-                <div class="tariff__cell tariff__cell--yes"></div>
+                <div class="tariff__cell"><span class="tariff__text">Комментарии</span></div>
+                <div class="tariff__cell"><span class="tariff__text-mobile">Комментарии</span><svg class="tariff__cell-svg tariff__cell-svg--no" viewbox="0 0 27 27">
+<use xlink:href="img/symbols.svg#icon-no"/>
+</svg>
+                </div>
+                <div class="tariff__cell"><span class="tariff__text-mobile">Комментарии</span><svg class="tariff__cell-svg tariff__cell-svg--no" viewbox="0 0 27 27">
+<use xlink:href="img/symbols.svg#icon-no"/>
+</svg>
+                </div>
+                <div class="tariff__cell"><span class="tariff__text-mobile">Комментарии</span><svg class="tariff__cell-svg tariff__cell-svg--yes" viewbox="0 0 27 27">
+<use xlink:href="img/symbols.svg#icon-yes"/>
+</svg>
+                </div>
               </div>
             </div>
           </div>
@@ -139,7 +187,12 @@
         </ul>
       </div>
     </section>
-    <section class="map"></section>
+    <section class="map"><svg class="map__corner">
+<use xlink:href="img/symbols.svg#bg-triangle-white-footer"/>
+</svg>
+      <div class="map__map" id="mapMap"></div>
+    </section>
     <script src="js/app.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWqQrvWiS4TthFic060hJB_RBFpejG6uc&amp;callback=initMap"></script>
   </body>
 </html>

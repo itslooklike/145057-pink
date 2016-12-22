@@ -1,7 +1,7 @@
 .button-primary {
   display: inline-block;
   padding: 17px 35px 15px;
-  border: 3px solid white;
+  border: 3px solid #fff;
   border-radius: 30px;
   background: none;
   color: #fff;
@@ -9,4 +9,19 @@
   font-weight: bold;
   line-height: 1;
   text-decoration: none;
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    color: $COLOR-SECONDARY;
+    background-color: #fff;
+  }
+
+  &:active {
+    color: rgba(210, 40, 86, 0.3);
+  }
+
+  &--full-width {
+    width: 100%;
+  }
 }

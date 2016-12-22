@@ -1,0 +1,29 @@
+.button-cancel {
+  display: inline-block;
+  padding: 17px 37px 15px;
+  border: 3px solid currentColor;
+  border-radius: 30px;
+  background: none;
+  color: rgba($COLOR-PRIMARY, 0.1);
+  font-size: $FONT-SIZE-M;
+  font-weight: bold;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    border-color: currentColor;
+    color: rgba($COLOR-PRIMARY, 0.3);
+  }
+
+  &:active {
+    border-color: transparent;
+    color: rgba(#fff, 0.3);
+    background-color: rgba($COLOR-PRIMARY, 0.3);
+  }
+
+  &--full-width {
+    width: 100%;
+  }
+}

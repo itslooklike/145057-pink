@@ -1,17 +1,27 @@
 .main-slide-form {
   padding-top: 100px;
   padding-bottom: 55px;
-  background: url('../img/bg-back-mobile@1x.jpg') 50% 0/auto 462px no-repeat;
+
+  @include retina('../img/bg-back-mobile', 2, jpg);
+
+  background-position: 50% 0;
+  background-size: auto 462px;
+  background-repeat: no-repeat;
 
   @include tablet {
     padding-top: 180px;
     padding-bottom: 85px;
+
+    @include retina('../img/bg-back-tablet', 2, jpg);
+
     background-size: cover;
   }
 
-  @include tablet {
+  @include desktop {
     padding-top: 170px;
     padding-bottom: 105px;
+
+    @include retina('../img/bg-back-desktop', 2, jpg);
   }
 }
 

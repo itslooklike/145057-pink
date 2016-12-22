@@ -23,7 +23,6 @@
   margin-bottom: 40px;
 
   @include tablet {
-    top: -10px;
     margin-bottom: 0;
   }
 }
@@ -32,6 +31,32 @@
   max-width: 150px;
   margin-right: auto;
   margin-left: auto;
+
+  use {
+    fill: $COLOR-PRIMARY;
+    color: $COLOR-SECONDARY;
+  }
+
+  &:hover use {
+    fill: $COLOR-SECONDARY;
+  }
+
+  &:active use {
+    fill: rgba($COLOR-PRIMARY, 0.3);
+    color: rgba($COLOR-SECONDARY, 0.3);
+  }
+}
+
+.footer__logo-tablet {
+  @include desktop {
+    display: none;
+  }
+}
+
+.footer__logo-desktop {
+  @include desktop-invert {
+    display: none;
+  }
 }
 
 .footer__icon-list {
@@ -49,7 +74,7 @@
   display: block;
   width: 51px;
   height: 51px;
-  border: 3px solid #edeeef;
+  border: 3px solid rgba($COLOR-PRIMARY, 0.1);
   border-radius: 50%;
   margin-right: 5px;
   margin-left: 5px;
@@ -76,36 +101,57 @@
   &--yt::before {
     background-image: url('../img/icon-youtube.svg');
   }
+
+  &:focus,
+  &:hover {
+    border-color: $COLOR-PRIMARY;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 }
 
 .footer__copy-wrap {
+  position: relative;
   margin: 0;
   color: $COLOR-PRIMARY;
   font-size: $FONT-SIZE-S;
   font-weight: normal;
   line-height: 18px;
   text-align: center;
+  text-decoration: none;
 
   @include desktop {
     font-size: $FONT-SIZE-M;
+  }
+
+  svg {
+    fill: $COLOR-SECONDARY;
+  }
+
+  &:hover svg {
+    fill: $COLOR-PRIMARY;
+  }
+
+  &:active svg {
+    fill: rgba($COLOR-PRIMARY, 0.3);
   }
 }
 
 .footer__copy {
   position: relative;
   padding-right: 40px;
+}
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: -5px;
-    right: 0;
-    width: 27px;
-    height: 34px;
-    background: url('../img/logo-htmlacademy.svg') 0 0 no-repeat;
+.footer__copy-logo {
+  position: absolute;
+  top: -5px;
+  right: 0;
+  width: 27px;
+  height: 34px;
 
-    @include desktop {
-      top: 0;
-    }
+  @include desktop {
+    top: 0;
   }
 }

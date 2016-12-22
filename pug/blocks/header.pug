@@ -1,14 +1,30 @@
 header.header
   .header__head
     .header__logo-wrap
-      img.header__logo(src="img/logo-pink-white-mobile.svg")
+      a(href="/")
+        <svg class="header__logo header__logo--mobile" viewbox="0 0 75 22">
+          <use xlink:href="img/symbols.svg#logo-pink-white-mobile"/>
+        </svg>
+        <svg class="header__logo header__logo--tablet" viewbox="0 0 147 40">
+          <use xlink:href="img/symbols.svg#logo-pink-white-tablet"/>
+        </svg>
+        <svg class="header__logo header__logo--desktop" viewbox="0 0 147 40">
+          <use xlink:href="img/symbols.svg#logo-pink-white-desktop"/>
+        </svg>
     .header__burger-wrap
       .header__burger
-        span.header__burger-item
-        span.header__burger-item
-        span.header__burger-item
+        <svg class="header__burger-burger" viewbox="0 0 50 24">
+          <use xlink:href="img/symbols.svg#icon-menu-burger"/>
+        </svg>
+        <svg class="header__burger-cross" viewbox="0 0 50 24">
+          <use xlink:href="img/symbols.svg#icon-menu-cross"/>
+        </svg>
     nav.header__menu
-      a.header__menu-link(href="/") Главная
-      a.header__menu-link(href="/photo.html") Фотографии
-      a.header__menu-link(href="/form.html") Конкурс
-      a.header__menu-link(href="#") HTML Academy
+      a.header__menu-link(href="/")
+        span.header__menu-text Главная
+      a.header__menu-link.header__menu-link--active(href="/photo.html")
+        span.header__menu-text Фотографии
+      a.header__menu-link(href="/form.html")
+        span.header__menu-text Конкурс
+      a.header__menu-link(href="#")
+        span.header__menu-text HTML Academy

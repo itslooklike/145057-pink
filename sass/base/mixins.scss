@@ -10,6 +10,12 @@
   }
 }
 
+@mixin tablet-only {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1}) {
+    @content;
+  }
+}
+
 @mixin desktop {
   @media (min-width: #{$desktop-width}) {
     @content;
@@ -88,6 +94,14 @@
   border: 2px solid $COLOR-GRAY-BORDERS;
   font-size: $FONT-SIZE-M;
   line-height: 30px;
+
+  &:hover {
+    border-color: $COLOR-PRIMARY;
+  }
+
+  &:focus {
+    border-color: $COLOR-SECONDARY;
+  }
 }
 
 @mixin form-fieldset {
@@ -111,4 +125,37 @@
 
 @mixin link {
   color: $COLOR-SECONDARY;
+  text-decoration: underline;
+
+  &:focus,
+  &:hover {
+    color: $COLOR-PRIMARY;
+  }
+
+  &:active {
+    color: rgba($COLOR-PRIMARY, 0.3);
+    text-decoration: none;
+  }
+}
+
+@mixin retina($url, $scale: 3, $ext: png) {
+  $dpi: 96;
+  $descender: 0.5;
+
+  background-image: url($url + '@1x.' + $ext);
+
+  @if $scale > 1 {
+    @for $i from 2 through $scale {
+      @media (min-resolution: ($i - $descender) * ($dpi)+dpi), (min-resolution: ($i - $descender)+dppx) {
+        background-image: url($url + '@' + $i + 'x.' + $ext);
+      }
+    }
+  }
+}
+
+@mixin btn-reset {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  background-color: transparent;
 }

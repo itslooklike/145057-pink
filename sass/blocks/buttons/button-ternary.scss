@@ -1,7 +1,7 @@
 .button-ternary {
   display: inline-block;
   padding: 17px 37px 15px;
-  border: 3px solid currentColor;
+  border: 3px solid $COLOR-SECONDARY;
   border-radius: 30px;
   background: none;
   color: $COLOR-SECONDARY;
@@ -9,10 +9,21 @@
   font-weight: bold;
   line-height: 1;
   text-decoration: none;
+  cursor: pointer;
+
+  &:focus:not([disabled]),
+  &:hover:not([disabled]) {
+    color: #fff;
+    background-color: $COLOR-SECONDARY;
+  }
+
+  &:active:not([disabled]) {
+    color: rgba(255, 255, 255, 0.3);
+  }
 
   &[disabled] {
     border-color: currentColor;
-    color: #283645;
+    color: $COLOR-PRIMARY;
     opacity: 0.1;
   }
 

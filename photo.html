@@ -10,11 +10,25 @@
   <body>
     <header class="header">
       <div class="header__head">
-        <div class="header__logo-wrap"><img class="header__logo" src="img/logo-pink-white-mobile.svg"></div>
+        <div class="header__logo-wrap"><a href="/"><svg class="header__logo header__logo--mobile" viewbox="0 0 75 22">
+<use xlink:href="img/symbols.svg#logo-pink-white-mobile"/>
+</svg>
+<svg class="header__logo header__logo--tablet" viewbox="0 0 147 40">
+<use xlink:href="img/symbols.svg#logo-pink-white-tablet"/>
+</svg>
+<svg class="header__logo header__logo--desktop" viewbox="0 0 147 40">
+<use xlink:href="img/symbols.svg#logo-pink-white-desktop"/>
+</svg></a></div>
         <div class="header__burger-wrap">
-          <div class="header__burger"><span class="header__burger-item"></span><span class="header__burger-item"></span><span class="header__burger-item"></span></div>
+          <div class="header__burger"><svg class="header__burger-burger" viewbox="0 0 50 24">
+<use xlink:href="img/symbols.svg#icon-menu-burger"/>
+</svg>
+<svg class="header__burger-cross" viewbox="0 0 50 24">
+<use xlink:href="img/symbols.svg#icon-menu-cross"/>
+</svg>
+          </div>
         </div>
-        <nav class="header__menu"><a class="header__menu-link" href="/">Главная</a><a class="header__menu-link" href="/photo.html">Фотографии</a><a class="header__menu-link" href="/form.html">Конкурс</a><a class="header__menu-link" href="#">HTML Academy</a></nav>
+        <nav class="header__menu"><a class="header__menu-link" href="/"><span class="header__menu-text">Главная</span></a><a class="header__menu-link header__menu-link--active" href="/photo.html"><span class="header__menu-text">Фотографии</span></a><a class="header__menu-link" href="/form.html"><span class="header__menu-text">Конкурс</span></a><a class="header__menu-link" href="#"><span class="header__menu-text">HTML Academy</span></a></nav>
       </div>
     </header>
     <section class="main-slide-photo">
@@ -28,7 +42,11 @@
       </div>
       <div class="photo__panorama-wrap">
         <div class="photo-card photo-card--panorama">
-          <div class="photo-card__img-wrap"><img class="photo-card__img" src="img/panorama-mobile@1x.jpg"></div>
+          <div class="photo-card__img-wrap"><a href="/">
+              <picture>
+                <source media="(min-width: 1020px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
+                <source media="(min-width: 700px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x"><img class="photo-card__img" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@1x.jpg 1x, img/panorama-mobile@2x.jpg 2x">
+              </picture></a></div>
           <div class="photo__inner">
             <div class="photo-card__content">
               <div class="photo-card__title">Анна<span class="photo-card__time"> (5 минут назад)</span></div>
@@ -43,7 +61,11 @@
       <div class="photo__inner">
         <div class="photo__card-catalog">
           <div class="photo-card">
-            <div class="photo-card__img-wrap"><img class="photo-card__img" src="img/photo-1-mobile@1x.jpg"></div>
+            <div class="photo-card__img-wrap"><a href="/">
+                <picture>
+                  <source media="(min-width: 1020px)" srcset="img/photo-1-desktop@1x.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
+                  <source media="(min-width: 700px)" srcset="img/photo-1-tablet@1x.jpg 1x, img/photo-1-tablet@2x.jpg 2x"><img class="photo-card__img" src="img/photo-1-mobile@1x.jpg" srcset="img/photo-1-mobile@1x.jpg 1x, img/photo-1-mobile@2x.jpg 2x">
+                </picture></a></div>
             <div class="photo-card__content">
               <div class="photo-card__title">Левон<span class="photo-card__time"> (5 часов назад)</span></div>
               <p class="photo-card__desc">Вчера он на луну летал, сегодня в руки к нам попал.</p>
@@ -53,7 +75,11 @@
             </div>
           </div>
           <div class="photo-card">
-            <div class="photo-card__img-wrap"><img class="photo-card__img" src="img/photo-2-mobile@1x.jpg"></div>
+            <div class="photo-card__img-wrap"><a href="/">
+                <picture>
+                  <source media="(min-width: 1020px)" srcset="img/photo-2-desktop@1x.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
+                  <source media="(min-width: 700px)" srcset="img/photo-2-tablet@1x.jpg 1x, img/photo-2-tablet@2x.jpg 2x"><img class="photo-card__img" src="img/photo-2-mobile@1x.jpg" srcset="img/photo-2-mobile@1x.jpg 1x, img/photo-2-mobile@2x.jpg 2x">
+                </picture></a></div>
             <div class="photo-card__content">
               <div class="photo-card__title">Антон<span class="photo-card__time"> (12 часов назад)</span></div>
               <div class="photo-card__like-wrap">
@@ -62,7 +88,11 @@
             </div>
           </div>
           <div class="photo-card">
-            <div class="photo-card__img-wrap"><img class="photo-card__img" src="img/photo-3-mobile@1x.jpg"></div>
+            <div class="photo-card__img-wrap"><a href="/">
+                <picture>
+                  <source media="(min-width: 1020px)" srcset="img/photo-3-desktop@1x.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
+                  <source media="(min-width: 700px)" srcset="img/photo-3-tablet@1x.jpg 1x, img/photo-3-tablet@2x.jpg 2x"><img class="photo-card__img" src="img/photo-3-mobile@1x.jpg" srcset="img/photo-3-mobile@1x.jpg 1x, img/photo-3-mobile@2x.jpg 2x">
+                </picture></a></div>
             <div class="photo-card__content">
               <div class="photo-card__title">Борис<span class="photo-card__time"> (20 часов назад)</span></div>
               <p class="photo-card__desc">Здесь могла быть ваша цитата о высоком и вечном.</p>
@@ -72,7 +102,11 @@
             </div>
           </div>
           <div class="photo-card">
-            <div class="photo-card__img-wrap"><img class="photo-card__img" src="img/photo-4-mobile@1x.jpg"></div>
+            <div class="photo-card__img-wrap"><a href="/">
+                <picture>
+                  <source media="(min-width: 1020px)" srcset="img/photo-4-desktop@1x.jpg 1x, img/photo-4-desktop@2x.jpg 2x">
+                  <source media="(min-width: 700px)" srcset="img/photo-4-tablet@1x.jpg 1x, img/photo-4-tablet@2x.jpg 2x"><img class="photo-card__img" src="img/photo-4-mobile@1x.jpg" srcset="img/photo-4-mobile@1x.jpg 1x, img/photo-4-mobile@2x.jpg 2x">
+                </picture></a></div>
             <div class="photo-card__content">
               <div class="photo-card__title">Сергей<span class="photo-card__time"> (25 часов назад)</span></div>
               <p class="photo-card__desc">Самая кубанская в мире!</p>
@@ -82,7 +116,11 @@
             </div>
           </div>
           <div class="photo-card">
-            <div class="photo-card__img-wrap"><img class="photo-card__img" src="img/photo-5-mobile@1x.jpg"></div>
+            <div class="photo-card__img-wrap"><a href="/">
+                <picture>
+                  <source media="(min-width: 1020px)" srcset="img/photo-5-desktop@1x.jpg 1x, img/photo-5-desktop@2x.jpg 2x">
+                  <source media="(min-width: 700px)" srcset="img/photo-5-tablet@1x.jpg 1x, img/photo-5-tablet@2x.jpg 2x"><img class="photo-card__img" src="img/photo-5-mobile@1x.jpg" srcset="img/photo-5-mobile@1x.jpg 1x, img/photo-5-mobile@2x.jpg 2x">
+                </picture></a></div>
             <div class="photo-card__content">
               <div class="photo-card__title">Максим<span class="photo-card__time"> (40 часов назад)</span></div>
               <p class="photo-card__desc">Где снег-то?</p>
@@ -92,7 +130,11 @@
             </div>
           </div>
           <div class="photo-card">
-            <div class="photo-card__img-wrap"><img class="photo-card__img" src="img/photo-6-mobile@1x.jpg"></div>
+            <div class="photo-card__img-wrap"><a href="/">
+                <picture>
+                  <source media="(min-width: 1020px)" srcset="img/photo-6-desktop@1x.jpg 1x, img/photo-6-desktop@2x.jpg 2x">
+                  <source media="(min-width: 700px)" srcset="img/photo-6-tablet@1x.jpg 1x, img/photo-6-tablet@2x.jpg 2x"><img class="photo-card__img" src="img/photo-6-mobile@1x.jpg" srcset="img/photo-6-mobile@1x.jpg 1x, img/photo-6-mobile@2x.jpg 2x">
+                </picture></a></div>
             <div class="photo-card__content">
               <div class="photo-card__title">Надежда<span class="photo-card__time"> (45 часов назад)</span></div>
               <p class="photo-card__desc">Всем GM и взаимные лайки!</p>
@@ -110,12 +152,20 @@
         <p class="photo-editor__title">Выкладывайте все, что накопилось в телефоне!</p>
       </div>
       <div class="photo-editor__inner">
-        <div class="photo-editor__img-wrap"><img class="photo-editor__img" src="img/photo-7-mobile@1x.jpg"></div>
+        <div class="photo-editor__img-wrap">
+          <picture>
+            <source media="(min-width: 1020px)" srcset="img/photo-7-desktop@1x.jpg 1x, img/photo-7-desktop@2x.jpg 2x">
+            <source media="(min-width: 700px)" srcset="img/photo-7-tablet@1x.jpg 1x, img/photo-7-tablet@2x.jpg 2x"><img class="photo-card__img" src="img/photo-7-mobile@1x.jpg" srcset="img/photo-7-mobile@1x.jpg 1x, img/photo-7-mobile@2x.jpg 2x">
+          </picture>
+        </div>
         <div class="photo-editor__controls">
           <div class="photo-editor__tools-wrap">
             <ul class="photo-editor__tools-list">
               <li class="photo-editor__tools-item">
-                <button class="photo-editor__tools-btn photo-editor__tools-btn--crop" type="button"></button>
+                <button class="photo-editor__tools-btn photo-editor__tools-btn--active" type="button"><svg class="photo-editor__tools-btn-icon photo-editor__tools-btn-icon--crop" viewbox="0 0 50 50">
+<use xlink:href="img/symbols.svg#icon-editor-crop"/>
+</svg>
+                </button>
                 <div class="photo-editor__tools-range-bar">
                   <div class="range-bar">
                     <div class="range-bar__dot range-bar__dot--position"></div>
@@ -123,7 +173,10 @@
                 </div>
               </li>
               <li class="photo-editor__tools-item">
-                <button class="photo-editor__tools-btn photo-editor__tools-btn--fill" type="button"></button>
+                <button class="photo-editor__tools-btn" type="button"><svg class="photo-editor__tools-btn-icon photo-editor__tools-btn-icon--fill" viewbox="0 0 50 50">
+<use xlink:href="img/symbols.svg#icon-editor-fill"/>
+</svg>
+                </button>
                 <div class="photo-editor__tools-range-bar">
                   <div class="range-bar">
                     <div class="range-bar__dot range-bar__dot--position"></div>
@@ -131,7 +184,10 @@
                 </div>
               </li>
               <li class="photo-editor__tools-item">
-                <button class="photo-editor__tools-btn photo-editor__tools-btn--contrast" type="button"></button>
+                <button class="photo-editor__tools-btn" type="button"><svg class="photo-editor__tools-btn-icon photo-editor__tools-btn-icon--contrast" viewbox="0 0 50 50">
+<use xlink:href="img/symbols.svg#icon-editor-contrast"/>
+</svg>
+                </button>
                 <div class="photo-editor__tools-range-bar">
                   <div class="range-bar">
                     <div class="range-bar__dot range-bar__dot--position"></div>
@@ -151,7 +207,7 @@
                 <button class="button-ternary button-ternary--full-width" type="button">Запостить</button>
               </div>
               <div class="photo-editor__btn-wrap">
-                <button class="button-ternary button-ternary--full-width" type="button" disabled>Отмена</button>
+                <button class="button-cancel button-cancel--full-width" type="button">Отмена</button>
               </div>
             </div>
           </div>
@@ -160,9 +216,17 @@
     </section>
     <footer class="footer">
       <div class="footer__inner">
-        <div class="footer__logo-wrap"><img class="footer__logo" src="img/logo-pink-blue-mobile.svg"></div>
-        <div class="footer__icon-list"><a class="footer__icon-link footer__icon-link--tw" href="#"></a><a class="footer__icon-link footer__icon-link--fb" href="#"></a><a class="footer__icon-link footer__icon-link--yt" href="#"></a></div>
-        <p class="footer__copy-wrap"><span class="footer__copy">Разработано</span></p>
+        <div class="footer__logo-wrap">
+          <div class="footer__logo"><a href="/"><svg class="footer__logo-tablet" viewbox="0 0 147 40">
+<use xlink:href="img/symbols.svg#logo-pink-blue-mobile"/>
+</svg>
+<svg class="footer__logo-desktop" viewbox="0 0 147 40">
+<use xlink:href="img/symbols.svg#logo-pink-blue-desktop"/>
+</svg></a></div>
+        </div>
+        <div class="footer__icon-list"><a class="footer__icon-link footer__icon-link--tw" href="#"></a><a class="footer__icon-link footer__icon-link--fb" href="#"></a><a class="footer__icon-link footer__icon-link--yt" href="#"></a></div><a class="footer__copy-wrap" href="/"><span class="footer__copy">Разработано<span class="footer__copy-logo"><svg class="" viewbox="0 0 27 34">
+<use xlink:href="img/symbols.svg#logo-htmlacademy"/>
+</svg></span></span></a>
       </div>
     </footer>
     <script src="js/app.js"></script>

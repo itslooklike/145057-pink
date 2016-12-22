@@ -1,4 +1,7 @@
 section.tariff
+  <svg class="tariff__corner">
+    <use xlink:href="img/symbols.svg#bg-triangle-white"/>
+  </svg>
   .tariff__inner
     .tariff__carusel
       .tariff__table-wrap
@@ -15,20 +18,59 @@ section.tariff
               span.tariff__thead-title Анлим
               span.tariff__thead-cost 3,99 USD
           .tariff__row
-            .tariff__cell Розовый фильтр
-            .tariff__cell.tariff__cell--yes
-            .tariff__cell.tariff__cell--no
-            .tariff__cell.tariff__cell--no
+            .tariff__cell
+              span.tariff__text Розовый фильтр
+            .tariff__cell
+              span.tariff__text-mobile Розовый фильтр
+              <svg class="tariff__cell-svg tariff__cell-svg--yes" viewbox="0 0 27 27">
+                <use xlink:href="img/symbols.svg#icon-yes"/>
+              </svg>
+            .tariff__cell
+              span.tariff__text-mobile Розовый фильтр
+              <svg class="tariff__cell-svg tariff__cell-svg--yes" viewbox="0 0 27 27">
+                <use xlink:href="img/symbols.svg#icon-yes"/>
+              </svg>
+            .tariff__cell
+              span.tariff__text-mobile Розовый фильтр
+              <svg class="tariff__cell-svg tariff__cell-svg--yes" viewbox="0 0 27 27">
+                <use xlink:href="img/symbols.svg#icon-yes"/>
+              </svg>
           .tariff__row
-            .tariff__cell Смайлики
-            .tariff__cell.tariff__cell--yes
-            .tariff__cell.tariff__cell--yes
-            .tariff__cell.tariff__cell--no
+            .tariff__cell
+              span.tariff__text Смайлики
+            .tariff__cell
+              span.tariff__text-mobile Смайлики
+              <svg class="tariff__cell-svg tariff__cell-svg--no" viewbox="0 0 27 27">
+                <use xlink:href="img/symbols.svg#icon-no"/>
+              </svg>
+            .tariff__cell
+              span.tariff__text-mobile Смайлики
+              <svg class="tariff__cell-svg tariff__cell-svg--yes" viewbox="0 0 27 27">
+                <use xlink:href="img/symbols.svg#icon-yes"/>
+              </svg>
+            .tariff__cell
+              span.tariff__text-mobile Смайлики
+              <svg class="tariff__cell-svg tariff__cell-svg--yes" viewbox="0 0 27 27">
+                <use xlink:href="img/symbols.svg#icon-yes"/>
+              </svg>
           .tariff__row
-            .tariff__cell Комментарии
-            .tariff__cell.tariff__cell--yes
-            .tariff__cell.tariff__cell--yes
-            .tariff__cell.tariff__cell--yes
+            .tariff__cell
+              span.tariff__text Комментарии
+            .tariff__cell
+              span.tariff__text-mobile Комментарии
+              <svg class="tariff__cell-svg tariff__cell-svg--no" viewbox="0 0 27 27">
+                <use xlink:href="img/symbols.svg#icon-no"/>
+              </svg>
+            .tariff__cell
+              span.tariff__text-mobile Комментарии
+              <svg class="tariff__cell-svg tariff__cell-svg--no" viewbox="0 0 27 27">
+                <use xlink:href="img/symbols.svg#icon-no"/>
+              </svg>
+            .tariff__cell
+              span.tariff__text-mobile Комментарии
+              <svg class="tariff__cell-svg tariff__cell-svg--yes" viewbox="0 0 27 27">
+                <use xlink:href="img/symbols.svg#icon-yes"/>
+              </svg>
 
     .tariff__dots-wrap
       include /blocks/slider-dots
