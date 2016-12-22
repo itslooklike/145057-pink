@@ -42,7 +42,6 @@ gulp.task('js', function() {
     .pipe(gulp.dest(buildFolder));
 });
 
-
 gulp.task('symbols', function() {
   return gulp.src(['img/**/*.svg'])
     .pipe(svgmin())
@@ -62,7 +61,7 @@ gulp.task('images', function() {
     .pipe(gulp.dest(buildFolder + '/img'));
 });
 
-gulp.task('scss-lint', function() {
+gulp.task('stylelint', function() {
   gulp.src(['sass/**/*.scss','!sass/base/normalize.scss'])
     .pipe(postcss([
       stylelint(),
@@ -70,21 +69,18 @@ gulp.task('scss-lint', function() {
     ],{ syntax: scss }));
 });
 
-gulp.task('style', ['scss-lint'], function() {
+gulp.task('style', ['stylelint'], function() {
   gulp.src('sass/style.scss')
     .pipe(plumber())
-    .pipe(sourcemaps.init())
+    // .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: 'expanded'}))
     .pipe(postcss([
-      // mqpacker({sort: function (a, b) {
-      //   return a.localeCompare(b);
-      // }}),
       autoprefixer({browsers: ['last 1 versions'], cascade: false})
     ]))
-    .pipe(sourcemaps.write('.'))
+    // .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(buildFolder + '/css'))
     .pipe(browserSync.stream({match: '**/*.css'}))
-    // .pipe(csso())
+    .pipe(csso())
     .pipe(rename('style.min.css'))
     .pipe(gulp.dest(buildFolder + '/css'));
 });
