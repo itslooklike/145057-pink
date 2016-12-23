@@ -38,8 +38,6 @@
 }
 
 .tariff__carusel {
-  flex-basis: 100%;
-
   @include tablet-invert {
     overflow-x: scroll;
   }
