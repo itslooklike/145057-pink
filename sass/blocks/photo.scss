@@ -1,5 +1,11 @@
 .photo__inner {
   @include content-container;
+
+  &--panorama {
+    @include desktop {
+      align-self: center;
+    }
+  }
 }
 
 .photo__title-wrap {

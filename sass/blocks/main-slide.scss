@@ -97,8 +97,9 @@ $main-slide-phone-height: 285px;
 }
 
 .main-slide__icon-list {
-  font-size: 0;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 20px;
 
   @include tablet {
@@ -111,7 +112,6 @@ $main-slide-phone-height: 285px;
 }
 
 .main-slide__icon-item {
-  display: inline-block;
   margin-right: 18px;
   margin-left: 18px;
 }

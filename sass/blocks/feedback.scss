@@ -10,6 +10,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  align-items: center;
   text-align: center;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -67,6 +68,7 @@
 }
 
 .feedback__text {
+  width: 100%;
   margin: 0 0 30px;
   color: $COLOR-PRIMARY;
   font-size: $FONT-SIZE-S;

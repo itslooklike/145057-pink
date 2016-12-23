@@ -118,6 +118,7 @@
   font-size: $FONT-SIZE-M;
   font-weight: bold;
   line-height: 30px;
+  vertical-align: top;
   text-transform: uppercase;
 
   @include tablet {
@@ -135,6 +136,7 @@
   font-size: 24px;
   line-height: 30px;
   font-weight: 100;
+  vertical-align: top;
 
   @include tablet {
     font-size: $FONT-SIZE-M;
