@@ -14,7 +14,7 @@
 
   &:focus,
   &:hover {
-    background-color: rgb(28, 155, 94);
+    background-color: #1c9b5e;
   }
 
   &:active {
@@ -22,7 +22,7 @@
   }
 
   &[disabled] {
-    background-color: rgb(229, 229, 229);
+    background-color: #e5e5e5;
     color: #fff;
   }
 

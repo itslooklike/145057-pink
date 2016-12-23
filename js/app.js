@@ -5,6 +5,8 @@ window.onload = function () {
   burger.addEventListener('click', function () {
     header.classList.toggle('active');
   });
+
+  svg4everybody();
 };
 
 var map;
