@@ -17,6 +17,8 @@ var imagemin = require('gulp-imagemin');
 var svgstore = require('gulp-svgstore');
 var svgmin = require('gulp-svgmin');
 var del = require('del');
+var fs = require('fs');
+var data = require('gulp-data');
 var runSequence = require('run-sequence');
 var browserSync = require('browser-sync').create();
 
@@ -88,6 +90,9 @@ gulp.task('style', ['stylelint'], function() {
 gulp.task('pug', function() {
   return gulp.src('pug/pages/*.{pug,jade}')
     .pipe(plumber())
+    .pipe(data(function() {
+      return { "data": JSON.parse(fs.readFileSync('./config/config.json')) }
+    }))
     .pipe(pug({
       pretty: true,
       basedir: 'pug'

@@ -33,16 +33,16 @@
   margin-right: auto;
   margin-left: auto;
 
-  use {
+  svg {
     fill: $COLOR-PRIMARY;
     color: $COLOR-SECONDARY;
   }
 
-  &:hover use {
+  &:hover svg {
     fill: $COLOR-SECONDARY;
   }
 
-  &:active use {
+  &:active svg {
     fill: rgba($COLOR-PRIMARY, 0.3);
     color: rgba($COLOR-SECONDARY, 0.3);
   }

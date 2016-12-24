@@ -1,8 +1,8 @@
-window.onload = function () {
+window.onload = function() {
   var header = document.querySelector('.header');
   var burger = document.querySelector('.header__burger-wrap');
 
-  burger.addEventListener('click', function () {
+  burger.addEventListener('click', function() {
     header.classList.toggle('active');
   });
 
@@ -10,6 +10,7 @@ window.onload = function () {
 };
 
 var map;
+
 function initMap() {
   var image = 'img/icon-map-marker.svg';
   var myLatLng = {lat: 59.9362413, lng: 30.3210924};
@@ -27,8 +28,8 @@ function initMap() {
     icon: image
   });
 
-  google.maps.event.addListener(map, 'mouseout', function(){
-    this.setOptions({scrollwheel:false});
+  google.maps.event.addListener(map, 'mouseout', function() {
+    this.setOptions({scrollwheel: false});
   });
 
   map.addListener('click', function() {

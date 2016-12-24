@@ -30,7 +30,7 @@ $header-padding-tablet: 35px;
   align-items: center;
 
   @include desktop {
-    @include content-container;
+    @include content-container-desktop;
   }
 }
 
