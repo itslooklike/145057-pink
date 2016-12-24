@@ -1,0 +1,7 @@
+{
+  "applications": [
+    {"alt": "Логотип Apple", "src": "img/logo-apple.svg", "href":"/"},
+    {"alt": "Логотип Android", "src": "img/logo-android.svg", "href":"/"},
+    {"alt": "Логотип Microsoft", "src": "img/logo-microsoft.svg", "href":"/"}
+  ]
+}
