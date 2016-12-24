@@ -67,7 +67,7 @@
 .tariff__thead {
   flex: 1 1 238px;
   position: relative;
-  padding-top: 23px;
+  padding-top: 17px;
   padding-bottom: 21px;
   border: 1px solid $COLOR-GRAY-BORDERS;
   background-color: $COLOR-PRIMARY;
@@ -88,7 +88,7 @@
 
   @include desktop {
     padding-top: 15px;
-    padding-bottom: 25px;
+    padding-bottom: 23px;
   }
 
   &--empty {
@@ -142,7 +142,7 @@
     font-size: $FONT-SIZE-M;
   }
 
-  @include tablet {
+  @include desktop {
     font-size: 24px;
   }
 }
@@ -152,7 +152,7 @@
   align-items: center;
   flex: 1 1 238px;
   position: relative;
-  padding: 24px 23px 26px;
+  padding: 15px 23px 17px;
   border: 1px solid $COLOR-GRAY-BORDERS;
   background-color: #fff;
   background-clip: padding-box;
@@ -166,17 +166,18 @@
   }
 
   @include tablet {
-    padding: 10px 15px;
+    padding: 9px 15px;
   }
 
   @include desktop {
-    padding: 18px 23px;
+    padding: 16px 23px;
     font-size: $FONT-SIZE-M;
   }
 }
 
 .tariff__text-mobile {
   margin-right: auto;
+  text-transform: uppercase;
 
   @include tablet {
     display: none;
