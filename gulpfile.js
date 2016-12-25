@@ -81,10 +81,10 @@ gulp.task('style', ['stylelint'], function() {
     ]))
     // .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(buildFolder + '/css'))
-    .pipe(browserSync.stream({match: '**/*.css'}))
     .pipe(csso())
     .pipe(rename('style.min.css'))
-    .pipe(gulp.dest(buildFolder + '/css'));
+    .pipe(gulp.dest(buildFolder + '/css'))
+    .pipe(browserSync.stream({match: '**/*.css'}));
 });
 
 gulp.task('pug', function() {
