@@ -9,7 +9,7 @@ mixin photo(item, idx)
           img.photo-card__img(src=`img/photo-${idx}-mobile@1x.jpg` srcset=`img/photo-${idx}-mobile@1x.jpg 1x, img/photo-${idx}-mobile@2x.jpg 2x` alt=item.alt width="280" height="180")
     .photo-card__content
       .photo-card__title= item.name
-        span.photo-card__time=  item.time
+        span.photo-card__time  #{item.time}
       p.photo-card__desc= item.desc
       .photo-card__like-wrap
         button.photo-card__like-btn(type="button")
