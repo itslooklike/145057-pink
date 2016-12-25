@@ -28,7 +28,7 @@ mixin photo(item, idx)
           picture
             source(media="(min-width: 1020px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x")
             source(media="(min-width: 700px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x")
-            img.photo-card__img(src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@1x.jpg 1x, img/panorama-mobile@2x.jpg 2x" alt="Мост" width="280" height="180")
+            img.photo-card__img.photo-card__img--panorama(src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@1x.jpg 1x, img/panorama-mobile@2x.jpg 2x" alt="Мост" width="280" height="180")
       .photo__inner.photo__inner--panorama
         .photo-card__content
           .photo-card__title Анна

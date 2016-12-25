@@ -60,6 +60,14 @@
   @include desktop {
     height: 400px;
   }
+
+  &--panorama {
+    height: 137px;
+
+    @include tablet {
+      height: 510px;
+    }
+  }
 }
 
 .photo-card__content {

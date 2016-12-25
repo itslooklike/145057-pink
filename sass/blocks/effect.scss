@@ -49,6 +49,7 @@
   background-color: $COLOR-BACKGROUND-PRIMARY;
   color: $COLOR-SECONDARY;
   font-size: 96px;
+  font-weight: bold;
   line-height: 1;
 
   @include desktop {
