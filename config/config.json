@@ -1,4 +1,10 @@
 {
+  "menu": [
+    {"name": "Главная", "href": "/"},
+    {"name": "Фотографии", "href": "/photo.html"},
+    {"name": "Конкурс", "href": "/form.html"},
+    {"name": "HTML Academy", "href": "#"}
+  ],
   "applications": [
     {"alt": "Логотип Apple", "src": "img/logo-apple.svg", "href":"/"},
     {"alt": "Логотип Android", "src": "img/logo-android.svg", "href":"/"},

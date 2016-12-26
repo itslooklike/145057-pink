@@ -1,7 +1,10 @@
-extends /templates/layout-map
+extends /templates/layout
+
+block vars
+  -var selected = 'Главная'
+  -var map = true
 
 block content
-
   include /blocks/main-slide
   include /blocks/benefits
   include /blocks/effect
