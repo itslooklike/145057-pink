@@ -80,11 +80,14 @@
   color: #d22856;
   font-size: 24px;
   font-weight: 300;
-  text-decoration: none;
 
   @include tablet {
     max-width: 250px;
     margin-right: auto;
     margin-left: auto;
+  }
+
+  &--link {
+    @include link-secondary;
   }
 }
