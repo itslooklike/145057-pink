@@ -13,7 +13,7 @@
 .contact__title {
   margin: 0 0 35px;
   color: $COLOR-PRIMARY;
-  font-size: 24px;
+  font-size: $FONT-SIZE-HERO-S;
   font-weight: 300;
   text-align: center;
 
@@ -22,13 +22,13 @@
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 50px;
-    font-size: 40px;
+    font-size: $FONT-SIZE-HERO-SM;
   }
 
   @include desktop {
     max-width: 500px;
     margin-bottom: 60px;
-    font-size: 50px;
+    font-size: $FONT-SIZE-HERO-M;
   }
 }
 
@@ -80,6 +80,7 @@
   color: #d22856;
   font-size: 24px;
   font-weight: 300;
+  text-decoration: none;
 
   @include tablet {
     max-width: 250px;

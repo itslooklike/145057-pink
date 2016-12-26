@@ -1,12 +1,11 @@
 mixin photo(item, idx)
   - ++idx
   .photo-card
-    .photo-card__img-wrap
-      a(href=`img/photo-${idx}-desktop@2x.jpg`)
-        picture
-          source(media="(min-width: 1020px)" srcset=`img/photo-${idx}-desktop@1x.jpg 1x, img/photo-${idx}-desktop@2x.jpg 2x`)
-          source(media="(min-width: 700px)" srcset=`img/photo-${idx}-tablet@1x.jpg 1x, img/photo-${idx}-tablet@2x.jpg 2x`)
-          img.photo-card__img(src=`img/photo-${idx}-mobile@1x.jpg` srcset=`img/photo-${idx}-mobile@1x.jpg 1x, img/photo-${idx}-mobile@2x.jpg 2x` alt=item.alt width="280" height="180")
+    a.photo-card__link(href=`img/photo-${idx}-desktop@2x.jpg`)
+      picture.photo-card__img-wrap
+        source(media="(min-width: 1020px)" srcset=`img/photo-${idx}-desktop@1x.jpg 1x, img/photo-${idx}-desktop@2x.jpg 2x`)
+        source(media="(min-width: 700px)" srcset=`img/photo-${idx}-tablet@1x.jpg 1x, img/photo-${idx}-tablet@2x.jpg 2x`)
+        img.photo-card__img(data-object-fit src=`img/photo-${idx}-mobile@1x.jpg` srcset=`img/photo-${idx}-mobile@1x.jpg 1x, img/photo-${idx}-mobile@2x.jpg 2x` alt=item.alt width="280" height="180")
     .photo-card__content
       .photo-card__title= item.name
         span.photo-card__time  #{item.time}
@@ -23,12 +22,11 @@ mixin photo(item, idx)
 
   .photo__panorama-wrap
     .photo-card.photo-card--panorama
-      .photo-card__img-wrap
-        a(href="img/panorama-desktop@2x.jpg")
-          picture
-            source(media="(min-width: 1020px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x")
-            source(media="(min-width: 700px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x")
-            img.photo-card__img.photo-card__img--panorama(src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@1x.jpg 1x, img/panorama-mobile@2x.jpg 2x" alt="Мост" width="280" height="180")
+      a.photo-card__link(href="img/panorama-desktop@2x.jpg")
+        picture.photo-card__img-wrap.photo-card__img-wrap--panorama
+          source(media="(min-width: 1020px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x")
+          source(media="(min-width: 700px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x")
+          img.photo-card__img.photo-card__img--panorama(data-object-fit src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@1x.jpg 1x, img/panorama-mobile@2x.jpg 2x" alt="Мост" width="280" height="180")
       .photo__inner.photo__inner--panorama
         .photo-card__content
           .photo-card__title Анна

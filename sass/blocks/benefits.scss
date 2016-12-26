@@ -58,7 +58,7 @@
 }
 
 .benefits__title {
-  margin: 0 0 30px;
+  margin: 0;
   color: $COLOR-PRIMARY;
   font-size: 24px;
   font-weight: 300;
@@ -71,21 +71,17 @@
   @include desktop {
     font-size: $FONT-SIZE-HERO-M;
   }
+}
 
-  &:last-child {
-    margin-bottom: 0;
+.benefits__title-br-mobile {
+  @include tablet {
+    display: none;
   }
+}
 
-  &--subtitle {
-    @include tablet {
-      max-width: 400px;
-      margin-right: auto;
-      margin-left: auto;
-    }
-
-    @include desktop {
-      max-width: 500px;
-    }
+.benefits__title-br-tablet {
+  @include tablet-invert {
+    display: none;
   }
 }
 
