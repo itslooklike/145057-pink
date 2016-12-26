@@ -61,8 +61,22 @@
   }
 }
 
+.photo-editor__picture {
+  position: relative;
+  height: 375px;
+
+  @include tablet {
+    height: 400px;
+  }
+}
+
 .photo-editor__img {
+  height: 375px;
   object-fit: cover;
+
+  @include tablet {
+    height: 400px;
+  }
 }
 
 .photo-editor__controls {
