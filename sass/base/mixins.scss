@@ -161,6 +161,21 @@
   }
 }
 
+@mixin link-secondary {
+  text-decoration: none;
+
+  &:focus,
+  &:hover {
+    background: linear-gradient(to right, currentColor, currentColor) 0 90%/1px 1px repeat-x;
+    color: $COLOR-PRIMARY;
+  }
+
+  &:active {
+    background-image: none;
+    color: rgba($COLOR-PRIMARY, 0.3);
+  }
+}
+
 @mixin retina($url, $scale: 3, $ext: png) {
   $dpi: 96;
   $descender: 0.5;

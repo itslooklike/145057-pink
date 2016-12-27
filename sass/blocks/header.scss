@@ -18,7 +18,7 @@ $header-padding-tablet: 30px;
     padding-top: 40px;
   }
 
-  &.active {
+  &--active {
     @include desktop-invert {
       position: relative;
       background-color: #283645;
@@ -128,7 +128,7 @@ $header-padding-tablet: 30px;
 }
 
 .header__burger-burger {
-  .header.active & {
+  .header--active & {
     display: none;
   }
 }
@@ -136,7 +136,7 @@ $header-padding-tablet: 30px;
 .header__burger-cross {
   display: none;
 
-  .header.active & {
+  .header--active & {
     display: block;
   }
 }
@@ -158,7 +158,7 @@ $header-padding-tablet: 30px;
     flex-basis: auto;
   }
 
-  .header.active & {
+  .header--active & {
     @include desktop-invert {
       display: flex;
       margin-top: $header-padding-tablet;

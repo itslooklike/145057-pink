@@ -3,7 +3,7 @@ window.onload = function() {
   var burger = document.querySelector('.header__burger-wrap');
 
   burger.addEventListener('click', function() {
-    header.classList.toggle('active');
+    header.classList.toggle('header--active');
   });
 
   svg4everybody();

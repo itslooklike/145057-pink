@@ -1,7 +1,47 @@
+mixin menuLinks(props, selected)
+  if selected === props.name
+    a.header__menu-link.header__menu-link--active(href=props.href)
+      span.header__menu-text= props.name
+  else
+    a.header__menu-link(href=props.href)
+      span.header__menu-text= props.name
+
 doctype html
 html(lang="ru")
   include /templates/head
+
   body
-    include /blocks/header
+    block vars
+      -var selected = 'Главная'
+      -var map = false
+
+    header.header.header--active
+      .header__head
+        .header__logo-wrap
+          a(href="/")
+            <svg class="header__logo header__logo--mobile" viewbox="0 0 75 22" width="75" height="22">
+            <use xlink:href="img/symbols.svg#logo-pink-white-mobile"/>
+            </svg>
+            <svg class="header__logo header__logo--tablet" viewbox="0 0 147 40" width="147" height="40">
+            <use xlink:href="img/symbols.svg#logo-pink-white-tablet"/>
+            </svg>
+            <svg class="header__logo header__logo--desktop" viewbox="0 0 147 40" width="147" height="40">
+            <use xlink:href="img/symbols.svg#logo-pink-white-desktop"/>
+            </svg>
+        .header__burger-wrap
+          .header__burger
+            <svg class="header__burger-burger" viewbox="0 0 50 24" width="50" height="24">
+            <use xlink:href="img/symbols.svg#icon-menu-burger"/>
+            </svg>
+            <svg class="header__burger-cross" viewbox="0 0 50 24" width="50" height="24">
+            <use xlink:href="img/symbols.svg#icon-menu-cross"/>
+            </svg>
+        nav.header__menu
+          for item in data.menu
+            +menuLinks(item, selected)
+
     block content
+
     include /templates/global-footer-scripts
+    if map
+      script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWqQrvWiS4TthFic060hJB_RBFpejG6uc&callback=initMap")
