@@ -1,0 +1,129 @@
+.feedback {
+  @include desktop {
+    padding-top: 85px;
+  }
+}
+
+.feedback__inner {
+  @include content-container;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @include tablet {
+    padding-top: 70px;
+    padding-bottom: 20px;
+  }
+
+  @include desktop {
+    padding-top: 100px;
+    padding-bottom: 10px;
+    background: url('../assets/img/icon-quotes.svg') 50% 0 no-repeat;
+  }
+}
+
+.feedback__title-wrap {
+  margin-bottom: 15px;
+
+  @include tablet {
+    margin-bottom: 40px;
+  }
+}
+
+.feedback__title {
+  margin: 0;
+  font-size: $FONT-SIZE-M;
+  font-weight: bold;
+  line-height: 30px;
+
+  @include tablet {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+
+  @include desktop {
+    font-size: 24px;
+  }
+}
+
+.feedback__subtitle {
+  @include tablet-invert {
+    @include visuallyhidden;
+  }
+
+  @include tablet {
+    margin: 0;
+    font-size: $FONT-SIZE-S;
+    text-align: center;
+  }
+
+  @include desktop {
+    font-size: 18px;
+  }
+}
+
+.feedback__text {
+  width: 100%;
+  margin: 0 0 30px;
+  color: $COLOR-PRIMARY;
+  font-size: $FONT-SIZE-S;
+  line-height: 30px;
+
+  @include tablet {
+    order: -1;
+    font-size: $FONT-SIZE-M;
+  }
+
+  @include desktop {
+    @include center-content(680px);
+
+    margin-bottom: 35px;
+  }
+}
+
+.feedback__btn {
+  @include btn-reset;
+
+  position: absolute;
+  top: 50%;
+  width: 31px;
+  height: 31px;
+  border-bottom: 2px solid rgba($COLOR-PRIMARY, 0.3);
+  border-left: 2px solid rgba($COLOR-PRIMARY, 0.3);
+  cursor: pointer;
+
+  @include desktop-invert {
+    display: none;
+  }
+
+  &:hover {
+    border-color: rgba($COLOR-PRIMARY, 0.6);
+  }
+
+  &:active {
+    border-color: rgba($COLOR-PRIMARY, 0.1);
+  }
+
+  &--left {
+    left: 0;
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  &--right {
+    right: 0;
+    transform: translateY(-50%) rotate(-135deg);
+  }
+}
+
+.feedback__dots-wrap {
+  @include center-content();
+
+  @include desktop {
+    display: none;
+  }
+}

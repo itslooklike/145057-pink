@@ -22,81 +22,89 @@ var data = require('gulp-data');
 var runSequence = require('run-sequence');
 var browserSync = require('browser-sync').create();
 
-var buildFolder = 'build';
+var buildFolder = 'docs';
+var srcFolder = 'src';
 
 gulp.task('clean', function() {
   return del(buildFolder);
 });
 
 gulp.task('copy', function() {
-  return gulp.src([
-    'fonts/**/*.{woff,woff2}',
-    'img/**',
-    'js/**'
-  ], {
-    base: '.'
-  })
-    .pipe(gulp.dest(buildFolder));
-});
-
-gulp.task('js', function() {
-  return gulp.src(['js/**'], {base: '.'})
+  return gulp
+    .src(
+      [
+        `${srcFolder}/assets/fonts/**/*.{woff,woff2}`,
+        `${srcFolder}/assets/img/**/*.svg`,
+        `${srcFolder}/js/**`,
+      ],
+      {
+        base: srcFolder,
+      }
+    )
     .pipe(gulp.dest(buildFolder));
 });
 
 gulp.task('symbols', function() {
-  return gulp.src(['img/**/*.svg'])
+  return gulp
+    .src(`${srcFolder}/assets/img/**/*.svg`)
     .pipe(svgmin())
-    .pipe(svgstore({
-      inlineSvg: true
-    }))
+    .pipe(
+      svgstore({
+        inlineSvg: true,
+      })
+    )
     .pipe(rename('symbols.svg'))
-    .pipe(gulp.dest(buildFolder + '/img'));
+    .pipe(gulp.dest(buildFolder + '/assets/img'));
 });
 
 gulp.task('images', function() {
-  return gulp.src('img/**/*.{png,jpg,gif}')
-    .pipe(imagemin([
-      imagemin.optipng({optimizationLevel: 3}),
-      imagemin.jpegtran({progressive: true})
-    ]))
-    .pipe(gulp.dest(buildFolder + '/img'));
+  return (gulp
+      .src(`${srcFolder}/assets/img/**/*.{png,jpg,gif}`, { base: srcFolder })
+      // .pipe(
+      //   imagemin([
+      //     imagemin.optipng({ optimizationLevel: 3 }),
+      //     imagemin.jpegtran({ progressive: true }),
+      //   ])
+      // )
+      .pipe(gulp.dest(buildFolder)) );
 });
 
 gulp.task('stylelint', function() {
-  gulp.src(['sass/**/*.scss','!sass/base/normalize.scss'])
-    .pipe(postcss([
-      stylelint(),
-      reporter({ clearMessages: true })
-    ],{ syntax: scss }));
+  gulp
+    .src([srcFolder + '/styles/**/*.scss', '!' + srcFolder + 'styles/base/normalize.scss'])
+    .pipe(postcss([stylelint(), reporter({ clearMessages: true })], { syntax: scss }));
 });
 
 gulp.task('style', ['stylelint'], function() {
-  gulp.src('sass/style.scss')
+  gulp
+    .src(srcFolder + '/styles/style.scss')
     .pipe(plumber())
     // .pipe(sourcemaps.init())
-    .pipe(sass({outputStyle: 'expanded'}))
-    .pipe(postcss([
-      autoprefixer({browsers: ['last 1 versions'], cascade: false})
-    ]))
+    .pipe(sass({ outputStyle: 'expanded' }))
+    .pipe(postcss([autoprefixer({ browsers: ['last 1 versions'], cascade: false })]))
     // .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(buildFolder + '/css'))
     .pipe(csso())
     .pipe(rename('style.min.css'))
     .pipe(gulp.dest(buildFolder + '/css'))
-    .pipe(browserSync.stream({match: '**/*.css'}));
+    .pipe(browserSync.stream({ match: '**/*.css' }));
 });
 
 gulp.task('pug', function() {
-  return gulp.src('pug/pages/*.{pug,jade}')
+  return gulp
+    .src(srcFolder + '/pug/pages/*.{pug,jade}')
     .pipe(plumber())
-    .pipe(data(function() {
-      return { "data": JSON.parse(fs.readFileSync('./config/config.json')) }
-    }))
-    .pipe(pug({
-      pretty: true,
-      basedir: 'pug'
-    }))
+    .pipe(
+      data(function() {
+        return { data: JSON.parse(fs.readFileSync(srcFolder + '/config/config.json')) };
+      })
+    )
+    .pipe(
+      pug({
+        pretty: true,
+        basedir: srcFolder + '/pug',
+      })
+    )
     .pipe(gulp.dest(buildFolder));
 });
 
@@ -106,22 +114,20 @@ gulp.task('serve', function() {
     notify: false,
     open: false,
     cors: true,
-    ui: false
+    ui: false,
   });
 
-  gulp.watch('sass/**/*.{scss,sass}', ['style']);
-  gulp.watch('pug/**/*.{pug,jade}', ['pug']);
-  gulp.watch('js/**/*.js', ['js']);
-
-  gulp.watch('img/*.svg', ['symbols']).on('change', function() {
+  gulp.watch(srcFolder + '/styles/**/*.{scss,sass}', ['style']);
+  gulp.watch(srcFolder + '/pug/**/*.{pug,jade}', ['pug']);
+  gulp.watch(srcFolder + '/js/**/*.js', ['js']);
+  gulp.watch(srcFolder + '/assets/img/*.svg', ['symbols']).on('change', function() {
     browserSync.reload();
   });
-
   gulp.watch(buildFolder + '/*.html').on('change', function() {
     browserSync.reload();
   });
 });
 
 gulp.task('build', function(callback) {
-  runSequence('clean', ['copy', 'style','pug', 'symbols'], callback);
+  runSequence('clean', ['copy', 'style', 'pug', 'symbols', 'images'], callback);
 });

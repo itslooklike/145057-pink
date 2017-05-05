@@ -1,0 +1,187 @@
+.photo-card {
+  $photo-margin: 10px;
+
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+
+  @include tablet {
+    flex: 1 0 300px;
+    margin-left: $photo-margin;
+    margin-right: $photo-margin;
+  }
+
+  @include desktop {
+    margin-bottom: 55px;
+  }
+
+  &--panorama {
+    @include tablet {
+      margin: 0 0 50px;
+    }
+  }
+}
+
+.photo-card__link {
+  text-decoration: none;
+}
+
+.photo-card__img-wrap {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 180px;
+  text-decoration: none;
+
+  @include tablet {
+    height: 300px;
+  }
+
+  @include desktop {
+    height: 400px;
+  }
+
+  &--panorama {
+    height: 137px;
+
+    @include tablet {
+      height: 510px;
+    }
+  }
+
+  .photo-card--panorama &::before {
+    content: 'ПАНОРАМА ДНЯ';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: $mobile-paddings;
+    padding: 11px 20px;
+    background-color: $COLOR-SECONDARY;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    @include tablet {
+      top: 60px;
+      right: $tablet-paddings;
+    }
+  }
+}
+
+.photo-card__img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+
+  @include tablet {
+    height: 300px;
+  }
+
+  @include desktop {
+    height: 400px;
+  }
+
+  &--panorama {
+    height: 137px;
+
+    @include tablet {
+      height: 510px;
+    }
+  }
+}
+
+.photo-card__content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 22px 20px;
+  background-color: #f2f2f2;
+
+  @include tablet {
+    padding: 27px;
+  }
+
+  .photo-card--panorama & {
+    @include tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+}
+
+.photo-card__title {
+  margin-bottom: 5px;
+  font-size: $FONT-SIZE-S;
+  font-weight: bold;
+}
+
+.photo-card__time {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.photo-card__desc {
+  margin: 0 0 15px;
+  font-size: $FONT-SIZE-S;
+  line-height: 24px;
+
+  .photo-card--panorama & {
+    @include tablet {
+      order: 1;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.photo-card__like-wrap {
+  display: flex;
+  margin-top: auto;
+
+  @include tablet {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .photo-card--panorama & {
+    @include tablet {
+      margin-top: 3px;
+    }
+  }
+}
+
+.photo-card__like-btn {
+  position: relative;
+  padding: 0;
+  border: 0;
+  width: 13px;
+  height: 12px;
+  background: url('../assets/img/icon-heart.svg') 0 0 no-repeat;
+  cursor: pointer;
+
+  @include tablet {
+    top: 1px;
+    right: 5px;
+  }
+}
+
+.photo-card__like-text {
+  position: relative;
+  padding-left: 18px;
+  margin: 0;
+  color: $COLOR-SECONDARY;
+  font-size: 12px;
+  text-transform: uppercase;
+
+  @include tablet {
+    padding-left: 0;
+  }
+
+  .photo-card--panorama & {
+    @include tablet {
+      margin-right: 20px;
+    }
+  }
+}

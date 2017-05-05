@@ -1,0 +1,110 @@
+.effect {
+  @include tablet-invert {
+    display: none;
+  }
+
+  @include desktop {
+    background-color: $COLOR-BACKGROUND-PRIMARY;
+  }
+}
+
+.effect__inner {
+  @include content-container;
+
+  display: flex;
+  align-items: center;
+  padding-top: 60px;
+  padding-bottom: 30px;
+
+  @include desktop {
+    padding-top: 15px;
+    padding-bottom: 65px;
+  }
+}
+
+.effect__icon-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 238px;
+  height: 276px;
+  background: url('../assets/img/icon-timer.svg') 0 0/contain no-repeat;
+
+  @include desktop {
+    flex: 0 0 298px;
+    height: 345px;
+  }
+}
+
+.effect__icon {
+  position: relative;
+  top: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 202px;
+  height: 202px;
+  border: 20px solid currentColor;
+  border-radius: 50%;
+  background-color: $COLOR-BACKGROUND-PRIMARY;
+  color: $COLOR-SECONDARY;
+  font-size: 96px;
+  font-weight: bold;
+  line-height: 1;
+
+  @include desktop {
+    top: 25px;
+    width: 253px;
+    height: 253px;
+    font-size: 120px;
+  }
+}
+
+.effect__content {
+  flex: 1 1 310px;
+  margin-left: 70px;
+
+  @include desktop {
+    padding-top: 40px;
+  }
+
+  br {
+    @include desktop {
+      display: none;
+    }
+  }
+}
+
+.effect__title {
+  margin: 0 0 10px;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: bold;
+
+  @include desktop {
+    margin-bottom: 20px;
+  }
+}
+
+.effect__text {
+  margin: 0 0 10px;
+  font-size: $FONT-SIZE-S;
+  line-height: 24px;
+
+  @include desktop {
+    margin-bottom: 30px;
+    font-size: $FONT-SIZE-M;
+    line-height: 30px;
+  }
+}
+
+.effect__link {
+  @include link;
+
+  font-size: $FONT-SIZE-S;
+
+  @include desktop {
+    font-size: $FONT-SIZE-M;
+    line-height: 30px;
+  }
+}
